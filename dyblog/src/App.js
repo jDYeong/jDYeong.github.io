@@ -1,7 +1,9 @@
+import Container from "./commons/container/container";
+
 function App() {
   return (
     <div className="App">
-      <h1>이러지마</h1>
+      <Container></Container>
     </div>
   );
 }
