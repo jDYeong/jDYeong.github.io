@@ -1,6 +1,6 @@
-import Header from "../header/header";
-import Footer from "../footer/footer";
-import Main from "../main/main";
+import Header from "./header";
+import Footer from "./footer";
+import Main from "./main";
 
 export default function Container(){
 

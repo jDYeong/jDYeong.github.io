@@ -1,4 +1,4 @@
-import Container from "./commons/container/container";
+import Container from "./common/container";
 
 function App() {
   return (
