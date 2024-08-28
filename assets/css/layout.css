@@ -1,0 +1,46 @@
+@charset "UTF-8";
+/*** 컬러 변수 ***/
+/*** 공통변수 ***/
+/* 기본 스크롤 커스텀 */
+/* 모드 컬러 */
+.lightMode {
+  background-color: #D6EADF;
+  color: #222;
+}
+.lightMode .container {
+  background-color: #fff;
+}
+
+.darkMode {
+  background-color: #292929;
+  color: #fff;
+}
+.darkMode .container {
+  background-color: #121212;
+}
+
+/* 레이아웃 */
+body {
+  overflow: hidden;
+}
+
+.bg {
+  padding: 5vh 0;
+}
+
+.container {
+  width: 80vw;
+  max-width: 120rem;
+  min-width: 100rem;
+  height: 90vh;
+  margin: 0 auto;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transition: width 0.23s ease-in;
+}
+@media screen and (max-width: 1200px) {
+  .container {
+    width: 90vw;
+    min-width: auto;
+  }
+}

@@ -1,0 +1,48 @@
+@import '../setting/_var.scss';
+
+/* 모드 컬러 */
+.lightMode{
+    background-color: $light-bg;
+    color: $light-font-color;
+    .container{
+        background-color: $light-sub-bg;
+    }
+}
+
+.darkMode{
+    background-color: $dark-bg;
+    color: $dark-font-color;
+    .container{
+        background-color: $dark-sub-bg;
+    }
+}
+
+/* 레이아웃 */
+body{
+    overflow: hidden;
+}
+
+.bg{
+    padding: 5vh 0;
+}
+
+.container{
+    width: 80vw;
+    max-width: 120rem;
+    min-width: 100rem;
+    height: 90vh;
+    //min-height: 62rem;
+    margin: 0 auto;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transition: width $ani-fast;
+
+    @media screen and (max-width: 1200px) {
+        width: 90vw;
+        min-width: auto;
+    }
+    
+    @media screen and (max-width: 720px) {
+        
+    }
+}
