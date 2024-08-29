@@ -1,7 +1,6 @@
 @charset "UTF-8";
 /*** 컬러 변수 ***/
 /*** 공통변수 ***/
-/* 기본 스크롤 커스텀 */
 /* 모드 컬러 */
 .lightMode {
   background-color: #D6EADF;
@@ -9,6 +8,7 @@
 }
 .lightMode .container {
   background-color: #fff;
+  border: 2px solid #222;
 }
 
 .darkMode {
@@ -17,30 +17,201 @@
 }
 .darkMode .container {
   background-color: #121212;
+  border: 2px solid #121212;
 }
 
 /* 레이아웃 */
-body {
-  overflow: hidden;
+body::-webkit-scrollbar {
+  width: 10px;
+  background: #F3B562;
+}
+body::-webkit-scrollbar-thumb {
+  width: 6px;
+  background-color: #F3B562;
+}
+body::-webkit-scrollbar-track {
+  background: #A7C4B5;
 }
 
 .bg {
+  min-height: 100vh;
   padding: 5vh 0;
 }
 
 .container {
+  display: flex;
   width: 80vw;
   max-width: 120rem;
   min-width: 100rem;
-  height: 90vh;
+  min-height: 90vh;
   margin: 0 auto;
-  overflow-y: auto;
-  overflow-x: hidden;
-  transition: width 0.23s ease-in;
+  border-radius: 0.8rem;
+  overflow: hidden;
 }
 @media screen and (max-width: 1200px) {
   .container {
     width: 90vw;
     min-width: auto;
+  }
+}
+@media screen and (max-width: 960px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+/* 모드 컬러 */
+.lightMode header {
+  background-color: #F3B562;
+}
+.lightMode header .title span {
+  background: #222;
+}
+.lightMode header .title div {
+  background: #fff;
+  color: #7D3C98;
+  border: 2px solid #222;
+}
+
+.darkMode header {
+  background-color: #F3B562;
+}
+.darkMode header .title span {
+  background: #121212;
+}
+.darkMode header .title div {
+  background: #fff;
+  color: #9D59B9;
+  border: 2px solid #121212;
+}
+
+header {
+  width: 15%;
+  padding: 3rem 0;
+  position: relative;
+  box-sizing: border-box;
+}
+header .sticky {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  position: sticky;
+  top: 0;
+}
+header .title {
+  width: 70%;
+  position: relative;
+  z-index: 1;
+}
+header .title span {
+  display: block;
+  width: 100%;
+  height: 10rem;
+  border-radius: 0.8rem;
+  position: absolute;
+  bottom: -0.5rem;
+  right: -0.5rem;
+  z-index: -1;
+}
+header .title div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "양진체";
+  letter-spacing: 1.3px;
+  width: 100%;
+  height: 10rem;
+  border-radius: 0.8rem;
+  text-align: center;
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+@media screen and (max-width: 960px) {
+  header {
+    width: 100%;
+    height: 6rem;
+  }
+}
+/* 모드 컬러 */
+.lightMode nav ul {
+  padding: 2rem 0;
+}
+.lightMode nav ul li a {
+  background: #fff;
+  border: 1px solid #222;
+}
+.lightMode nav ul li:hover::before {
+  background: #222;
+}
+
+.darkMode nav ul {
+  padding: 2rem 0;
+}
+.darkMode nav ul li a {
+  background: #fff;
+  border: 1px solid #121212;
+}
+.darkMode nav ul li:hover::before {
+  background: #121212;
+}
+
+nav {
+  width: 70%;
+}
+nav ul {
+  padding: 2rem 0;
+}
+nav ul li {
+  padding: 0.5rem 0;
+  position: relative;
+}
+nav ul li a {
+  font-family: "양진체";
+  letter-spacing: 1.3px;
+  display: block;
+  padding: 1.5rem 1rem;
+  border-radius: 3rem;
+  font-size: 1.4em;
+  position: relative;
+  transition: 0.23s ease-in;
+  z-index: 2;
+}
+nav ul li a::after {
+  content: "";
+  display: block;
+  width: 2.4rem;
+  height: 2.4rem;
+  background: url("../images/icons/arr-right.svg") no-repeat center;
+  position: absolute;
+  top: calc(50% - 1.2rem);
+  right: 0.5rem;
+}
+nav ul li:hover a {
+  top: -0.4rem;
+  left: -0.4rem;
+}
+nav ul li::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: calc(100% - 1.5rem);
+  border-radius: 3rem;
+  position: absolute;
+  bottom: 0.4rem;
+  right: -0.1rem;
+  background: transparent;
+}
+
+/* 모드 컬러 */
+main {
+  width: 85%;
+  height: 1200px;
+}
+@media screen and (max-width: 960px) {
+  main {
+    width: 100%;
+    height: calc(100% - 6rem);
   }
 }

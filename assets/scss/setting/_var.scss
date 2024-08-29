@@ -1,17 +1,103 @@
 /*** 컬러 변수 ***/
+//공통
+$scroll-thumb: #F3B562;
+$scroll-bg : #A7C4B5;
+
 //라이트 모드
 $light-bg: #D6EADF;
 $light-sub-bg: #fff;
 $light-font-color: #222;
+
+$light-border-black: #222;
+$light-border-dark: #BBBBBB;
+$light-border-light: #EEEEEE;
+$light-border-white: #fff;
+
+$light-header-bg: #F3B562;
+$light-header-white: #fff;
+$light-header-purple: #7D3C98;
 
 //다크 모드
 $dark-bg: #292929;
 $dark-sub-bg: #121212;
 $dark-font-color: #fff;
 
+$dark-border-black: #121212;
+$dark-border-dark: #636363;
+$dark-border-light: #CCCCCC;
+$dark-border-white: #fff;
+
+$dark-header-bg: #F3B562;
+$dark-header-white: #fff;
+$dark-header-purple: #9D59B9;
+
+
 /*** 공통변수 ***/
 $ani-fast : .23s ease-in;
 $ani-middle : .4s ease-in;
 $ani-slow : .7s ease-in;
 
-/* 기본 스크롤 커스텀 */
+//이미지 주소
+$img-url-bg : '../images/bg/';
+$img-url-icons : '../images/icons/';
+
+//폰트
+@mixin fontTitle{
+    font-family: "양진체";
+    letter-spacing: 1.3px;
+}
+@mixin fontDefault{
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    letter-spacing: normal;
+}
+
+//scroll custom
+@mixin scrollCustom{
+    &::-webkit-scrollbar {
+        width: 10px;
+        background: $scroll-thumb;
+    }
+    &::-webkit-scrollbar-thumb {
+        width: 6px;
+        background-color: $scroll-thumb;
+    }
+    &::-webkit-scrollbar-track {
+        background: $scroll-bg;
+    }
+}
+
+//flex
+@mixin flex{
+    display: flex;
+}
+@mixin flexTop{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+@mixin flexCenter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@mixin flexBottom{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+@mixin flexColumn{
+    display: flex;
+    flex-direction: column;
+}
+@mixin flexColumnTop{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+@mixin flexColumnBottom{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
