@@ -1,10 +1,10 @@
 /* 모드 컬러 */
-.lightMode{
-    main{}
+@media (prefers-color-scheme: dark) {
+    
 }
 
-.darkMode{
-    main{}
+@media (prefers-color-scheme: light) {
+    
 }
 
 main{

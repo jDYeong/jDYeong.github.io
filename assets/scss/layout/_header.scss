@@ -1,21 +1,5 @@
 /* 모드 컬러 */
-.lightMode{
-    header{
-        background-color: $light-header-bg;
-        .title{
-            span{
-                background: $light-border-black;
-            }
-            div{
-                background: $light-header-white;
-                color: $light-header-red;
-                border: 2px solid $light-border-black;
-            }
-        }
-    }
-}
-
-.darkMode{
+@media (prefers-color-scheme: dark) {
     header{
         background-color: $dark-header-bg;
         .title{
@@ -28,6 +12,22 @@
                 border: 2px solid $dark-border-black;
             }
             
+        }
+    }
+}
+    
+@media (prefers-color-scheme: light) {
+    header{
+        background-color: $light-header-bg;
+        .title{
+            span{
+                background: $light-border-black;
+            }
+            div{
+                background: $light-header-white;
+                color: $light-header-red;
+                border: 2px solid $light-border-black;
+            }
         }
     }
 }
