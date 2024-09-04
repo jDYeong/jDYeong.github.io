@@ -1,6 +1,18 @@
 @charset "UTF-8";
 /*** 컬러 변수 ***/
 /*** 공통변수 ***/
+/* ani */
+@keyframes bounceAni {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 /* 모드 컬러 */
 .lightMode {
   background-color: #D6EADF;
@@ -46,7 +58,7 @@ body::-webkit-scrollbar-track {
   min-height: 90vh;
   margin: 0 auto;
   border-radius: 0.8rem;
-  overflow: hidden;
+  position: relative;
 }
 @media screen and (max-width: 1200px) {
   .container {
@@ -69,7 +81,7 @@ body::-webkit-scrollbar-track {
 }
 .lightMode header .title div {
   background: #fff;
-  color: #7D3C98;
+  color: #EC7063;
   border: 2px solid #222;
 }
 
@@ -81,7 +93,7 @@ body::-webkit-scrollbar-track {
 }
 .darkMode header .title div {
   background: #fff;
-  color: #9D59B9;
+  color: #EC7063;
   border: 2px solid #121212;
 }
 
@@ -90,6 +102,7 @@ header {
   padding: 3rem 0;
   position: relative;
   box-sizing: border-box;
+  border-radius: 0.6rem 0 0 0.6rem;
 }
 header .sticky {
   display: flex;
@@ -98,7 +111,7 @@ header .sticky {
   justify-content: flex-start;
   width: 100%;
   position: sticky;
-  top: 0;
+  top: 2rem;
 }
 header .title {
   width: 70%;
@@ -108,7 +121,7 @@ header .title {
 header .title span {
   display: block;
   width: 100%;
-  height: 10rem;
+  height: 12rem;
   border-radius: 0.8rem;
   position: absolute;
   bottom: -0.5rem;
@@ -122,11 +135,24 @@ header .title div {
   font-family: "양진체";
   letter-spacing: 1.3px;
   width: 100%;
-  height: 10rem;
+  height: 12rem;
   border-radius: 0.8rem;
   text-align: center;
   font-size: 1.5rem;
   line-height: 1.5;
+  padding-top: 4rem;
+  position: relative;
+}
+header .title div::before {
+  content: "";
+  display: block;
+  width: 2.4rem;
+  height: 2.4rem;
+  background: url("../images/icons/mood-happy.svg") no-repeat center;
+  position: absolute;
+  top: 2rem;
+  left: calc(50% - 1.2rem);
+  animation: bounceAni 1.3s ease-in-out infinite;
 }
 @media screen and (max-width: 960px) {
   header {
@@ -142,6 +168,9 @@ header .title div {
   background: #fff;
   border: 1px solid #222;
 }
+.lightMode nav ul li a::after {
+  background: url("../images/icons/arr-right.svg") no-repeat center;
+}
 .lightMode nav ul li:hover::before {
   background: #222;
 }
@@ -152,6 +181,9 @@ header .title div {
 .darkMode nav ul li a {
   background: #fff;
   border: 1px solid #121212;
+}
+.darkMode nav ul li a::after {
+  background: url("../images/icons/arr-right.svg") no-repeat center;
 }
 .darkMode nav ul li:hover::before {
   background: #121212;
@@ -171,7 +203,7 @@ nav ul li a {
   font-family: "양진체";
   letter-spacing: 1.3px;
   display: block;
-  padding: 1.5rem 1rem;
+  padding: 1rem;
   border-radius: 3rem;
   font-size: 1.4em;
   position: relative;
@@ -183,7 +215,6 @@ nav ul li a::after {
   display: block;
   width: 2.4rem;
   height: 2.4rem;
-  background: url("../images/icons/arr-right.svg") no-repeat center;
   position: absolute;
   top: calc(50% - 1.2rem);
   right: 0.5rem;
@@ -214,4 +245,25 @@ main {
     width: 100%;
     height: calc(100% - 6rem);
   }
+}
+/* 모드 컬러 */
+.lightMode footer p {
+  color: #222;
+}
+
+.darkMode footer p {
+  color: #fff;
+}
+
+footer {
+  width: 100%;
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+footer p {
+  font-size: 1.2rem;
+  line-height: 1.2;
+  text-align: center;
 }

@@ -7,6 +7,7 @@
                 a{
                     background: $light-header-white;
                     border: 1px solid $light-border-black;
+                    &::after{background: url($img-url-icons + 'arr-right.svg') no-repeat center;}
                 }
                 &.active{
                     
@@ -27,6 +28,7 @@
                 a{
                     background: $dark-header-white;
                     border: 1px solid $dark-border-black;
+                    &::after{background: url($img-url-icons + 'arr-right.svg') no-repeat center;}
                 }
                 &.active{
                     
@@ -49,7 +51,7 @@ nav{
             a{
                 @include fontTitle;
                 display: block;
-                padding: 1.5rem 1rem;
+                padding: 1rem;
                 border-radius: 3rem;
                 font-size: 1.4em;
                 position: relative;
@@ -60,7 +62,6 @@ nav{
                     display: block;
                     width: 2.4rem;
                     height: 2.4rem;
-                    background: url($img-url-icons + 'arr-right.svg') no-repeat center;
                     position: absolute;
                     top: calc(50% - 1.2rem);
                     right: .5rem;
