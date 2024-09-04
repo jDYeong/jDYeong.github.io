@@ -24,7 +24,7 @@
     border: 2px solid #121212;
   }
   .bg #name {
-    color: pink;
+    color: yellow;
   }
 }
 @media (prefers-color-scheme: light) {
