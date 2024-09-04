@@ -9,10 +9,11 @@
             background-color: $dark-sub-bg;
             border: 2px solid $dark-border-black;
         }
+        #name{color: pink;}
     }
-  }
-  
-  @media (prefers-color-scheme: light) {
+}
+    
+@media (prefers-color-scheme: light) {
     .bg{
         background-color: $light-bg;
         color: $light-font-color;
@@ -21,7 +22,8 @@
             border: 2px solid $light-border-black;
         }
     }
-  }
+    #name{color: red;}
+}
 
 /* 레이아웃 */
 //기본 스크롤 커스텀
