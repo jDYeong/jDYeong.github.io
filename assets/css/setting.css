@@ -10,6 +10,17 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+:root {
+  color-scheme: light only;
+}
+
+@media (prefers-color-scheme: dark) {
+  html,
+  body {
+    background: #fff !important;
+    background-color: #fff !important;
+  }
+}
 html {
   font-size: 62.5%;
 }

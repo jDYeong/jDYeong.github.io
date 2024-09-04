@@ -1,10 +1,10 @@
 /* 모드 컬러 */
-@media (prefers-color-scheme: dark) {
-    footer p{color: $dark-font-color;}
+.lightMode{
+    footer p{color: $light-font-color;}
 }
 
-@media (prefers-color-scheme: light) {
-    footer p{color: $light-font-color;}
+.darkMode{
+    footer p{color: $dark-font-color;}
 }
 
 footer{

@@ -14,32 +14,24 @@
   }
 }
 /* 모드 컬러 */
-@media (prefers-color-scheme: dark) {
-  .bg {
-    background-color: #292929;
-    color: #fff;
-  }
-  .bg .container {
-    background-color: #121212;
-    border: 2px solid #121212;
-  }
-  .bg #name {
-    color: yellow;
-  }
+.lightMode {
+  background-color: #D6EADF;
+  color: #222;
 }
-@media (prefers-color-scheme: light) {
-  .bg {
-    background-color: #D6EADF;
-    color: #222;
-  }
-  .bg .container {
-    background-color: #fff;
-    border: 2px solid #222;
-  }
-  #name {
-    color: red;
-  }
+.lightMode .container {
+  background-color: #fff;
+  border: 2px solid #222;
 }
+
+.darkMode {
+  background-color: #292929;
+  color: #fff;
+}
+.darkMode .container {
+  background-color: #121212;
+  border: 2px solid #121212;
+}
+
 /* 레이아웃 */
 body::-webkit-scrollbar {
   width: 10px;
@@ -81,32 +73,30 @@ body::-webkit-scrollbar-track {
   }
 }
 /* 모드 컬러 */
-@media (prefers-color-scheme: dark) {
-  header {
-    background-color: #F3B562;
-  }
-  header .title span {
-    background: #121212;
-  }
-  header .title div {
-    background: #fff;
-    color: #EC7063;
-    border: 2px solid #121212;
-  }
+.lightMode header {
+  background-color: #F3B562;
 }
-@media (prefers-color-scheme: light) {
-  header {
-    background-color: #F3B562;
-  }
-  header .title span {
-    background: #222;
-  }
-  header .title div {
-    background: #fff;
-    color: #EC7063;
-    border: 2px solid #222;
-  }
+.lightMode header .title span {
+  background: #222;
 }
+.lightMode header .title div {
+  background: #fff;
+  color: #EC7063;
+  border: 2px solid #222;
+}
+
+.darkMode header {
+  background-color: #F3B562;
+}
+.darkMode header .title span {
+  background: #121212;
+}
+.darkMode header .title div {
+  background: #fff;
+  color: #EC7063;
+  border: 2px solid #121212;
+}
+
 header {
   width: 15%;
   padding: 3rem 0;
@@ -171,36 +161,34 @@ header .title div::before {
   }
 }
 /* 모드 컬러 */
-@media (prefers-color-scheme: dark) {
-  nav ul {
-    padding: 2rem 0;
-  }
-  nav ul li a {
-    background: #fff;
-    border: 1px solid #121212;
-  }
-  nav ul li a::after {
-    background: url("../images/icons/arr-right.svg") no-repeat center;
-  }
-  nav ul li:hover::before {
-    background: #121212;
-  }
+.lightMode nav ul {
+  padding: 2rem 0;
 }
-@media (prefers-color-scheme: light) {
-  nav ul {
-    padding: 2rem 0;
-  }
-  nav ul li a {
-    background: #fff;
-    border: 1px solid #222;
-  }
-  nav ul li a::after {
-    background: url("../images/icons/arr-right.svg") no-repeat center;
-  }
-  nav ul li:hover::before {
-    background: #222;
-  }
+.lightMode nav ul li a {
+  background: #fff;
+  border: 1px solid #222;
 }
+.lightMode nav ul li a::after {
+  background: url("../images/icons/arr-right.svg") no-repeat center;
+}
+.lightMode nav ul li:hover::before {
+  background: #222;
+}
+
+.darkMode nav ul {
+  padding: 2rem 0;
+}
+.darkMode nav ul li a {
+  background: #fff;
+  border: 1px solid #121212;
+}
+.darkMode nav ul li a::after {
+  background: url("../images/icons/arr-right.svg") no-repeat center;
+}
+.darkMode nav ul li:hover::before {
+  background: #121212;
+}
+
 nav {
   width: 70%;
 }
@@ -259,16 +247,14 @@ main {
   }
 }
 /* 모드 컬러 */
-@media (prefers-color-scheme: dark) {
-  footer p {
-    color: #fff;
-  }
+.lightMode footer p {
+  color: #222;
 }
-@media (prefers-color-scheme: light) {
-  footer p {
-    color: #222;
-  }
+
+.darkMode footer p {
+  color: #fff;
 }
+
 footer {
   width: 100%;
   position: absolute;

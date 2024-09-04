@@ -1,28 +1,22 @@
 @import '../setting/_var.scss';
 
 /* 모드 컬러 */
-@media (prefers-color-scheme: dark) {
-    .bg{
-        background-color: $dark-bg;
-        color: $dark-font-color;
-        .container{
-            background-color: $dark-sub-bg;
-            border: 2px solid $dark-border-black;
-        }
-        #name{color: yellow;}
+.lightMode{
+    background-color: $light-bg;
+    color: $light-font-color;
+    .container{
+        background-color: $light-sub-bg;
+        border: 2px solid $light-border-black;
     }
 }
-    
-@media (prefers-color-scheme: light) {
-    .bg{
-        background-color: $light-bg;
-        color: $light-font-color;
-        .container{
-            background-color: $light-sub-bg;
-            border: 2px solid $light-border-black;
-        }
+
+.darkMode{
+    background-color: $dark-bg;
+    color: $dark-font-color;
+    .container{
+        background-color: $dark-sub-bg;
+        border: 2px solid $dark-border-black;
     }
-    #name{color: red;}
 }
 
 /* 레이아웃 */

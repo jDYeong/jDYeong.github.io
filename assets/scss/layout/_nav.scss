@@ -1,26 +1,5 @@
 /* 모드 컬러 */
-@media (prefers-color-scheme: dark) {
-    nav{
-        ul{
-            padding: 2rem 0;
-            li{
-                a{
-                    background: $dark-header-white;
-                    border: 1px solid $dark-border-black;
-                    &::after{background: url($img-url-icons + 'arr-right.svg') no-repeat center;}
-                }
-                &.active{
-                    
-                } 
-                &:hover{
-                    &::before{background: $dark-border-black;}
-                }
-            }
-        }
-    }
-}
-
-@media (prefers-color-scheme: light) {
+.lightMode{
     nav{
         ul{
             padding: 2rem 0;
@@ -35,6 +14,27 @@
                 } 
                 &:hover{
                     &::before{background: $light-border-black;}
+                }
+            }
+        }
+    }
+}
+
+.darkMode{
+    nav{
+        ul{
+            padding: 2rem 0;
+            li{
+                a{
+                    background: $dark-header-white;
+                    border: 1px solid $dark-border-black;
+                    &::after{background: url($img-url-icons + 'arr-right.svg') no-repeat center;}
+                }
+                &.active{
+                    
+                } 
+                &:hover{
+                    &::before{background: $dark-border-black;}
                 }
             }
         }
