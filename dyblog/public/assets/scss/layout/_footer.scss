@@ -1,0 +1,20 @@
+/* 모드 컬러 */
+.lightMode{
+    footer p{color: $light-font-color;}
+}
+
+.darkMode{
+    footer p{color: $dark-font-color;}
+}
+
+footer{
+    width: 100%;
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    p{
+        font-size: 1rem;
+        text-align: center;
+    }
+}

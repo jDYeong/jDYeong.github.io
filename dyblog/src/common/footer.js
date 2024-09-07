@@ -1,8 +1,7 @@
+import React from 'react';
 export default function Footer(){
 
     return(
-        <footer>
-            <h1>푸터</h1>
-        </footer>
+        <footer><p>&copy; 2024. All rights reserved.</p></footer>
     )
 }

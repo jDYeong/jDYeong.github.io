@@ -1,4 +1,5 @@
 {
+    "emmet.includeLanguages":{"javascript" : "javascriptreact"},
     "liveSassCompile.settings.generateMap": false,
     "liveSassCompile.settings.formats": [
     {

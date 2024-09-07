@@ -1,6 +1,8 @@
+import React from 'react';
 import Container from "./common/container";
 
 function App() {
+  
   return (
     <div className="App">
       <Container></Container>
