@@ -114,3 +114,12 @@ $img-url-icons : '../images/icons/';
     50%{transform: translateY(-5px);}
     100%{transform: translateY(0);}
 }
+
+/* button type */
+@mixin btnType1{
+    padding: .2rem;
+    border: 1px solid $dark-border-black;
+    border-bottom-width: 2px;
+    border-right-width: 2px;
+    box-sizing: border-box;
+}

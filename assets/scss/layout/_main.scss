@@ -1,15 +1,20 @@
 /* 모드 컬러 */
 .lightMode{
-    main{}
+    main{
+        border-top: 1px solid $light-border-black;
+    }
 }
 
 .darkMode{
-    main{}
+    main{
+        border-top: 1px solid $dark-border-black;
+    }
 }
 
 main{
     width: 85%;
-    height: 1200px;
+    margin-top: 4rem;
+    box-sizing: border-box;
 
     @media screen and (max-width: 1200px) {
     

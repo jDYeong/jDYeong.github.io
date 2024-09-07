@@ -13,6 +13,7 @@
     transform: translateY(0);
   }
 }
+/* button type */
 /* 모드 컬러 */
 .lightMode {
   background-color: #D6EADF;
@@ -57,7 +58,6 @@ body::-webkit-scrollbar-track {
   min-width: 100rem;
   min-height: 90vh;
   margin: 0 auto;
-  border-radius: 0.8rem;
   position: relative;
 }
 @media screen and (max-width: 1200px) {
@@ -75,34 +75,38 @@ body::-webkit-scrollbar-track {
 /* 모드 컬러 */
 .lightMode header {
   background-color: #F3B562;
+  border-right-color: #222;
 }
-.lightMode header .title span {
-  background: #222;
-}
-.lightMode header .title div {
+.lightMode header .title p {
   background: #fff;
-  color: #EC7063;
-  border: 2px solid #222;
+  border: 1px solid #222;
 }
-
+.lightMode header .title p::after {
+  border-color: #fff transparent;
+}
+.lightMode header .title p::before {
+  border-color: #222 transparent;
+}
 .darkMode header {
   background-color: #F3B562;
+  border-right-color: #121212;
 }
-.darkMode header .title span {
-  background: #121212;
-}
-.darkMode header .title div {
+.darkMode header .title p {
   background: #fff;
-  color: #EC7063;
-  border: 2px solid #121212;
+  border: 1px solid #121212;
 }
-
+.darkMode header .title p::after {
+  border-color: #fff transparent;
+}
+.darkMode header .title p::before {
+  border-color: #121212 transparent;
+}
 header {
   width: 15%;
   padding: 3rem 0;
   position: relative;
+  border-right: 1px solid;
   box-sizing: border-box;
-  border-radius: 0.6rem 0 0 0.6rem;
 }
 header .sticky {
   display: flex;
@@ -114,50 +118,72 @@ header .sticky {
   top: 2rem;
 }
 header .title {
-  width: 70%;
+  width: calc(100% - 2rem);
   position: relative;
+  text-align: center;
+  font-weight: normal;
   z-index: 1;
+  word-break: keep-all;
+}
+header .title p {
+  width: 100%;
+  font-size: 1.1rem;
+  line-height: 1.3;
+  border-radius: 1.2rem;
+  padding: 0.5rem;
+  margin-bottom: 1.4rem;
+  animation: bounceAni 1.3s ease-in-out infinite;
+  position: relative;
+  box-sizing: border-box;
+}
+header .title p::after {
+  content: "";
+  position: absolute;
+  border-style: solid;
+  border-width: 8px 8px 0;
+  display: block;
+  width: 0;
+  z-index: 1;
+  bottom: -7px;
+  left: calc(50% - 7px);
+}
+header .title p::before {
+  content: "";
+  position: absolute;
+  border-style: solid;
+  border-width: 8px 8px 0;
+  display: block;
+  width: 0;
+  z-index: 0;
+  bottom: -8px;
+  left: calc(50% - 7px);
 }
 header .title span {
   display: block;
-  width: 100%;
-  height: 12rem;
-  border-radius: 0.8rem;
-  position: absolute;
-  bottom: -0.5rem;
-  right: -0.5rem;
-  z-index: -1;
-}
-header .title div {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: "양진체";
-  letter-spacing: 1.3px;
-  width: 100%;
-  height: 12rem;
-  border-radius: 0.8rem;
-  text-align: center;
-  font-size: 1.5rem;
-  line-height: 1.5;
-  padding-top: 4rem;
-  position: relative;
-}
-header .title div::before {
-  content: "";
-  display: block;
+  margin: 0 auto;
   width: 2.4rem;
   height: 2.4rem;
   background: url("../images/icons/mood-happy.svg") no-repeat center;
-  position: absolute;
-  top: 2rem;
-  left: calc(50% - 1.2rem);
-  animation: bounceAni 1.3s ease-in-out infinite;
+}
+header .title div {
+  font-family: "양진체";
+  letter-spacing: 1.3px;
+  font-size: 1.6rem;
+  line-height: 1.6;
+  font-weight: 800;
+  padding-top: 0.4rem;
 }
 @media screen and (max-width: 960px) {
   header {
     width: 100%;
-    height: 6rem;
+    padding: 0 2rem;
+  }
+  header .sticky {
+    flex-direction: row;
+    gap: 0 2.4rem;
+  }
+  header .title {
+    width: 12rem;
   }
 }
 /* 모드 컬러 */
@@ -166,13 +192,10 @@ header .title div::before {
 }
 .lightMode nav ul li a {
   background: #fff;
-  border: 1px solid #222;
+  border-color: #222;
 }
 .lightMode nav ul li a::after {
   background: url("../images/icons/arr-right.svg") no-repeat center;
-}
-.lightMode nav ul li:hover::before {
-  background: #222;
 }
 
 .darkMode nav ul {
@@ -180,20 +203,17 @@ header .title div::before {
 }
 .darkMode nav ul li a {
   background: #fff;
-  border: 1px solid #121212;
+  border-color: #121212;
 }
 .darkMode nav ul li a::after {
   background: url("../images/icons/arr-right.svg") no-repeat center;
 }
-.darkMode nav ul li:hover::before {
-  background: #121212;
-}
 
 nav {
-  width: 70%;
+  width: calc(100% - 1.6rem);
 }
 nav ul {
-  padding: 2rem 0;
+  padding: 2.4rem 0;
 }
 nav ul li {
   padding: 0.5rem 0;
@@ -202,13 +222,17 @@ nav ul li {
 nav ul li a {
   font-family: "양진체";
   letter-spacing: 1.3px;
+  width: 100%;
   display: block;
-  padding: 1rem;
-  border-radius: 3rem;
+  padding: 1rem 3rem 1rem 1rem;
   font-size: 1.4em;
+  line-height: 1.4;
+  font-weight: 800;
   position: relative;
-  transition: 0.23s ease-in;
+  right: 1px;
   z-index: 2;
+  border-style: solid;
+  border-width: 1px 2px 2px 1px;
 }
 nav ul li a::after {
   content: "";
@@ -220,25 +244,28 @@ nav ul li a::after {
   right: 0.5rem;
 }
 nav ul li:hover a {
-  top: -0.4rem;
-  left: -0.4rem;
+  right: 0;
+  bottom: -1px;
+  border-width: 2px 1px 1px 2px;
 }
-nav ul li::before {
-  content: "";
-  display: block;
-  width: 100%;
-  height: calc(100% - 1.5rem);
-  border-radius: 3rem;
-  position: absolute;
-  bottom: 0.4rem;
-  right: -0.1rem;
-  background: transparent;
+@media screen and (max-width: 960px) {
+  nav {
+    width: calc(100% - 12rem);
+  }
+}
+/* 모드 컬러 */
+.lightMode main {
+  border-top: 1px solid #222;
 }
 
-/* 모드 컬러 */
+.darkMode main {
+  border-top: 1px solid #121212;
+}
+
 main {
   width: 85%;
-  height: 1200px;
+  margin-top: 4rem;
+  box-sizing: border-box;
 }
 @media screen and (max-width: 960px) {
   main {
@@ -263,7 +290,31 @@ footer {
   transform: translateX(-50%);
 }
 footer p {
-  font-size: 1.2rem;
-  line-height: 1.2;
+  font-size: 1rem;
   text-align: center;
+}
+
+.main-btns {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: flex-end;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  padding: 0.4rem;
+  box-sizing: border-box;
+}
+.main-btns .btn-type1 {
+  padding: 0.2rem;
+  border: 1px solid #121212;
+  border-bottom-width: 2px;
+  border-right-width: 2px;
+  box-sizing: border-box;
+}
+@media screen and (max-width: 960px) {
+  .main-btns {
+    position: static;
+  }
 }

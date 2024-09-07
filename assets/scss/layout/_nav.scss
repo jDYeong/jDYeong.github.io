@@ -6,14 +6,8 @@
             li{
                 a{
                     background: $light-header-white;
-                    border: 1px solid $light-border-black;
+                    border-color: $light-border-black;
                     &::after{background: url($img-url-icons + 'arr-right.svg') no-repeat center;}
-                }
-                &.active{
-                    
-                } 
-                &:hover{
-                    &::before{background: $light-border-black;}
                 }
             }
         }
@@ -27,14 +21,8 @@
             li{
                 a{
                     background: $dark-header-white;
-                    border: 1px solid $dark-border-black;
+                    border-color: $dark-border-black;
                     &::after{background: url($img-url-icons + 'arr-right.svg') no-repeat center;}
-                }
-                &.active{
-                    
-                } 
-                &:hover{
-                    &::before{background: $dark-border-black;}
                 }
             }
         }
@@ -42,21 +30,25 @@
 }
 
 nav{
-    width: 70%;
+    width: calc(100% - 1.6rem);
     ul{
-        padding: 2rem 0;
+        padding: 2.4rem 0;
         li{
             padding: .5rem 0;
             position: relative;
             a{
                 @include fontTitle;
+                width: 100%;
                 display: block;
-                padding: 1rem;
-                border-radius: 3rem;
+                padding: 1rem 3rem 1rem 1rem;
                 font-size: 1.4em;
+                line-height: 1.4;
+                font-weight: 800;
                 position: relative;
-                transition: $ani-fast;
+                right: 1px;
                 z-index: 2;
+                border-style: solid;
+                border-width: 1px 2px 2px 1px;
                 &::after{
                     content: '';
                     display: block;
@@ -67,21 +59,25 @@ nav{
                     right: .5rem;
                 }
             }
-            &:hover a{
-                top: -.4rem;
-                left: -.4rem;
-            }
-            &::before{
-                content: '';
-                display: block;
-                width: 100%;
-                height: calc(100% - 1.5rem);
-                border-radius: 3rem;
-                position: absolute;
-                bottom: .4rem;
-                right: -.1rem;
-                background: transparent;
-            }
+            &:hover{
+                a{
+                    right: 0;
+                    bottom: -1px;
+                    border-width: 2px 1px 1px 2px;
+                }
+            } 
         }
+    }
+
+    @media screen and (max-width: 1200px) {
+    
+    }
+
+    @media screen and (max-width: 960px) {
+        width: calc(100% - 12rem);
+    }
+    
+    @media screen and (max-width: 720px) {
+        
     }
 }
