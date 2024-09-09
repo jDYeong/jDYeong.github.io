@@ -106,7 +106,8 @@ header {
   width: 15%;
   padding: 3rem 0;
   position: relative;
-  border-right: 1px solid;
+  border-width: 0 1px 0 0;
+  border-style: solid;
   box-sizing: border-box;
 }
 header .sticky {
@@ -195,8 +196,16 @@ header .title div {
 .lightMode nav ul li a {
   background: #fff;
   border-color: #222;
+  color: #222;
 }
 .lightMode nav ul li a::after {
+  background: url("../images/icons/arr-right.svg") no-repeat center;
+}
+.lightMode nav ul li.active a {
+  border-color: #7D3C98;
+  color: #7D3C98;
+}
+.lightMode nav ul li.active a::after {
   background: url("../images/icons/arr-right.svg") no-repeat center;
 }
 
@@ -206,6 +215,7 @@ header .title div {
 .darkMode nav ul li a {
   background: #fff;
   border-color: #121212;
+  color: #fff;
 }
 .darkMode nav ul li a::after {
   background: url("../images/icons/arr-right.svg") no-repeat center;
@@ -254,11 +264,15 @@ nav ul li:hover a {
   nav {
     width: calc(100% + 4rem);
     position: absolute;
-    bottom: 0;
+    bottom: auto;
+    top: 100%;
     left: -2rem;
     background: #F6D8AE;
     padding: 0 2rem;
     z-index: 1;
+  }
+  nav ul {
+    padding: 1.6rem 0;
   }
 }
 /* 모드 컬러 */
@@ -324,9 +338,4 @@ footer p {
   border-bottom-width: 2px;
   border-right-width: 2px;
   box-sizing: border-box;
-}
-@media screen and (max-width: 960px) {
-  .main-btns {
-    position: static;
-  }
 }

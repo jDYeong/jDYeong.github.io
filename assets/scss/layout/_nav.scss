@@ -7,6 +7,12 @@
                 a{
                     background: $light-header-white;
                     border-color: $light-border-black;
+                    color: $light-font-color;
+                    &::after{background: url($img-url-icons + 'arr-right.svg') no-repeat center;}
+                }
+                &.active a{
+                    border-color: $light-header-purple;
+                    color: $light-header-purple;
                     &::after{background: url($img-url-icons + 'arr-right.svg') no-repeat center;}
                 }
             }
@@ -22,6 +28,7 @@
                 a{
                     background: $dark-header-white;
                     border-color: $dark-border-black;
+                    color: $dark-font-color;
                     &::after{background: url($img-url-icons + 'arr-right.svg') no-repeat center;}
                 }
             }
@@ -76,11 +83,23 @@ nav{
     @media screen and (max-width: 960px) {
         width: calc(100% + 4rem);
         position: absolute;
-        bottom: 0;
+        bottom: auto;
+        top: 100%;
         left: -2rem;
         background: $light-bg-orange;
         padding: 0 2rem;
         z-index: 1;
+        ul{
+            padding: 1.6rem 0;
+            li{
+                a{
+
+                    &::after{
+
+                    }
+                }
+            }
+        }
     }
     
     @media screen and (max-width: 720px) {
