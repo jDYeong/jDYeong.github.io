@@ -75,7 +75,7 @@ body::-webkit-scrollbar-track {
 /* 모드 컬러 */
 .lightMode header {
   background-color: #F3B562;
-  border-right-color: #222;
+  border-color: #222;
 }
 .lightMode header .title p {
   background: #fff;
@@ -87,9 +87,10 @@ body::-webkit-scrollbar-track {
 .lightMode header .title p::before {
   border-color: #222 transparent;
 }
+
 .darkMode header {
   background-color: #F3B562;
-  border-right-color: #121212;
+  border-color: #121212;
 }
 .darkMode header .title p {
   background: #fff;
@@ -177,6 +178,7 @@ header .title div {
   header {
     width: 100%;
     padding: 0 2rem;
+    border-width: 0 0 1px 0;
   }
   header .sticky {
     flex-direction: row;
@@ -250,7 +252,13 @@ nav ul li:hover a {
 }
 @media screen and (max-width: 960px) {
   nav {
-    width: calc(100% - 12rem);
+    width: calc(100% + 4rem);
+    position: absolute;
+    bottom: 0;
+    left: -2rem;
+    background: #F6D8AE;
+    padding: 0 2rem;
+    z-index: 1;
   }
 }
 /* 모드 컬러 */
@@ -293,7 +301,11 @@ footer p {
   font-size: 1rem;
   text-align: center;
 }
-
+@media screen and (max-width: 960px) {
+  footer {
+    display: none;
+  }
+}
 .main-btns {
   display: flex;
   gap: 0.5rem;
