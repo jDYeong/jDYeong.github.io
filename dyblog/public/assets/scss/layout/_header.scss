@@ -2,7 +2,7 @@
 .lightMode{
     header{
         background-color: $light-header-bg;
-        border-right-color: $light-border-black;
+        border-color: $light-border-black;
         .title{
             p{
                 background: $light-header-white;
@@ -14,7 +14,6 @@
                     border-color: $light-border-black transparent;
                 }
             }
-            span{}
         }
     }
 }
@@ -22,7 +21,7 @@
 .darkMode{
     header{
         background-color: $dark-header-bg;
-        border-right-color: $dark-border-black;
+        border-color: $dark-border-black;
         .title{
             p{
                 background: $dark-header-white;
@@ -118,6 +117,7 @@ header{
     @media screen and (max-width: 960px) {
         width: 100%;
         padding: 0 2rem;
+        border-width: 0 0 1px 0;
         .sticky{
             flex-direction: row;
             gap: 0 2.4rem;

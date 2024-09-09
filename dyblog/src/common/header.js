@@ -1,4 +1,5 @@
 import React from 'react';
+import { Pc } from './MediaQuery';
 import Nav from "./nav";
 import Footer from "./footer";
 
@@ -14,7 +15,7 @@ export default function Header(){
                 </h1>
                 <Nav />
             </div>
-            <Footer />
+            <Pc><Footer /></Pc>
         </header>
     )
 }
