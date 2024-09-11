@@ -43,7 +43,8 @@ header{
     width: 15%;
     padding: 3rem 0;
     position: relative;
-    border-right: 1px solid;
+    border-width: 0 1px 0 0;
+    border-style: solid;
     box-sizing: border-box;
 
     .sticky{
@@ -116,14 +117,24 @@ header{
 
     @media screen and (max-width: 960px) {
         width: 100%;
-        padding: 0 2rem;
+        height: 8rem;
+        padding: 0;
         border-width: 0 0 1px 0;
         .sticky{
+            height: calc(100% + 1px);
             flex-direction: row;
             gap: 0 2.4rem;
+            padding: 1.2rem 2rem;
         }
         .title{
-            width: 12rem;
+            width: 13.5rem;
+            p{
+                margin-bottom: 5px;
+                &::before{left: 12px;}
+                &::after{left: 12px;}
+            }
+            span{margin: 0 0 0 .9rem;}
+            div{display: none;}
         }
     }
     

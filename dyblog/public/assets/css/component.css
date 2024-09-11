@@ -1,0 +1,14 @@
+.lightMode svg.moon {
+  display: none;
+}
+
+.darkMode svg.sun {
+  display: none;
+}
+
+button.open .close {
+  display: none;
+}
+button.close .open {
+  display: none;
+}
