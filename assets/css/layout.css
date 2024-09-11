@@ -178,54 +178,61 @@ header .title div {
 @media screen and (max-width: 960px) {
   header {
     width: 100%;
-    padding: 0 2rem;
+    height: 8rem;
+    padding: 0;
     border-width: 0 0 1px 0;
   }
   header .sticky {
+    height: calc(100% + 1px);
     flex-direction: row;
     gap: 0 2.4rem;
+    padding: 1.2rem 2rem;
   }
   header .title {
-    width: 12rem;
+    width: 13.5rem;
+  }
+  header .title p {
+    margin-bottom: 5px;
+  }
+  header .title p::before {
+    left: 12px;
+  }
+  header .title p::after {
+    left: 12px;
+  }
+  header .title span {
+    margin: 0 0 0 0.9rem;
+  }
+  header .title div {
+    display: none;
   }
 }
 /* 모드 컬러 */
-.lightMode nav ul {
-  padding: 2rem 0;
-}
 .lightMode nav ul li a {
   background: #fff;
   border-color: #222;
   color: #222;
 }
-.lightMode nav ul li a::after {
-  background: url("../images/icons/arr-right.svg") no-repeat center;
-}
-.lightMode nav ul li.active a {
+.lightMode nav ul li a.active {
   border-color: #7D3C98;
   color: #7D3C98;
 }
-.lightMode nav ul li.active a::after {
-  background: url("../images/icons/arr-right.svg") no-repeat center;
-}
 
-.darkMode nav ul {
-  padding: 2rem 0;
-}
 .darkMode nav ul li a {
   background: #fff;
   border-color: #121212;
   color: #fff;
 }
-.darkMode nav ul li a::after {
-  background: url("../images/icons/arr-right.svg") no-repeat center;
+.darkMode nav ul li a.active {
+  border-color: #9D59B9;
+  color: #9D59B9;
 }
 
 nav {
   width: calc(100% - 1.6rem);
 }
 nav ul {
-  padding: 2.4rem 0;
+  padding: 2rem 0;
 }
 nav ul li {
   padding: 0.5rem 0;
@@ -246,8 +253,7 @@ nav ul li a {
   border-style: solid;
   border-width: 1px 2px 2px 1px;
 }
-nav ul li a::after {
-  content: "";
+nav ul li a svg {
   display: block;
   width: 2.4rem;
   height: 2.4rem;
@@ -260,19 +266,52 @@ nav ul li:hover a {
   bottom: -1px;
   border-width: 2px 1px 1px 2px;
 }
+
 @media screen and (max-width: 960px) {
+  /* 모드 컬러 */
+  .lightMode nav ul li a {
+    background: transparent;
+  }
+  .darkMode nav ul li a {
+    background: transparent;
+  }
   nav {
-    width: calc(100% + 4rem);
+    width: 100%;
     position: absolute;
     bottom: auto;
     top: 100%;
-    left: -2rem;
+    left: 0;
     background: #F6D8AE;
     padding: 0 2rem;
     z-index: 1;
+    transition: transform 0.23s ease-in;
   }
   nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
     padding: 1.6rem 0;
+  }
+  nav ul li {
+    flex: 40% 1 1;
+    padding: 0;
+  }
+  nav ul li:first-of-type {
+    flex: 100% 1 1;
+  }
+  nav ul li a {
+    border-width: 0 0 2px 0;
+    padding: 0 0 0.5rem 0;
+  }
+  nav ul li a svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    top: calc(50% - 1rem);
+  }
+  nav ul li:hover a {
+    right: 1px;
+    bottom: 0;
+    border-width: 0 0 2px 0;
   }
 }
 /* 모드 컬러 */
@@ -334,8 +373,23 @@ footer p {
 }
 .main-btns .btn-type1 {
   padding: 0.2rem;
+  background: #fff;
   border: 1px solid #121212;
   border-bottom-width: 2px;
   border-right-width: 2px;
   box-sizing: border-box;
+}
+.main-btns .btn-type1 svg.hide {
+  display: none;
+}
+
+@media screen and (max-width: 960px) {
+  .main-btns {
+    padding: 1rem;
+  }
+  .main-btns button:last-of-type {
+    position: absolute;
+    top: calc(100% - 1rem);
+    right: 1rem;
+  }
 }

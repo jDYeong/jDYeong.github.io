@@ -2,18 +2,15 @@
 .lightMode{
     nav{
         ul{
-            padding: 2rem 0;
             li{
                 a{
                     background: $light-header-white;
                     border-color: $light-border-black;
                     color: $light-font-color;
-                    &::after{background: url($img-url-icons + 'arr-right.svg') no-repeat center;}
-                }
-                &.active a{
-                    border-color: $light-header-purple;
-                    color: $light-header-purple;
-                    &::after{background: url($img-url-icons + 'arr-right.svg') no-repeat center;}
+                    &.active{
+                        border-color: $light-header-purple;
+                        color: $light-header-purple;
+                    }
                 }
             }
         }
@@ -23,13 +20,15 @@
 .darkMode{
     nav{
         ul{
-            padding: 2rem 0;
             li{
                 a{
                     background: $dark-header-white;
                     border-color: $dark-border-black;
                     color: $dark-font-color;
-                    &::after{background: url($img-url-icons + 'arr-right.svg') no-repeat center;}
+                    &.active{
+                        border-color: $dark-header-purple;
+                        color: $dark-header-purple;
+                    }
                 }
             }
         }
@@ -39,7 +38,7 @@
 nav{
     width: calc(100% - 1.6rem);
     ul{
-        padding: 2.4rem 0;
+        padding: 2rem 0;
         li{
             padding: .5rem 0;
             position: relative;
@@ -56,8 +55,7 @@ nav{
                 z-index: 2;
                 border-style: solid;
                 border-width: 1px 2px 2px 1px;
-                &::after{
-                    content: '';
+                svg{
                     display: block;
                     width: 2.4rem;
                     height: 2.4rem;
@@ -75,34 +73,62 @@ nav{
             } 
         }
     }
+}
 
-    @media screen and (max-width: 1200px) {
+@media screen and (max-width: 1200px) {
     
+}
+
+@media screen and (max-width: 960px) {
+    /* 모드 컬러 */
+    .lightMode{
+        nav ul li a{background: transparent;}
     }
 
-    @media screen and (max-width: 960px) {
-        width: calc(100% + 4rem);
+    .darkMode{
+        nav ul li a{background: transparent;}
+    }
+
+    nav{
+        width: 100%;
         position: absolute;
         bottom: auto;
         top: 100%;
-        left: -2rem;
+        left: 0;
         background: $light-bg-orange;
         padding: 0 2rem;
         z-index: 1;
+        transition: transform $ani-fast;
         ul{
+            @include flex;
+            flex-wrap: wrap;
+            gap: 16px;
             padding: 1.6rem 0;
             li{
+                flex: 40% 1 1;
+                padding: 0;
+                &:first-of-type{flex: 100% 1 1;}
                 a{
-
-                    &::after{
-
+                    border-width: 0 0 2px 0;
+                    padding: 0 0 .5rem 0;
+                    svg{
+                        width: 1.5rem;
+                        height: 1.5rem;
+                        top: calc(50% - 1rem);
+                    }
+                }
+                &:hover{
+                    a{
+                        right: 1px;
+                        bottom: 0;
+                        border-width: 0 0 2px 0;
                     }
                 }
             }
         }
     }
+}
+
+@media screen and (max-width: 720px) {
     
-    @media screen and (max-width: 720px) {
-        
-    }
 }

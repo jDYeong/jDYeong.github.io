@@ -13,16 +13,23 @@
     .btn-type1{
         @include btnType1;
     }
+}
 
-    @media screen and (max-width: 1200px) {
+@media screen and (max-width: 1200px) {
     
-    }
+}
 
-    @media screen and (max-width: 960px) {
-        //position: static;
+@media screen and (max-width: 960px) {
+    .main-btns{
+        padding: 1rem;
+        button:last-of-type{
+            position: absolute;
+            top: calc(100% - 1rem);
+            right: 1rem;
+        }
     }
+}
+
+@media screen and (max-width: 720px) {
     
-    @media screen and (max-width: 720px) {
-        
-    }
 }
