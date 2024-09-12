@@ -60,10 +60,12 @@ body::-webkit-scrollbar-track {
   margin: 0 auto;
   position: relative;
 }
+
 @media screen and (max-width: 1200px) {
   .container {
     width: 90vw;
     min-width: auto;
+    overflow: hidden;
   }
 }
 @media screen and (max-width: 960px) {
@@ -80,6 +82,7 @@ body::-webkit-scrollbar-track {
 .lightMode header .title p {
   background: #fff;
   border: 1px solid #222;
+  color: #222;
 }
 .lightMode header .title p::after {
   border-color: #fff transparent;
@@ -95,6 +98,7 @@ body::-webkit-scrollbar-track {
 .darkMode header .title p {
   background: #fff;
   border: 1px solid #121212;
+  color: #222;
 }
 .darkMode header .title p::after {
   border-color: #fff transparent;
@@ -175,7 +179,17 @@ header .title div {
   font-weight: 800;
   padding-top: 0.4rem;
 }
+
 @media screen and (max-width: 960px) {
+  /* 모드 컬러 */
+  .lightMode header .sticky {
+    background-color: #F3B562;
+    border-color: #222;
+  }
+  .darkMode header .sticky {
+    background-color: #F3B562;
+    border-color: #121212;
+  }
   header {
     width: 100%;
     height: 8rem;
@@ -187,6 +201,8 @@ header .title div {
     flex-direction: row;
     gap: 0 2.4rem;
     padding: 1.2rem 2rem;
+    z-index: 1;
+    border-bottom: 1px solid;
   }
   header .title {
     width: 13.5rem;
@@ -221,7 +237,7 @@ header .title div {
 .darkMode nav ul li a {
   background: #fff;
   border-color: #121212;
-  color: #fff;
+  color: #222;
 }
 .darkMode nav ul li a.active {
   border-color: #9D59B9;
@@ -283,7 +299,8 @@ nav ul li:hover a {
     left: 0;
     background: #F6D8AE;
     padding: 0 2rem;
-    z-index: 1;
+    z-index: 0;
+    transform: translateY(-100%);
     transition: transform 0.23s ease-in;
   }
   nav ul {
@@ -312,6 +329,9 @@ nav ul li:hover a {
     right: 1px;
     bottom: 0;
     border-width: 0 0 2px 0;
+  }
+  nav.open {
+    transform: translateY(0);
   }
 }
 /* 모드 컬러 */
@@ -369,6 +389,7 @@ footer p {
   right: 0;
   width: 100%;
   padding: 0.4rem;
+  z-index: 2;
   box-sizing: border-box;
 }
 .main-btns .btn-type1 {
@@ -389,7 +410,7 @@ footer p {
   }
   .main-btns button:last-of-type {
     position: absolute;
-    top: calc(100% - 1rem);
+    top: calc(100% - 0.5rem);
     right: 1rem;
   }
 }

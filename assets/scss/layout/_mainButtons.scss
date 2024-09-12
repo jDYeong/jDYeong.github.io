@@ -8,6 +8,7 @@
     right: 0;
     width: 100%;
     padding: 0.4rem;
+    z-index: 2;
     box-sizing: border-box;
 
     .btn-type1{
@@ -24,7 +25,7 @@
         padding: 1rem;
         button:last-of-type{
             position: absolute;
-            top: calc(100% - 1rem);
+            top: calc(100% - .5rem);
             right: 1rem;
         }
     }

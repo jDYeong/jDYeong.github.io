@@ -7,6 +7,7 @@
             p{
                 background: $light-header-white;
                 border: 1px solid $light-border-black;
+                color: $light-font-color;
                 &::after{
                     border-color: $light-header-white transparent;
                 }
@@ -26,6 +27,7 @@
             p{
                 background: $dark-header-white;
                 border: 1px solid $dark-border-black;
+                color: $light-font-color;
                 &::after{
                     border-color: $dark-header-white transparent;
                 }
@@ -110,12 +112,29 @@ header{
         }
         
     }
+}
 
-    @media screen and (max-width: 1200px) {
+@media screen and (max-width: 1200px) {
     
+}
+
+@media screen and (max-width: 960px) {
+    /* 모드 컬러 */
+    .lightMode header{
+        .sticky{
+            background-color: $light-header-bg;
+            border-color: $light-border-black;
+        }
     }
 
-    @media screen and (max-width: 960px) {
+    .darkMode header{
+        .sticky{
+            background-color: $dark-header-bg;
+            border-color: $dark-border-black;
+        }
+    }
+
+    header{
         width: 100%;
         height: 8rem;
         padding: 0;
@@ -125,6 +144,8 @@ header{
             flex-direction: row;
             gap: 0 2.4rem;
             padding: 1.2rem 2rem;
+            z-index: 1;
+            border-bottom: 1px solid;
         }
         .title{
             width: 13.5rem;
@@ -137,8 +158,8 @@ header{
             div{display: none;}
         }
     }
+}
+
+@media screen and (max-width: 720px) {
     
-    @media screen and (max-width: 720px) {
-        
-    }
 }
