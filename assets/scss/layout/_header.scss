@@ -15,6 +15,7 @@
                     border-color: $light-border-black transparent;
                 }
             }
+            div{color: $light-font-color;}
         }
     }
 }
@@ -35,8 +36,7 @@
                     border-color: $dark-border-black transparent;
                 }
             }
-            span{}
-            
+            div{color: $light-font-color;}
         }
     }
 }
@@ -156,6 +156,15 @@ header{
             }
             span{margin: 0 0 0 .9rem;}
             div{display: none;}
+        }
+
+        &.mediaNotPc{
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: translateY(0);
+            border-top-width: 2px;
+            margin-top: -2px;
         }
     }
 }
