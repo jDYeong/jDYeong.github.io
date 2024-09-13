@@ -1,53 +1,55 @@
 /* 모드 컬러 */
 .lightMode{
     header{
-        background-color: $light-header-bg;
-        border-color: $light-border-black;
+        background-color: $light-color-dark-orange;
+        border-color: $light-color-black;
         .title{
             p{
-                background: $light-header-white;
-                border: 1px solid $light-border-black;
-                color: $light-font-color;
+                background: $light-color-white;
+                border: 1px solid $light-color-black;
+                color: $light-color-black;
                 &::after{
-                    border-color: $light-header-white transparent;
+                    border-color: $light-color-white transparent;
                 }
                 &::before{
-                    border-color: $light-border-black transparent;
+                    border-color: $light-color-black transparent;
                 }
             }
-            div{color: $light-font-color;}
+            div{color: $light-color-black;}
         }
     }
 }
 
 .darkMode{
     header{
-        background-color: $dark-header-bg;
-        border-color: $dark-border-black;
+        background-color: $dark-color-dark-green;
+        border-color: $dark-color-white;
         .title{
             p{
-                background: $dark-header-white;
-                border: 1px solid $dark-border-black;
-                color: $light-font-color;
+                background: $dark-color-white;
+                border: 1px solid $dark-color-black;
+                color: $light-color-black;
                 &::after{
-                    border-color: $dark-header-white transparent;
+                    border-color: $dark-color-white transparent;
                 }
                 &::before{
-                    border-color: $dark-border-black transparent;
+                    border-color: $dark-color-black transparent;
                 }
             }
-            div{color: $light-font-color;}
+            div{color: $light-color-black;}
         }
     }
 }
 
 header{
-    width: 15%;
+    width: $header-pc-width;
     padding: 3rem 0;
     position: relative;
     border-width: 0 1px 0 0;
     border-style: solid;
     box-sizing: border-box;
+
+    &.mediaPc{transform: translateY(0) !important;}
 
     .sticky{
         @include flexColumnTop;
@@ -122,25 +124,25 @@ header{
     /* 모드 컬러 */
     .lightMode header{
         .sticky{
-            background-color: $light-header-bg;
-            border-color: $light-border-black;
+            background-color: $light-color-dark-orange;
+            border-color: $light-color-black;
         }
     }
 
     .darkMode header{
         .sticky{
-            background-color: $dark-header-bg;
-            border-color: $dark-border-black;
+            background-color: $dark-color-dark-green;
+            border-color: $dark-color-black;
         }
     }
 
     header{
         width: 100%;
-        height: 8rem;
+        height: $header-tablet-height;
         padding: 0;
         border-width: 0 0 1px 0;
         .sticky{
-            height: calc(100% + 1px);
+            height: calc(100% + 3px);
             flex-direction: row;
             gap: 0 2.4rem;
             padding: 1.2rem 2rem;
@@ -165,6 +167,25 @@ header{
             transform: translateY(0);
             border-top-width: 2px;
             margin-top: -2px;
+            transition: height $ani-fast;
+            &.down{
+                height: 5.2rem;
+                .title p{
+                    height: 0;
+                    padding-top: 0;
+                    padding-bottom: 0;
+                    margin-bottom: 0;
+                    overflow: hidden;
+                    border-width: 0;
+                    transition: $ani-fast;
+                }
+                .main-btns{
+                    br{display: none;}
+                    button{
+                        &:last-of-type{margin-top: 0;}
+                    }
+                }
+            }
         }
     }
 }

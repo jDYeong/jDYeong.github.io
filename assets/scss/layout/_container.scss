@@ -2,20 +2,20 @@
 
 /* 모드 컬러 */
 .lightMode{
-    background-color: $light-bg;
-    color: $light-font-color;
+    background-color: $light-color-light-green;
+    color: $light-color-black;
     .container{
-        background-color: $light-sub-bg;
-        border: 2px solid $light-border-black;
+        background-color: $light-color-white;
+        border: 2px solid $light-color-black;
     }
 }
 
 .darkMode{
-    background-color: $dark-bg;
-    color: $dark-font-color;
+    background-color: $dark-color-black;
+    color: $dark-color-black;
     .container{
-        background-color: $dark-sub-bg;
-        border: 2px solid $dark-border-black;
+        background-color: $dark-color-black;
+        border: 2px solid $dark-color-white;
     }
 }
 
@@ -33,7 +33,7 @@ body{
 
 .container{
     @include flex;
-    width: 80vw;
+    width: $container-width;
     max-width: 120rem;
     min-width: 100rem;
     min-height: 90vh;

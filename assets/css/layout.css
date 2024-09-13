@@ -25,12 +25,12 @@
 }
 
 .darkMode {
-  background-color: #292929;
-  color: #fff;
+  background-color: #121212;
+  color: #121212;
 }
 .darkMode .container {
   background-color: #121212;
-  border: 2px solid #121212;
+  border: 2px solid #fff;
 }
 
 /* 레이아웃 */
@@ -95,8 +95,8 @@ body::-webkit-scrollbar-track {
 }
 
 .darkMode header {
-  background-color: #F3B562;
-  border-color: #121212;
+  background-color: #76AD91;
+  border-color: #fff;
 }
 .darkMode header .title p {
   background: #fff;
@@ -120,6 +120,9 @@ header {
   border-width: 0 1px 0 0;
   border-style: solid;
   box-sizing: border-box;
+}
+header.mediaPc {
+  transform: translateY(0) !important;
 }
 header .sticky {
   display: flex;
@@ -194,7 +197,7 @@ header .title div {
     border-color: #222;
   }
   .darkMode header .sticky {
-    background-color: #F3B562;
+    background-color: #76AD91;
     border-color: #121212;
   }
   header {
@@ -204,7 +207,7 @@ header .title div {
     border-width: 0 0 1px 0;
   }
   header .sticky {
-    height: calc(100% + 1px);
+    height: calc(100% + 3px);
     flex-direction: row;
     gap: 0 2.4rem;
     padding: 1.2rem 2rem;
@@ -236,6 +239,25 @@ header .title div {
     transform: translateY(0);
     border-top-width: 2px;
     margin-top: -2px;
+    transition: height 0.23s ease-in;
+  }
+  header.mediaNotPc.down {
+    height: 5.2rem;
+  }
+  header.mediaNotPc.down .title p {
+    height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    overflow: hidden;
+    border-width: 0;
+    transition: 0.23s ease-in;
+  }
+  header.mediaNotPc.down .main-btns br {
+    display: none;
+  }
+  header.mediaNotPc.down .main-btns button:last-of-type {
+    margin-top: 0;
   }
 }
 /* 모드 컬러 */
@@ -252,15 +274,15 @@ header .title div {
 .darkMode nav ul li a {
   background: #fff;
   border-color: #121212;
-  color: #222;
+  color: #121212;
 }
 .darkMode nav ul li a.active {
-  border-color: #9D59B9;
-  color: #9D59B9;
+  border-color: #E39F43;
+  color: #E39F43;
 }
 
 nav {
-  width: calc(100% - 1.6rem);
+  width: calc(85% - 0.1rem);
 }
 nav ul {
   padding: 2rem 0;
@@ -274,7 +296,7 @@ nav ul li a {
   letter-spacing: 1.3px;
   width: 100%;
   display: block;
-  padding: 1rem 3rem 1rem 1rem;
+  padding: 1rem 3rem 0.6rem 1rem;
   font-size: 1.4em;
   line-height: 1.4;
   font-weight: 800;
@@ -300,11 +322,21 @@ nav ul li:hover a {
 
 @media screen and (max-width: 960px) {
   /* 모드 컬러 */
+  .lightMode nav {
+    background: #F6D8AE;
+  }
   .lightMode nav ul li a {
     background: transparent;
   }
+  .darkMode nav {
+    background: #AFDBC3;
+  }
   .darkMode nav ul li a {
     background: transparent;
+  }
+  .darkMode nav ul li a.active {
+    border-color: #79259C;
+    color: #79259C;
   }
   nav {
     width: 100%;
@@ -312,7 +344,6 @@ nav ul li:hover a {
     bottom: auto;
     top: 100%;
     left: 0;
-    background: #F6D8AE;
     padding: 0 2rem;
     z-index: 0;
     transform: translateY(-100%);
@@ -352,10 +383,12 @@ nav ul li:hover a {
 /* 모드 컬러 */
 .lightMode main {
   border-top-color: #222;
+  color: #222;
 }
 
 .darkMode main {
-  border-top-color: #121212;
+  border-top-color: #fff;
+  color: #fff;
 }
 
 main {
@@ -371,7 +404,7 @@ main {
     height: calc(100% - 6rem);
     margin-top: 0;
     border-width: 0;
-    height: 1000px;
+    padding-top: 8rem;
   }
 }
 /* 모드 컬러 */
@@ -399,6 +432,37 @@ footer p {
     display: none;
   }
 }
+/* 모드 컬러 */
+.lightMode .main-btns .btn-type1 {
+  padding: 0.2rem;
+  background: #fff;
+  border: 1px solid #222;
+  border-bottom-width: 2px;
+  border-right-width: 2px;
+  box-sizing: border-box;
+}
+.lightMode .main-btns .btn-type1 svg.hide {
+  display: none;
+}
+.lightMode .main-btns .btn-type1 * {
+  fill: #222;
+}
+
+.darkMode .main-btns .btn-type1 {
+  padding: 0.2rem;
+  background: #121212;
+  border: 1px solid #fff;
+  border-bottom-width: 2px;
+  border-right-width: 2px;
+  box-sizing: border-box;
+}
+.darkMode .main-btns .btn-type1 svg.hide {
+  display: none;
+}
+.darkMode .main-btns .btn-type1 * {
+  fill: #fff;
+}
+
 .main-btns {
   display: flex;
   gap: 0.5rem;
@@ -412,25 +476,32 @@ footer p {
   z-index: 2;
   box-sizing: border-box;
 }
-.main-btns .btn-type1 {
-  padding: 0.2rem;
-  background: #fff;
-  border: 1px solid #121212;
-  border-bottom-width: 2px;
-  border-right-width: 2px;
-  box-sizing: border-box;
-}
-.main-btns .btn-type1 svg.hide {
-  display: none;
-}
 
 @media screen and (max-width: 960px) {
+  .darkMode .main-btns .btn-type1 {
+    padding: 0.2rem;
+    background: #fff;
+    border: 1px solid #121212;
+    border-bottom-width: 2px;
+    border-right-width: 2px;
+    box-sizing: border-box;
+  }
+  .darkMode .main-btns .btn-type1 svg.hide {
+    display: none;
+  }
+  .darkMode .main-btns .btn-type1 * {
+    fill: #121212;
+  }
   .main-btns {
+    display: block;
+    text-align: right;
     padding: 1rem;
   }
+  .main-btns button {
+    margin-left: 0.5rem;
+    transition: 0.23s ease-in;
+  }
   .main-btns button:last-of-type {
-    position: absolute;
-    top: calc(100% - 0.5rem);
-    right: 1rem;
+    margin-top: 0.5rem;
   }
 }
