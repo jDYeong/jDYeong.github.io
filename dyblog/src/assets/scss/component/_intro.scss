@@ -1,0 +1,148 @@
+@import '../setting/_var.scss';
+
+/* 모드 컬러 */
+.lightMode{
+    .user_box{
+        &.pic div{
+            background: $light-color-blue;
+            border-color: $light-color-black;
+            &::before{background-color: $light-color-light-green;}
+        }
+        &.login>div{
+            background: $light-color-purple;
+            border-color: $light-color-black;
+        }
+    }
+    .aboutme_box{
+        border-color: $light-color-black;
+        dl{
+            dt{color: $light-color-white;}
+            dd{color: $light-color-white;}
+        }
+    }
+    .skill_box{
+        background: $light-color-purple;
+    }
+    .skills_slide{
+        .swiper-slide-active{
+            &::after{
+                border-top-color: $light-color-purple;
+            }
+        }
+    }
+}
+
+.darkMode{
+    .user_box{
+        &.pic div{
+            background: $dark-color-blue;
+            border-color: $dark-color-white;
+            &::before{background-color: $dark-color-light-green;}
+        }
+        &.login>div{
+            background: $dark-color-purple;
+            border-color: $dark-color-white;
+        }
+    }
+    .aboutme_box{
+        border-color: $dark-color-black;
+        dl{
+            dt{color: $dark-color-white;}
+            dd{color: $dark-color-white;}
+        }
+    }
+    .skill_box{
+        background: $dark-color-purple;
+    }
+    .skills_slide{
+        .swiper-slide-active{
+            &::after{
+                border-top-color: $dark-color-purple;
+            }
+        }
+    }
+}
+
+.user_box{
+    &.pic div{
+        &::before{
+            content: '';
+            display: block;
+            width: 16rem;
+            height: 16rem;
+            border-radius: 50%;
+            position: absolute;
+            bottom: 0;
+            left: calc(50% - 8rem);
+            transform-origin: center;
+            animation: beat $ani-middle infinite alternate;
+            @keyframes beat {
+                to { transform: scale(1.05); }
+            }
+        }
+        &::after{
+            content: '';
+            display: block;
+            width: 16rem;
+            height: 16rem;
+            background: url($img-url-bg + 'intro_user_pc.png') no-repeat center / cover;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+}
+
+.aboutme_box{}
+
+.skills_slide{
+    height: 8.5rem;
+    .swiper-wrapper{align-items: flex-end;}
+    .swiper-slide{
+        width: auto;
+        @include flexBottom;
+        margin-bottom: 10px;
+    }
+    .swiper-slide-active{
+        position: relative;
+        &::after{
+            content: '';
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border: 10px solid transparent;
+            border-top-color: #000000;
+            border-bottom: 0;
+            margin-left: -10px;
+            margin-bottom: -10px;
+        }
+        div div{
+            height: 4rem;
+            margin-bottom: .4rem;
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    
+}
+
+@media screen and (max-width: 960px) {
+    .user_box{
+        &.pic div{
+            &::after{
+                width: 13rem;
+                height: 13rem;
+                background-image: url($img-url-bg + 'intro_user_m.png');
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 720px) {
+
+}

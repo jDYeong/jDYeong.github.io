@@ -1,0 +1,60 @@
+@import '../setting/_var.scss';
+
+/* 모드 컬러 */
+.lightMode{
+    background-color: $light-color-light-green;
+    color: $light-color-black;
+    .container{
+        background-color: $light-color-white;
+        border: 2px solid $light-color-black;
+    }
+}
+
+.darkMode{
+    background-color: $dark-color-black;
+    color: $dark-color-black;
+    .container{
+        background-color: $dark-color-black;
+        border: 2px solid $dark-color-white;
+    }
+}
+
+/* 레이아웃 */
+//기본 스크롤 커스텀
+body{
+    @include scrollCustom;
+}
+
+
+.bg{
+    min-height: 100vh;
+    padding: 5vh 0;
+}
+
+.container{
+    @include flex;
+    width: $container-width;
+    max-width: 120rem;
+    min-width: 100rem;
+    min-height: 90vh;
+    margin: 0 auto;
+    position: relative;
+}
+
+@media screen and (max-width: 1200px) {
+    .container{
+        width: 90vw;
+        min-width: auto;
+        overflow: hidden;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .container{
+        @include flexColumn;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    
+}

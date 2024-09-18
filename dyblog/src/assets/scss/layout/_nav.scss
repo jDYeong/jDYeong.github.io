@@ -4,12 +4,12 @@
         ul{
             li{
                 a{
-                    background: $light-header-white;
-                    border-color: $light-border-black;
-                    color: $light-font-color;
+                    background: $light-color-white;
+                    border-color: $light-color-black;
+                    color: $light-color-black;
                     &.active{
-                        border-color: $light-header-purple;
-                        color: $light-header-purple;
+                        border-color: $light-color-purple;
+                        color: $light-color-purple;
                     }
                 }
             }
@@ -22,12 +22,12 @@
         ul{
             li{
                 a{
-                    background: $dark-header-white;
-                    border-color: $dark-border-black;
-                    color: $dark-font-color;
+                    background: $dark-color-white;
+                    border-color: $dark-color-black;
+                    color: $dark-color-black;
                     &.active{
-                        border-color: $dark-header-purple;
-                        color: $dark-header-purple;
+                        border-color: $dark-color-dark-orange;
+                        color: $dark-color-dark-orange;
                     }
                 }
             }
@@ -36,7 +36,7 @@
 }
 
 nav{
-    width: calc(100% - 1.6rem);
+    width: calc(100% - $header-pc-width - .1rem);
     ul{
         padding: 2rem 0;
         li{
@@ -46,7 +46,7 @@ nav{
                 @include fontTitle;
                 width: 100%;
                 display: block;
-                padding: 1rem 3rem 1rem 1rem;
+                padding: 1rem 3rem .6rem 1rem;
                 font-size: 1.4em;
                 line-height: 1.4;
                 font-weight: 800;
@@ -82,11 +82,27 @@ nav{
 @media screen and (max-width: 960px) {
     /* 모드 컬러 */
     .lightMode{
-        nav ul li a{background: transparent;}
+        nav{
+            background: $light-color-light-orange;
+            ul li a{background: transparent;}
+        }
     }
 
     .darkMode{
-        nav ul li a{background: transparent;}
+        nav{
+            background: $dark-color-light-green;
+            ul{
+                li{
+                    a{
+                        background: transparent;
+                        &.active{
+                            border-color: $dark-color-purple;
+                            color: $dark-color-purple;
+                        }
+                    }
+                }
+            }
+        }
     }
 
     nav{
@@ -95,9 +111,9 @@ nav{
         bottom: auto;
         top: 100%;
         left: 0;
-        background: $light-bg-orange;
         padding: 0 2rem;
-        z-index: 1;
+        z-index: 0;
+        transform: translateY(-100%);
         transition: transform $ani-fast;
         ul{
             @include flex;
@@ -125,6 +141,9 @@ nav{
                     }
                 }
             }
+        }
+        &.open{
+            transform: translateY(0);
         }
     }
 }

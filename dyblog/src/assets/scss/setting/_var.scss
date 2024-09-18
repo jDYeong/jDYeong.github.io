@@ -1,0 +1,181 @@
+/*** 컬러 변수 ***/
+//공통
+:root{
+    --scroll-thumb: #F3B562;
+    --scroll-bg: #A7C4B5;
+
+    --light-color-black: #222;
+    --light-color-gray : #BBB;
+    --light-color-light-gray: #EEE;
+    --light-color-white: #fff;
+    --light-color-dark-green: #A7C4B5;
+    --light-color-light-green: #D6EADF;
+    --light-color-light-orange: #F6D8AE;
+    --light-color-dark-orange: #F3B562;
+    --light-color-purple: #7D3C98;
+    --light-color-blue: #2471A3;
+    --light-color-red: #EC7063;
+    --light-color-yellow: #F4D03F;
+
+    --dark-color-black: #121212;
+    --dark-color-gray: #636363;
+    --dark-color-light-gray: #CCC;
+    --dark-color-white: #fff;
+    --dark-color-dark-green: #76AD91;
+    --dark-color-light-green: #AFDBC3;
+    --dark-color-light-orange: #EDC389;
+    --dark-color-dark-orange: #E39F43;
+    --dark-color-purple: #79259C;
+    --dark-color-blue: #1B6493;
+    --dark-color-red: #BD3D30;
+    --dark-color-yellow: #EED368;
+
+    /*** 공통변수 ***/
+    --ani-fast : .23s ease-in;
+    --ani-middle : .4s ease-in;
+    --ani-slow : .7s ease-in;
+}
+
+$scroll-thumb: #F3B562;
+$scroll-bg : #A7C4B5;
+
+$light-color-black: #222;
+$light-color-gray: #BBB;
+$light-color-light-gray: #EEE;
+$light-color-white: #fff;
+$light-color-dark-green: #A7C4B5;
+$light-color-light-green: #D6EADF;
+$light-color-light-orange: #F6D8AE;
+$light-color-dark-orange: #F3B562;
+$light-color-purple: #7D3C98;
+$light-color-blue: #2471A3;
+$light-color-red: #EC7063;
+$light-color-yellow: #F4D03F;
+
+$dark-color-black: #121212;
+$dark-color-gray: #636363;
+$dark-color-light-gray: #CCC;
+$dark-color-white: #fff;
+$dark-color-dark-green: #76AD91;
+$dark-color-light-green: #AFDBC3;
+$dark-color-light-orange: #EDC389;
+$dark-color-dark-orange: #E39F43;
+$dark-color-purple: #79259C;
+$dark-color-blue: #1B6493;
+$dark-color-red: #BD3D30;
+$dark-color-yellow: #EED368;
+
+//사이즈 변수
+$container-width: 80vw;
+$header-pc-width: 15%;
+$header-tablet-height: 8rem;
+$header-mob-height: 8rem;
+$constent-pc-width: calc(100% - $header-pc-width);
+$constent-tablet-height: calc(100% - 6rem);
+$constent-mob-height: calc(100% - 6rem);
+
+/*** 공통변수 ***/
+$ani-fast : .23s ease-in;
+$ani-middle : .4s ease-in;
+$ani-slow : .7s ease-in;
+
+//이미지 주소
+$img-url-bg : '../images/bg/';
+$img-url-icons : '../images/icons/';
+
+//폰트
+@mixin fontTitle{
+    font-family: "양진체";
+    letter-spacing: 1.3px;
+}
+@mixin fontDefault{
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    letter-spacing: normal;
+}
+
+//scroll custom
+@mixin scrollCustom{
+    &::-webkit-scrollbar {
+        width: 10px;
+        background: $scroll-thumb;
+    }
+    &::-webkit-scrollbar-thumb {
+        width: 6px;
+        background-color: $scroll-thumb;
+    }
+    &::-webkit-scrollbar-track {
+        background: $scroll-bg;
+    }
+}
+
+//flex
+@mixin flex{
+    display: flex;
+}
+@mixin flexTop{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+@mixin flexCenter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@mixin flexBottom{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+@mixin flexColumn{
+    display: flex;
+    flex-direction: column;
+}
+@mixin flexColumnTop{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+@mixin flexColumnBottom{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+@mixin flexColumnCenter{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+/* ani */
+@keyframes bounceAni {
+    0%{transform: translateY(0);}
+    50%{transform: translateY(-5px);}
+    100%{transform: translateY(0);}
+}
+
+/* button type */
+@mixin btnType1($border, $bg){
+    padding: .2rem;
+    background: $bg;
+    border: 1px solid $border;
+    border-bottom-width: 2px;
+    border-right-width: 2px;
+    box-sizing: border-box;
+    svg.hide{display: none;}
+}
+
+@media screen and (max-width: 1200px) {
+    
+}
+
+@media screen and (max-width: 960px) {
+
+}
+
+@media screen and (max-width: 720px) {
+    
+}

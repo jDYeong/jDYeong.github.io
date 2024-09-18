@@ -1,10 +1,10 @@
 /* 모드 컬러 */
 .lightMode{
-    footer p{color: $light-font-color;}
+    footer p{color: $light-color-black;}
 }
 
 .darkMode{
-    footer p{color: $dark-font-color;}
+    footer p{color: $light-color-black;}
 }
 
 footer{

@@ -1,0 +1,40 @@
+/* 모드 컬러 */
+.lightMode{
+    main{
+        border-top-color: $light-color-black;
+        color: $light-color-black;
+    }
+}
+
+.darkMode{
+    main{
+        border-top-color: $dark-color-white;
+        color: $light-color-white;
+    }
+}
+
+main{
+    width: $constent-pc-width;
+    margin-top: 4rem;
+    border-top: 1px solid;
+    box-sizing: border-box;
+}
+
+
+@media screen and (max-width: 1200px) {
+    
+}
+
+@media screen and (max-width: 960px) {
+    main{
+        width: 100%;
+        height: $constent-tablet-height;
+        margin-top: 0;
+        border-width: 0;
+        padding-top: $header-tablet-height;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    
+}

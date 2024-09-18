@@ -2,8 +2,8 @@ import React from 'react';
 import { useMediaQuery } from "react-responsive"
 
 const Pc = ({children}) => {
-    const isTablet = useMediaQuery({minWidth: 961 });
-    return isTablet ? children : null;
+    const isPc = useMediaQuery({minWidth: 961 });
+    return isPc ? children : null;
 }
 
 const Tablet = ({children}) => {
@@ -17,3 +17,17 @@ const Mobile = ({children}) => {
 };
 
 export {Pc, Tablet, Mobile};
+
+/* styled components */
+const size = {
+    desktop: '961px',
+    tabletMax: '960px',
+    tabletMin: '721px',
+    mobile: '720px',
+}
+
+export const device = {
+    desktop: `(min-width: ${size.desktop})`,
+    tablet: `(min-width: ${size.tabletMin}) and (max-width: ${size.tabletMax})`,
+    mobile: `(max-width: ${size.mobile})`,
+};

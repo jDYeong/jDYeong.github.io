@@ -1,5 +1,38 @@
 @charset "UTF-8";
 /*** 컬러 변수 ***/
+:root {
+  --scroll-thumb: #F3B562;
+  --scroll-bg: #A7C4B5;
+  --light-color-black: #222;
+  --light-color-gray: #BBB;
+  --light-color-light-gray: #EEE;
+  --light-color-white: #fff;
+  --light-color-dark-green: #A7C4B5;
+  --light-color-light-green: #D6EADF;
+  --light-color-light-orange: #F6D8AE;
+  --light-color-dark-orange: #F3B562;
+  --light-color-purple: #7D3C98;
+  --light-color-blue: #2471A3;
+  --light-color-red: #EC7063;
+  --light-color-yellow: #F4D03F;
+  --dark-color-black: #121212;
+  --dark-color-gray: #636363;
+  --dark-color-light-gray: #CCC;
+  --dark-color-white: #fff;
+  --dark-color-dark-green: #76AD91;
+  --dark-color-light-green: #AFDBC3;
+  --dark-color-light-orange: #EDC389;
+  --dark-color-dark-orange: #E39F43;
+  --dark-color-purple: #79259C;
+  --dark-color-blue: #1B6493;
+  --dark-color-red: #BD3D30;
+  --dark-color-yellow: #EED368;
+  /*** 공통변수 ***/
+  --ani-fast: .23s ease-in;
+  --ani-middle: .4s ease-in;
+  --ani-slow: .7s ease-in;
+}
+
 /*** 공통변수 ***/
 /* ani */
 @keyframes bounceAni {
@@ -25,12 +58,12 @@
 }
 
 .darkMode {
-  background-color: #292929;
-  color: #fff;
+  background-color: #121212;
+  color: #121212;
 }
 .darkMode .container {
   background-color: #121212;
-  border: 2px solid #121212;
+  border: 2px solid #fff;
 }
 
 /* 레이아웃 */
@@ -60,10 +93,12 @@ body::-webkit-scrollbar-track {
   margin: 0 auto;
   position: relative;
 }
+
 @media screen and (max-width: 1200px) {
   .container {
     width: 90vw;
     min-width: auto;
+    overflow: hidden;
   }
 }
 @media screen and (max-width: 960px) {
@@ -80,6 +115,7 @@ body::-webkit-scrollbar-track {
 .lightMode header .title p {
   background: #fff;
   border: 1px solid #222;
+  color: #222;
 }
 .lightMode header .title p::after {
   border-color: #fff transparent;
@@ -87,14 +123,18 @@ body::-webkit-scrollbar-track {
 .lightMode header .title p::before {
   border-color: #222 transparent;
 }
+.lightMode header .title div {
+  color: #222;
+}
 
 .darkMode header {
-  background-color: #F3B562;
-  border-color: #121212;
+  background-color: #76AD91;
+  border-color: #fff;
 }
 .darkMode header .title p {
   background: #fff;
   border: 1px solid #121212;
+  color: #222;
 }
 .darkMode header .title p::after {
   border-color: #fff transparent;
@@ -102,13 +142,21 @@ body::-webkit-scrollbar-track {
 .darkMode header .title p::before {
   border-color: #121212 transparent;
 }
+.darkMode header .title div {
+  color: #222;
+}
+
 header {
   width: 15%;
   padding: 3rem 0;
   position: relative;
   border-width: 0 1px 0 0;
   border-style: solid;
+  z-index: 100;
   box-sizing: border-box;
+}
+header.mediaPc {
+  transform: translateY(0) !important;
 }
 header .sticky {
   display: flex;
@@ -175,7 +223,17 @@ header .title div {
   font-weight: 800;
   padding-top: 0.4rem;
 }
+
 @media screen and (max-width: 960px) {
+  /* 모드 컬러 */
+  .lightMode header .sticky {
+    background-color: #F3B562;
+    border-color: #222;
+  }
+  .darkMode header .sticky {
+    background-color: #76AD91;
+    border-color: #121212;
+  }
   header {
     width: 100%;
     height: 8rem;
@@ -183,10 +241,12 @@ header .title div {
     border-width: 0 0 1px 0;
   }
   header .sticky {
-    height: calc(100% + 1px);
+    height: calc(100% + 3px);
     flex-direction: row;
     gap: 0 2.4rem;
     padding: 1.2rem 2rem;
+    z-index: 1;
+    border-bottom: 1px solid;
   }
   header .title {
     width: 13.5rem;
@@ -206,6 +266,33 @@ header .title div {
   header .title div {
     display: none;
   }
+  header.mediaNotPc {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(0);
+    border-top-width: 2px;
+    margin-top: -2px;
+    transition: height 0.23s ease-in;
+  }
+  header.mediaNotPc.down {
+    height: 5.2rem;
+  }
+  header.mediaNotPc.down .title p {
+    height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    overflow: hidden;
+    border-width: 0;
+    transition: 0.23s ease-in;
+  }
+  header.mediaNotPc.down .main-btns br {
+    display: none;
+  }
+  header.mediaNotPc.down .main-btns button:last-of-type {
+    margin-top: 0;
+  }
 }
 /* 모드 컬러 */
 .lightMode nav ul li a {
@@ -221,15 +308,15 @@ header .title div {
 .darkMode nav ul li a {
   background: #fff;
   border-color: #121212;
-  color: #fff;
+  color: #121212;
 }
 .darkMode nav ul li a.active {
-  border-color: #9D59B9;
-  color: #9D59B9;
+  border-color: #E39F43;
+  color: #E39F43;
 }
 
 nav {
-  width: calc(100% - 1.6rem);
+  width: calc(85% - 0.1rem);
 }
 nav ul {
   padding: 2rem 0;
@@ -243,7 +330,7 @@ nav ul li a {
   letter-spacing: 1.3px;
   width: 100%;
   display: block;
-  padding: 1rem 3rem 1rem 1rem;
+  padding: 1rem 3rem 0.6rem 1rem;
   font-size: 1.4em;
   line-height: 1.4;
   font-weight: 800;
@@ -269,11 +356,21 @@ nav ul li:hover a {
 
 @media screen and (max-width: 960px) {
   /* 모드 컬러 */
+  .lightMode nav {
+    background: #F6D8AE;
+  }
   .lightMode nav ul li a {
     background: transparent;
   }
+  .darkMode nav {
+    background: #AFDBC3;
+  }
   .darkMode nav ul li a {
     background: transparent;
+  }
+  .darkMode nav ul li a.active {
+    border-color: #79259C;
+    color: #79259C;
   }
   nav {
     width: 100%;
@@ -281,9 +378,9 @@ nav ul li:hover a {
     bottom: auto;
     top: 100%;
     left: 0;
-    background: #F6D8AE;
     padding: 0 2rem;
-    z-index: 1;
+    z-index: 0;
+    transform: translateY(-100%);
     transition: transform 0.23s ease-in;
   }
   nav ul {
@@ -313,25 +410,35 @@ nav ul li:hover a {
     bottom: 0;
     border-width: 0 0 2px 0;
   }
+  nav.open {
+    transform: translateY(0);
+  }
 }
 /* 모드 컬러 */
 .lightMode main {
-  border-top: 1px solid #222;
+  border-top-color: #222;
+  color: #222;
 }
 
 .darkMode main {
-  border-top: 1px solid #121212;
+  border-top-color: #fff;
+  color: #fff;
 }
 
 main {
   width: 85%;
   margin-top: 4rem;
+  border-top: 1px solid;
   box-sizing: border-box;
 }
+
 @media screen and (max-width: 960px) {
   main {
     width: 100%;
     height: calc(100% - 6rem);
+    margin-top: 0;
+    border-width: 0;
+    padding-top: 8rem;
   }
 }
 /* 모드 컬러 */
@@ -340,7 +447,7 @@ main {
 }
 
 .darkMode footer p {
-  color: #fff;
+  color: #222;
 }
 
 footer {
@@ -359,6 +466,37 @@ footer p {
     display: none;
   }
 }
+/* 모드 컬러 */
+.lightMode .main-btns .btn-type1 {
+  padding: 0.2rem;
+  background: #fff;
+  border: 1px solid #222;
+  border-bottom-width: 2px;
+  border-right-width: 2px;
+  box-sizing: border-box;
+}
+.lightMode .main-btns .btn-type1 svg.hide {
+  display: none;
+}
+.lightMode .main-btns .btn-type1 * {
+  fill: #222;
+}
+
+.darkMode .main-btns .btn-type1 {
+  padding: 0.2rem;
+  background: #121212;
+  border: 1px solid #fff;
+  border-bottom-width: 2px;
+  border-right-width: 2px;
+  box-sizing: border-box;
+}
+.darkMode .main-btns .btn-type1 svg.hide {
+  display: none;
+}
+.darkMode .main-btns .btn-type1 * {
+  fill: #fff;
+}
+
 .main-btns {
   display: flex;
   gap: 0.5rem;
@@ -369,27 +507,35 @@ footer p {
   right: 0;
   width: 100%;
   padding: 0.4rem;
+  z-index: 2;
   box-sizing: border-box;
-}
-.main-btns .btn-type1 {
-  padding: 0.2rem;
-  background: #fff;
-  border: 1px solid #121212;
-  border-bottom-width: 2px;
-  border-right-width: 2px;
-  box-sizing: border-box;
-}
-.main-btns .btn-type1 svg.hide {
-  display: none;
 }
 
 @media screen and (max-width: 960px) {
+  .darkMode .main-btns .btn-type1 {
+    padding: 0.2rem;
+    background: #fff;
+    border: 1px solid #121212;
+    border-bottom-width: 2px;
+    border-right-width: 2px;
+    box-sizing: border-box;
+  }
+  .darkMode .main-btns .btn-type1 svg.hide {
+    display: none;
+  }
+  .darkMode .main-btns .btn-type1 * {
+    fill: #121212;
+  }
   .main-btns {
+    display: block;
+    text-align: right;
     padding: 1rem;
   }
+  .main-btns button {
+    margin-left: 0.5rem;
+    transition: 0.23s ease-in;
+  }
   .main-btns button:last-of-type {
-    position: absolute;
-    top: calc(100% - 1rem);
-    right: 1rem;
+    margin-top: 0.5rem;
   }
 }
