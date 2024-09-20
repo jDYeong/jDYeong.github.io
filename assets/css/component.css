@@ -95,6 +95,39 @@ button.close .open {
 .lightMode .bgHover:hover {
   background-color: #F6D8AE;
 }
+.lightMode .works_box .btn-type1 {
+  padding: 0.2rem;
+  background: #fff;
+  border: 1px solid #222;
+  border-bottom-width: 2px;
+  border-right-width: 2px;
+  box-sizing: border-box;
+}
+.lightMode .works_box .btn-type1 svg.hide {
+  display: none;
+}
+.lightMode .works_box .btn-type1 * {
+  fill: #222;
+}
+.lightMode .works_box dl.active {
+  border-bottom-color: #222;
+}
+.lightMode .works_box dl.active dt {
+  background-color: #2471A3;
+  color: #fff;
+}
+.lightMode .works_box dl:hover dt {
+  background-color: #EEE;
+}
+.lightMode .works_box dl dt {
+  background-color: #fff;
+}
+.lightMode .works_box .works_tit {
+  border-color: #222;
+}
+.lightMode .works_box .works_desc {
+  border-color: #222;
+}
 
 .darkMode .user_box.pic div {
   background: #1B6493;
@@ -124,6 +157,32 @@ button.close .open {
 }
 .darkMode .bgHover:hover {
   background-color: #636363;
+}
+.darkMode .works_box .btn-type1 {
+  padding: 0.2rem;
+  background: #121212;
+  border: 1px solid #fff;
+  border-bottom-width: 2px;
+  border-right-width: 2px;
+  box-sizing: border-box;
+}
+.darkMode .works_box .btn-type1 svg.hide {
+  display: none;
+}
+.darkMode .works_box .btn-type1 * {
+  fill: #fff;
+}
+.darkMode .works_box dl.active {
+  border-bottom-color: #121212;
+}
+.darkMode .works_box dl:hover dt {
+  background-color: #CCC;
+}
+.darkMode .works_box .works_tit {
+  border-color: #fff;
+}
+.darkMode .works_box .works_desc {
+  border-color: #fff;
 }
 
 .user_box.pic div::before {
