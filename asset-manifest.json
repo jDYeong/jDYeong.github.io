@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.ea88bc9f.css",
-    "main.js": "/static/js/main.14146db4.js",
+    "main.js": "/static/js/main.93eafcbb.js",
     "static/js/453.a1527df8.chunk.js": "/static/js/453.a1527df8.chunk.js",
     "static/media/icon-close.svg": "/static/media/icon-close.bee8cf956f2d9bcc21b51882ded0205e.svg",
     "index.html": "/index.html",
@@ -11,15 +11,17 @@
     "static/media/theme-moon.svg": "/static/media/theme-moon.f467128d8ff84994690b19d9e4394f6e.svg",
     "static/media/icon-home.svg": "/static/media/icon-home.02ec9f7627b6a092f139e460f4a8d9a0.svg",
     "static/media/icon-success.svg": "/static/media/icon-success.e6f404b36d230d27e4405ec2b3426eba.svg",
+    "static/media/arr-list.svg": "/static/media/arr-list.c98af56bd3eca3682d3ade256263c406.svg",
     "static/media/intro_userTag.svg": "/static/media/intro_userTag.034d7c200cceee8ecca9de65d4a06536.svg",
     "static/media/icon-menu.svg": "/static/media/icon-menu.2e002f9f1212b498b4e6a2aa4e189787.svg",
+    "static/media/mood-happy.svg": "/static/media/mood-happy.50373f3801b297c0320ea9b53e75d486.svg",
     "static/media/arr-right.svg": "/static/media/arr-right.f4c5ee8f087296f18a87a2388cedf41a.svg",
     "main.ea88bc9f.css.map": "/static/css/main.ea88bc9f.css.map",
-    "main.14146db4.js.map": "/static/js/main.14146db4.js.map",
+    "main.93eafcbb.js.map": "/static/js/main.93eafcbb.js.map",
     "453.a1527df8.chunk.js.map": "/static/js/453.a1527df8.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ea88bc9f.css",
-    "static/js/main.14146db4.js"
+    "static/js/main.93eafcbb.js"
   ]
 }

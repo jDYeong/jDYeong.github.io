@@ -98,13 +98,13 @@ body::-webkit-scrollbar-track {
   .container {
     width: 90vw;
     min-width: auto;
-    overflow: hidden;
   }
 }
 @media screen and (max-width: 960px) {
   .container {
     display: flex;
     flex-direction: column;
+    overflow: hidden;
   }
 }
 /* 모드 컬러 */
@@ -272,7 +272,7 @@ header .title div {
     left: 0;
     transform: translateY(0);
     border-top-width: 2px;
-    margin-top: -2px;
+    margin-top: -4px;
     transition: height 0.23s ease-in;
   }
   header.mediaNotPc.down {
