@@ -95,6 +95,12 @@ button.close .open {
 .lightMode .bgHover:hover {
   background-color: #F6D8AE;
 }
+.lightMode .works_constent {
+  background: #EEE;
+}
+.lightMode .works_constent > div {
+  background-color: #fff;
+}
 .lightMode .works_box .btn-type1 {
   padding: 0.2rem;
   background: #fff;
@@ -128,6 +134,21 @@ button.close .open {
 .lightMode .works_box .works_desc {
   border-color: #222;
 }
+.lightMode .works_box .works_desc div::-webkit-scrollbar {
+  width: 7px;
+  background: #BBB;
+}
+.lightMode .works_box .works_desc div::-webkit-scrollbar-thumb {
+  width: 6px;
+  background-color: #BBB;
+  border: solid #222;
+  border-width: 0 0 0 1px;
+}
+.lightMode .works_box .works_desc div::-webkit-scrollbar-track {
+  background: #fff;
+  border: solid #222;
+  border-width: 0 0 0 1px;
+}
 
 .darkMode .user_box.pic div {
   background: #1B6493;
@@ -158,6 +179,12 @@ button.close .open {
 .darkMode .bgHover:hover {
   background-color: #636363;
 }
+.darkMode .works_constent {
+  background: #333;
+}
+.darkMode .works_constent > div {
+  background-color: #121212;
+}
 .darkMode .works_box .btn-type1 {
   padding: 0.2rem;
   background: #121212;
@@ -172,17 +199,41 @@ button.close .open {
 .darkMode .works_box .btn-type1 * {
   fill: #fff;
 }
+.darkMode .works_box dl {
+  border-color: #121212;
+}
 .darkMode .works_box dl:hover dt {
-  background-color: #CCC;
+  background-color: #636363;
+  color: #fff;
 }
 .darkMode .works_box dl.active {
-  border-bottom-color: #121212;
+  border-bottom-color: #fff;
+  background-color: #272f4a;
+}
+.darkMode .works_box dl.active dt {
+  background-color: #1B6493;
+  color: #fff;
 }
 .darkMode .works_box .works_tit {
   border-color: #fff;
 }
 .darkMode .works_box .works_desc {
   border-color: #fff;
+}
+.darkMode .works_box .works_desc div::-webkit-scrollbar {
+  width: 7px;
+  background: #1B6493;
+}
+.darkMode .works_box .works_desc div::-webkit-scrollbar-thumb {
+  width: 6px;
+  background-color: #1B6493;
+  border: solid #222;
+  border-width: 0 0 0 1px;
+}
+.darkMode .works_box .works_desc div::-webkit-scrollbar-track {
+  background: #EEE;
+  border: solid #222;
+  border-width: 0 0 0 1px;
 }
 
 .user_box.pic div::before {
@@ -247,22 +298,6 @@ button.close .open {
 .skills_slide .swiper-slide-active div div {
   height: 4rem;
   margin-bottom: 0.8rem;
-}
-
-.works_box .works_desc div::-webkit-scrollbar {
-  width: 7px;
-  background: #BBB;
-}
-.works_box .works_desc div::-webkit-scrollbar-thumb {
-  width: 6px;
-  background-color: #BBB;
-  border: solid #222;
-  border-width: 0 0 0 1px;
-}
-.works_box .works_desc div::-webkit-scrollbar-track {
-  background: #fff;
-  border: solid #222;
-  border-width: 0 0 0 1px;
 }
 
 @media screen and (max-width: 960px) {
