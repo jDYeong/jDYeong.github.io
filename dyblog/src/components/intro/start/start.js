@@ -16,13 +16,11 @@ const Start = () => {
                 </S.UserPic>
 
                 <S.UserLogin className='user_box login'>
-                    
                     {/* 로그아웃 상태 */}
                     <LogoutArea />
 
                     {/* 로그인 상태
                     <LoginArea /> */}
-                    
                     <UserBoxTag />
                 </S.UserLogin>
             </S.UserBox>

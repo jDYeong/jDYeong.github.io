@@ -30,6 +30,49 @@
             }
         }
     }
+    .bgHover:hover{background-color: $light-color-light-orange;}
+
+    .works_constent{
+        background: $light-color-light-gray;
+        &>div{
+            background-color: $light-color-white;
+        }
+    }
+    .works_box{
+        .btn-type1{
+            @include btnType1($light-color-black, $light-color-white);
+            * {fill:$light-color-black;}
+        }
+        dl{
+            &:hover dt{background-color: $light-color-light-gray;}
+            &.active{
+                border-bottom-color: $light-color-black;
+                dt{
+                    background-color: $light-color-blue;
+                    color: $light-color-white;
+                }
+            }
+            dt{background-color: $light-color-white;}
+        }
+        .works_tit{border-color: $light-color-black;}
+        .works_desc{
+            border-color: $light-color-black;
+            div{@include scrollCustomSub;}
+        }
+    }
+
+    .portfolio_content{
+        div{border-color: $light-color-black;}
+        a{
+            border-color: $light-color-black;
+            background-color: $light-color-yellow;
+        }
+        dl dd{
+            span{color: $light-color-red;}
+            button{color: $dark-color-gray;}
+        } 
+    }
+
 }
 
 .darkMode{
@@ -45,7 +88,7 @@
         }
     }
     .aboutme_box{
-        border-color: $dark-color-black;
+        border-color: $dark-color-white;
         dl{
             dt{color: $dark-color-white;}
             dd{color: $dark-color-white;}
@@ -60,6 +103,60 @@
                 border-top-color: $dark-color-purple;
             }
         }
+    }
+
+    .bgHover:hover{background-color: $dark-color-gray;}
+
+    .works_constent{
+        background: #333;
+        &>div{
+            background-color: $dark-color-black;
+        }
+    }
+    .works_box{
+        .btn-type1{
+            @include btnType1($dark-color-white, $dark-color-black);
+            * {fill:$dark-color-white;}
+        }
+        dl{
+            border-color: $dark-color-black;
+            &:hover dt{
+                background-color: $dark-color-gray;
+                color: $dark-color-white;
+            }
+            &.active{
+                border-bottom-color: $dark-color-white;
+                background-color: #272f4a;
+                dt{
+                    background-color: $dark-color-blue;
+                    color: $dark-color-white;
+                }
+            }
+        }
+        .works_tit{border-color: $dark-color-white;}
+        .works_desc{
+            border-color: $dark-color-white;
+            div{@include scrollCustomSub2;}
+        }
+    }
+
+    .portfolio_content{
+        div{
+            border-color: $dark-color-black;
+            background-color: $dark-color-white;
+            &::before{background-color: $dark-color-black;}
+            &::after{border-left-color: $dark-color-purple;}
+        }
+        a{
+            border-color: $dark-color-black;
+            background-color: $dark-color-yellow;
+            color: $dark-color-black;
+        }
+        dl dd{
+            p{font-weight: 300;}
+            span{color: $dark-color-red;}
+            button{color: $dark-color-light-gray;}
+        } 
     }
 }
 
@@ -97,7 +194,8 @@
 .aboutme_box{}
 
 .skills_slide{
-    height: 8.5rem;
+    width: 100%;
+    height: 8.9rem;
     .swiper-wrapper{align-items: flex-end;}
     .swiper-slide{
         width: auto;
@@ -115,14 +213,13 @@
             width: 0;
             height: 0;
             border: 10px solid transparent;
-            border-top-color: #000000;
             border-bottom: 0;
             margin-left: -10px;
             margin-bottom: -10px;
         }
         div div{
             height: 4rem;
-            margin-bottom: .4rem;
+            margin-bottom: .8rem;
         }
     }
 }
@@ -144,5 +241,18 @@
 }
 
 @media screen and (max-width: 720px) {
-
+    .skills_slide{
+        width: 100%;
+        height: 7.4rem;
+        .swiper-slide-active{
+            &::after{
+                border: 12px solid transparent;
+                margin-left: -12px;
+                margin-bottom: -19px;
+            }
+            div div{
+                height: 2.4rem;
+            }
+        }
+    }
 }

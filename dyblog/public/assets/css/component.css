@@ -92,6 +92,76 @@ button.close .open {
 .lightMode .skills_slide .swiper-slide-active::after {
   border-top-color: #7D3C98;
 }
+.lightMode .bgHover:hover {
+  background-color: #F6D8AE;
+}
+.lightMode .works_constent {
+  background: #EEE;
+}
+.lightMode .works_constent > div {
+  background-color: #fff;
+}
+.lightMode .works_box .btn-type1 {
+  padding: 0.2rem;
+  background: #fff;
+  border: 1px solid #222;
+  border-bottom-width: 2px;
+  border-right-width: 2px;
+  box-sizing: border-box;
+}
+.lightMode .works_box .btn-type1 svg.hide {
+  display: none;
+}
+.lightMode .works_box .btn-type1 * {
+  fill: #222;
+}
+.lightMode .works_box dl:hover dt {
+  background-color: #EEE;
+}
+.lightMode .works_box dl.active {
+  border-bottom-color: #222;
+}
+.lightMode .works_box dl.active dt {
+  background-color: #2471A3;
+  color: #fff;
+}
+.lightMode .works_box dl dt {
+  background-color: #fff;
+}
+.lightMode .works_box .works_tit {
+  border-color: #222;
+}
+.lightMode .works_box .works_desc {
+  border-color: #222;
+}
+.lightMode .works_box .works_desc div::-webkit-scrollbar {
+  width: 7px;
+  background: #BBB;
+}
+.lightMode .works_box .works_desc div::-webkit-scrollbar-thumb {
+  width: 6px;
+  background-color: #BBB;
+  border: solid #222;
+  border-width: 0 0 0 1px;
+}
+.lightMode .works_box .works_desc div::-webkit-scrollbar-track {
+  background: #fff;
+  border: solid #222;
+  border-width: 0 0 0 1px;
+}
+.lightMode .portfolio_content div {
+  border-color: #222;
+}
+.lightMode .portfolio_content a {
+  border-color: #222;
+  background-color: #F4D03F;
+}
+.lightMode .portfolio_content dl dd span {
+  color: #EC7063;
+}
+.lightMode .portfolio_content dl dd button {
+  color: #636363;
+}
 
 .darkMode .user_box.pic div {
   background: #1B6493;
@@ -105,7 +175,7 @@ button.close .open {
   border-color: #fff;
 }
 .darkMode .aboutme_box {
-  border-color: #121212;
+  border-color: #fff;
 }
 .darkMode .aboutme_box dl dt {
   color: #fff;
@@ -118,6 +188,89 @@ button.close .open {
 }
 .darkMode .skills_slide .swiper-slide-active::after {
   border-top-color: #79259C;
+}
+.darkMode .bgHover:hover {
+  background-color: #636363;
+}
+.darkMode .works_constent {
+  background: #333;
+}
+.darkMode .works_constent > div {
+  background-color: #121212;
+}
+.darkMode .works_box .btn-type1 {
+  padding: 0.2rem;
+  background: #121212;
+  border: 1px solid #fff;
+  border-bottom-width: 2px;
+  border-right-width: 2px;
+  box-sizing: border-box;
+}
+.darkMode .works_box .btn-type1 svg.hide {
+  display: none;
+}
+.darkMode .works_box .btn-type1 * {
+  fill: #fff;
+}
+.darkMode .works_box dl {
+  border-color: #121212;
+}
+.darkMode .works_box dl:hover dt {
+  background-color: #636363;
+  color: #fff;
+}
+.darkMode .works_box dl.active {
+  border-bottom-color: #fff;
+  background-color: #272f4a;
+}
+.darkMode .works_box dl.active dt {
+  background-color: #1B6493;
+  color: #fff;
+}
+.darkMode .works_box .works_tit {
+  border-color: #fff;
+}
+.darkMode .works_box .works_desc {
+  border-color: #fff;
+}
+.darkMode .works_box .works_desc div::-webkit-scrollbar {
+  width: 7px;
+  background: #1B6493;
+}
+.darkMode .works_box .works_desc div::-webkit-scrollbar-thumb {
+  width: 6px;
+  background-color: #1B6493;
+  border: solid #222;
+  border-width: 0 0 0 1px;
+}
+.darkMode .works_box .works_desc div::-webkit-scrollbar-track {
+  background: #EEE;
+  border: solid #222;
+  border-width: 0 0 0 1px;
+}
+.darkMode .portfolio_content div {
+  border-color: #121212;
+  background-color: #fff;
+}
+.darkMode .portfolio_content div::before {
+  background-color: #121212;
+}
+.darkMode .portfolio_content div::after {
+  border-left-color: #79259C;
+}
+.darkMode .portfolio_content a {
+  border-color: #121212;
+  background-color: #EED368;
+  color: #121212;
+}
+.darkMode .portfolio_content dl dd p {
+  font-weight: 300;
+}
+.darkMode .portfolio_content dl dd span {
+  color: #BD3D30;
+}
+.darkMode .portfolio_content dl dd button {
+  color: #CCC;
 }
 
 .user_box.pic div::before {
@@ -150,7 +303,8 @@ button.close .open {
 }
 
 .skills_slide {
-  height: 8.5rem;
+  width: 100%;
+  height: 8.9rem;
 }
 .skills_slide .swiper-wrapper {
   align-items: flex-end;
@@ -174,14 +328,13 @@ button.close .open {
   width: 0;
   height: 0;
   border: 10px solid transparent;
-  border-top-color: #000000;
   border-bottom: 0;
   margin-left: -10px;
   margin-bottom: -10px;
 }
 .skills_slide .swiper-slide-active div div {
   height: 4rem;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.8rem;
 }
 
 @media screen and (max-width: 960px) {
@@ -189,5 +342,19 @@ button.close .open {
     width: 13rem;
     height: 13rem;
     background-image: url("../images/bg/intro_user_m.png");
+  }
+}
+@media screen and (max-width: 720px) {
+  .skills_slide {
+    width: 100%;
+    height: 7.4rem;
+  }
+  .skills_slide .swiper-slide-active::after {
+    border: 12px solid transparent;
+    margin-left: -12px;
+    margin-bottom: -19px;
+  }
+  .skills_slide .swiper-slide-active div div {
+    height: 2.4rem;
   }
 }

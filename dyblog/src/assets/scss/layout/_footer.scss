@@ -4,7 +4,7 @@
 }
 
 .darkMode{
-    footer p{color: $light-color-black;}
+    footer p{color: $light-color-white;}
 }
 
 footer{
@@ -23,7 +23,7 @@ footer{
     }
 
     @media screen and (max-width: 960px) {
-        display: none;
+        bottom: 1rem;
     }
     
     @media screen and (max-width: 720px) {

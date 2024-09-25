@@ -81,7 +81,7 @@ export const UserLogin = styled.div`
 export const LoginArea = styled.div``
 
 export const InpWrap = styled.div`
-    max-width: calc(100% - 8rem);
+    //max-width: calc(100% - 8rem);
     color: ${ props => props.$error ? `var(--light-color-red)` : `var(--light-color-white)`};
 `
 export const InpBox = styled.div`
@@ -158,15 +158,38 @@ export const AboutMeTxt = styled.dl`
     padding: 2.4rem;
     position: relative;
     z-index: 1;
+    
+    @media ${device.tablet} { 
+    
+    }
+    @media ${device.mobile} {
+        padding: 1.6rem;
+    }
 `
 export const AboutMeTit = styled.dt`
-    font-size: 2.8rem;
+    font-size: 2.4rem;
     font-weight: 800;
     line-height: 1.2;
+    ${include.fontTitle}
+    
+    @media ${device.tablet} { 
+    
+    }
+    @media ${device.mobile} {
+        font-size: 2.4rem;
+    }
 `
 export const AboutMeDesc = styled.dd`
     font-size: 1.6rem;
     line-height: 1.4;
     word-break: keep-all;
     margin-top: .8rem;
+    
+    @media ${device.tablet} { 
+    
+    }
+    @media ${device.mobile} {
+        font-size: 1.4rem;
+        margin-top: .4rem;
+    }
 `

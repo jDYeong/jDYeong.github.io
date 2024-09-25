@@ -25,9 +25,9 @@ export default function Container(){
                 <Tablet><Header mediaQuery={true} /></Tablet>
                 <Main />
                 <Pc><MainButtons /></Pc>
-                <Mobile><Footer /></Mobile>
-                <Tablet><Footer /></Tablet>
             </div>
+            <Mobile><Footer /></Mobile>
+            <Tablet><Footer /></Tablet>
         </div>
     )
 }

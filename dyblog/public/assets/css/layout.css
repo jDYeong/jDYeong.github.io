@@ -82,6 +82,7 @@ body::-webkit-scrollbar-track {
 .bg {
   min-height: 100vh;
   padding: 5vh 0;
+  position: relative;
 }
 
 .container {
@@ -98,13 +99,13 @@ body::-webkit-scrollbar-track {
   .container {
     width: 90vw;
     min-width: auto;
-    overflow: hidden;
   }
 }
 @media screen and (max-width: 960px) {
   .container {
     display: flex;
     flex-direction: column;
+    overflow: hidden;
   }
 }
 /* 모드 컬러 */
@@ -272,7 +273,8 @@ header .title div {
     left: 0;
     transform: translateY(0);
     border-top-width: 2px;
-    margin-top: -2px;
+    margin-top: -4px;
+    transform-origin: center top;
     transition: height 0.23s ease-in;
   }
   header.mediaNotPc.down {
@@ -292,6 +294,9 @@ header .title div {
   }
   header.mediaNotPc.down .main-btns button:last-of-type {
     margin-top: 0;
+  }
+  header.mediaNotPc.fixed {
+    position: fixed;
   }
 }
 /* 모드 컬러 */
@@ -447,7 +452,7 @@ main {
 }
 
 .darkMode footer p {
-  color: #222;
+  color: #fff;
 }
 
 footer {
@@ -463,7 +468,7 @@ footer p {
 }
 @media screen and (max-width: 960px) {
   footer {
-    display: none;
+    bottom: 1rem;
   }
 }
 /* 모드 컬러 */

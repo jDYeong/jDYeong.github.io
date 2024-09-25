@@ -36,9 +36,6 @@
     --ani-slow : .7s ease-in;
 }
 
-$scroll-thumb: #F3B562;
-$scroll-bg : #A7C4B5;
-
 $light-color-black: #222;
 $light-color-gray: #BBB;
 $light-color-light-gray: #EEE;
@@ -64,6 +61,15 @@ $dark-color-purple: #79259C;
 $dark-color-blue: #1B6493;
 $dark-color-red: #BD3D30;
 $dark-color-yellow: #EED368;
+
+$scroll-thumb: #F3B562;
+$scroll-bg : #A7C4B5;
+
+$scroll-thumb2: #BBB;
+$scroll-bg2 : #fff;
+
+$scroll-thumb3: $dark-color-blue;
+$scroll-bg3 : $light-color-light-gray;
 
 //사이즈 변수
 $container-width: 80vw;
@@ -105,6 +111,41 @@ $img-url-icons : '../images/icons/';
     }
     &::-webkit-scrollbar-track {
         background: $scroll-bg;
+    }
+}
+
+@mixin scrollCustomSub{
+    &::-webkit-scrollbar {
+        width: 7px;
+        background: $scroll-thumb2;
+    }
+    &::-webkit-scrollbar-thumb {
+        width: 6px;
+        background-color: $scroll-thumb2;
+        border: solid $light-color-black;
+        border-width: 0 0 0 1px;
+    }
+    &::-webkit-scrollbar-track {
+        background: $scroll-bg2;
+        border: solid $light-color-black;
+        border-width: 0 0 0 1px;
+    }
+}
+@mixin scrollCustomSub2{
+    &::-webkit-scrollbar {
+        width: 7px;
+        background: $scroll-thumb3;
+    }
+    &::-webkit-scrollbar-thumb {
+        width: 6px;
+        background-color: $scroll-thumb3;
+        border: solid $light-color-black;
+        border-width: 0 0 0 1px;
+    }
+    &::-webkit-scrollbar-track {
+        background: $scroll-bg3;
+        border: solid $light-color-black;
+        border-width: 0 0 0 1px;
     }
 }
 

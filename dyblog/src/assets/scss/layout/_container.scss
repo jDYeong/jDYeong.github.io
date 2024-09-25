@@ -29,6 +29,7 @@ body{
 .bg{
     min-height: 100vh;
     padding: 5vh 0;
+    position: relative;
 }
 
 .container{
@@ -45,13 +46,13 @@ body{
     .container{
         width: 90vw;
         min-width: auto;
-        overflow: hidden;
     }
 }
 
 @media screen and (max-width: 960px) {
     .container{
         @include flexColumn;
+        overflow: hidden;
     }
 }
 

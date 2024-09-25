@@ -7,19 +7,29 @@ import MainButtons from "./mainButtons";
 export default function Header(prop){
 
     //태블릿,모바일 헤더 스크롤 이벤트
-    const handleScroll = () => {
+    const handleScroll = (e) => {
         let headerTop = document.querySelector('.container').offsetTop + 2;
         let mediaNotPc = document.querySelector('header');
 
-        window.scrollY > headerTop
-            ? mediaNotPc.style.transform=`translateY(${window.scrollY - headerTop}px)`
-            : mediaNotPc.style.transform=`translateY(0)`;
+        let lastKnownScrollPosition = 0;
+        let deltaY = 0;
 
-        //휠 이벤트
-        window.onwheel = (e) => {
-            e.deltaY > 0
+        window.scrollY > headerTop
+            ? mediaNotPc.classList.add('fixed')
+            : mediaNotPc.classList.remove('fixed')
+
+        let ticking = false;
+        if (!ticking) {
+            window.requestAnimationFrame(function() {
+                deltaY = window.scrollY - lastKnownScrollPosition;
+                lastKnownScrollPosition = window.scrollY;
+                ticking = false;
+
+                deltaY > 0
                 ? mediaNotPc.classList.add('down')
                 : mediaNotPc.classList.remove('down');
+            });
+            ticking = true;
         }
     }
 
