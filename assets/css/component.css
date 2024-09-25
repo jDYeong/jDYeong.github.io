@@ -159,6 +159,9 @@ button.close .open {
 .lightMode .portfolio_content dl dd span {
   color: #EC7063;
 }
+.lightMode .portfolio_content dl dd button {
+  color: #636363;
+}
 
 .darkMode .user_box.pic div {
   background: #1B6493;
@@ -246,23 +249,30 @@ button.close .open {
   border-width: 0 0 0 1px;
 }
 .darkMode .portfolio_content div {
-  border-color: #fff;
+  border-color: #121212;
+  background-color: #fff;
 }
 .darkMode .portfolio_content div::before {
   background-color: #121212;
 }
 .darkMode .portfolio_content div::after {
-  border-left-color: #1B6493;
+  border-left-color: #79259C;
   top: 0.7rem;
   left: 0.7rem;
 }
 .darkMode .portfolio_content a {
-  border-color: #fff;
+  border-color: #121212;
   background-color: #EED368;
   color: #121212;
 }
+.darkMode .portfolio_content dl dd p {
+  font-weight: 300;
+}
 .darkMode .portfolio_content dl dd span {
   color: #BD3D30;
+}
+.darkMode .portfolio_content dl dd button {
+  color: #CCC;
 }
 
 .user_box.pic div::before {
