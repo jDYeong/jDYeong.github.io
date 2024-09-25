@@ -295,6 +295,9 @@ header .title div {
   header.mediaNotPc.down .main-btns button:last-of-type {
     margin-top: 0;
   }
+  header.mediaNotPc.fixed {
+    position: fixed;
+  }
 }
 /* 모드 컬러 */
 .lightMode nav ul li a {
