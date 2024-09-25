@@ -257,8 +257,6 @@ button.close .open {
 }
 .darkMode .portfolio_content div::after {
   border-left-color: #79259C;
-  top: 0.7rem;
-  left: 0.7rem;
 }
 .darkMode .portfolio_content a {
   border-color: #121212;
