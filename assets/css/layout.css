@@ -544,3 +544,210 @@ footer p {
     margin-top: 0.5rem;
   }
 }
+/*** 컬러 변수 ***/
+:root {
+  --scroll-thumb: #F3B562;
+  --scroll-bg: #A7C4B5;
+  --light-color-black: #222;
+  --light-color-gray: #BBB;
+  --light-color-light-gray: #EEE;
+  --light-color-white: #fff;
+  --light-color-dark-green: #A7C4B5;
+  --light-color-light-green: #D6EADF;
+  --light-color-light-orange: #F6D8AE;
+  --light-color-dark-orange: #F3B562;
+  --light-color-purple: #7D3C98;
+  --light-color-blue: #2471A3;
+  --light-color-red: #EC7063;
+  --light-color-yellow: #F4D03F;
+  --dark-color-black: #121212;
+  --dark-color-gray: #636363;
+  --dark-color-light-gray: #CCC;
+  --dark-color-white: #fff;
+  --dark-color-dark-green: #76AD91;
+  --dark-color-light-green: #AFDBC3;
+  --dark-color-light-orange: #EDC389;
+  --dark-color-dark-orange: #E39F43;
+  --dark-color-purple: #79259C;
+  --dark-color-blue: #1B6493;
+  --dark-color-red: #BD3D30;
+  --dark-color-yellow: #EED368;
+  /*** 공통변수 ***/
+  --ani-fast: .23s ease-in;
+  --ani-middle: .4s ease-in;
+  --ani-slow: .7s ease-in;
+}
+
+/*** 공통변수 ***/
+/* ani */
+@keyframes bounceAni {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+/* button type */
+/* 모드 컬러 */
+.lightMode .contact_container span {
+  border-color: #222;
+  background-color: #F3B562;
+}
+.lightMode .contact_container dl {
+  background-color: #fff;
+  border-color: #222;
+}
+.lightMode .contact_container dl::before {
+  border-color: #222 transparent;
+}
+.lightMode .contact_container dl::after {
+  border-color: #fff transparent;
+}
+
+.darkMode .contact_container span {
+  border-color: #fff;
+  background-color: #76AD91;
+}
+.darkMode .contact_container dl {
+  background-color: #fff;
+  border-color: #121212;
+}
+.darkMode .contact_container dl::before {
+  border-color: #121212 transparent;
+}
+.darkMode .contact_container dl::after {
+  border-color: #fff transparent;
+}
+
+.contact_container {
+  position: fixed;
+  bottom: 2rem;
+  right: calc((100vw - 120rem) / 2 + 1rem);
+  z-index: 99;
+}
+.contact_container span {
+  display: block;
+  display: block;
+  margin: 0 auto;
+  width: 2.4rem;
+  height: 2.4rem;
+  background: url("../images/icons/mood-happy.svg") no-repeat center;
+  width: 4rem;
+  height: 4rem;
+  background-size: 2.4rem 2.4rem;
+  border-width: 1px 2px 2px 1px;
+  border-style: solid;
+  border-radius: 50%;
+  margin-right: 0;
+}
+.contact_container dl {
+  padding: 0.4rem 1.4rem;
+  border-radius: 5rem;
+  position: relative;
+  border: 1px solid;
+  text-align: right;
+  margin-bottom: 1rem;
+  animation: bounceAni 1.5s infinite;
+  transition: all 0.23s ease-in;
+}
+.contact_container dl::before {
+  content: "";
+  position: absolute;
+  border-style: solid;
+  border-width: 6px 6px 0;
+  display: block;
+  width: 0;
+  z-index: 0;
+  bottom: -7px;
+  right: 1.4rem;
+}
+.contact_container dl::after {
+  content: "";
+  position: absolute;
+  border-style: solid;
+  border-width: 6px 6px 0;
+  display: block;
+  width: 0;
+  z-index: 1;
+  bottom: -6px;
+  right: 1.4rem;
+}
+.contact_container dl dt {
+  font-size: 2rem;
+  line-height: 1;
+  font-weight: 800;
+}
+.contact_container dl dd {
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  transition: all 0.23s ease-in;
+}
+.contact_container dl dd ul li {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.4rem;
+  font-size: 1.8rem;
+  line-height: 1.2;
+  margin-top: 0.6rem;
+  flex-shrink: 0;
+}
+.contact_container dl dd ul li svg {
+  flex-shrink: 0;
+}
+.contact_container:hover dl {
+  border-radius: 1rem;
+}
+.contact_container:hover dl dd {
+  width: 21.5rem;
+  height: 5.5rem;
+}
+
+@media screen and (max-width: 1500px) {
+  .contact_container {
+    right: calc(10vw + 1rem);
+  }
+}
+@media screen and (max-width: 1200px) {
+  .contact_container {
+    right: calc(5vw + 1rem);
+  }
+}
+@media screen and (max-width: 720px) {
+  .contact_container span {
+    width: 3rem;
+    height: 3rem;
+    background-size: 2rem 2rem;
+  }
+  .contact_container dl {
+    padding: 0.4rem 1rem;
+  }
+  .contact_container dl::before {
+    border-width: 4px 4px 0;
+    bottom: -5px;
+    right: 1.2rem;
+  }
+  .contact_container dl::after {
+    border-width: 4px 4px 0;
+    bottom: -4px;
+    right: 1.2rem;
+  }
+  .contact_container dl dt {
+    font-size: 1.6rem;
+  }
+  .contact_container dl dd ul li {
+    font-size: 1.4rem;
+    margin-top: 0.4rem;
+  }
+  .contact_container:hover dl {
+    border-radius: 0.8rem;
+  }
+  .contact_container:hover dl dd {
+    width: 17.3rem;
+    height: 5rem;
+  }
+}
