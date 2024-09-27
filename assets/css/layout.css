@@ -79,6 +79,10 @@ body::-webkit-scrollbar-track {
   background: #A7C4B5;
 }
 
+main {
+  position: relative;
+}
+
 .bg {
   min-height: 100vh;
   padding: 5vh 0;
@@ -689,6 +693,7 @@ footer p {
 }
 .contact_container dl dd ul li {
   display: flex;
+  align-items: center;
   justify-content: flex-end;
   gap: 0.4rem;
   font-size: 1.8rem;
