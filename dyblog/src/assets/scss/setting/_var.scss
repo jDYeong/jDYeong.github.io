@@ -209,6 +209,15 @@ $img-url-icons : '../images/icons/';
     svg.hide{display: none;}
 }
 
+//메인 얼굴
+@mixin happyFace{
+    display: block;
+    margin: 0 auto;
+    width: 2.4rem;
+    height: 2.4rem;
+    background: url($img-url-icons + 'mood-happy.svg') no-repeat center;
+}
+
 @media screen and (max-width: 1200px) {
     
 }

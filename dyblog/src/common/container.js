@@ -4,6 +4,7 @@ import Header from "./header";
 import Main from "./main";
 import MainButtons from './mainButtons';
 import Footer from './footer';
+import Contact from './contact';
 
 export default function Container(){
 
@@ -25,6 +26,7 @@ export default function Container(){
                 <Tablet><Header mediaQuery={true} /></Tablet>
                 <Main />
                 <Pc><MainButtons /></Pc>
+                <Contact />
             </div>
             <Mobile><Footer /></Mobile>
             <Tablet><Footer /></Tablet>
