@@ -18,8 +18,7 @@ export const UserPic = styled.div`
         width: 100%;
         height: 100%;
         z-index: 1;
-        border-style: solid;
-        border-width: 1px 2px 2px 1px;
+        ${include.borderStyle};
         overflow: hidden;
     }
     button{
@@ -50,16 +49,13 @@ export const UserLogin = styled.div`
         height: 18.2rem;
         z-index: 1;
         text-align: center;
-        border-style: solid;
-        border-width: 1px 2px 2px 1px;
+        ${include.borderStyle};
         ${include.flexColumnCenter}
         @media ${device.tablet} { 
-            border-style: solid;
-            border-width: 1px 2px 2px 1px;
+            ${include.borderStyle};
         }
         @media ${device.mobile} {
-            border-style: solid;
-            border-width: 1px 2px 2px 1px;
+            ${include.borderStyle};
         }
         &+button{
             position: absolute;
@@ -86,8 +82,7 @@ export const InpWrap = styled.div`
 `
 export const InpBox = styled.div`
     width: 100%;
-    border-style: solid;
-    border-width: 1px 2px 2px 1px;
+    ${include.borderStyle};
     border-color: var(--light-color-white);
     margin: 0 auto 8px;
     padding-left: 4rem;
@@ -133,8 +128,7 @@ export const AboutMe = styled.div`
     background: url(${process.env.PUBLIC_URL}/assets/images/bg/intro_bg.jpg) no-repeat center bottom / cover;
     position: relative;
     overflow: hidden;
-    border-width: 1px 2px 2px 1px;
-    border-style: solid;
+    ${include.borderStyle};
     &::before{
         content: '';
         display: block;

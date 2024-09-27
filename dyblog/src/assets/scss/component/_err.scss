@@ -1,0 +1,18 @@
+@import '../setting/_var.scss';
+
+/* 모드 컬러 */
+.lightMode{
+    .btn_err{
+        background-color: $light-color-blue;
+        border-color: $light-color-black;
+        color: $light-color-white;
+    }
+}
+
+.darkMode{
+    .btn_err{
+        background-color: $dark-color-blue;
+        border-color: $dark-color-white;
+        color: $dark-color-white;
+    }
+}

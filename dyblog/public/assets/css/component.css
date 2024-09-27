@@ -358,3 +358,63 @@ button.close .open {
     height: 2.4rem;
   }
 }
+/*** 컬러 변수 ***/
+:root {
+  --scroll-thumb: #F3B562;
+  --scroll-bg: #A7C4B5;
+  --light-color-black: #222;
+  --light-color-gray: #BBB;
+  --light-color-light-gray: #EEE;
+  --light-color-white: #fff;
+  --light-color-dark-green: #A7C4B5;
+  --light-color-light-green: #D6EADF;
+  --light-color-light-orange: #F6D8AE;
+  --light-color-dark-orange: #F3B562;
+  --light-color-purple: #7D3C98;
+  --light-color-blue: #2471A3;
+  --light-color-red: #EC7063;
+  --light-color-yellow: #F4D03F;
+  --dark-color-black: #121212;
+  --dark-color-gray: #636363;
+  --dark-color-light-gray: #CCC;
+  --dark-color-white: #fff;
+  --dark-color-dark-green: #76AD91;
+  --dark-color-light-green: #AFDBC3;
+  --dark-color-light-orange: #EDC389;
+  --dark-color-dark-orange: #E39F43;
+  --dark-color-purple: #79259C;
+  --dark-color-blue: #1B6493;
+  --dark-color-red: #BD3D30;
+  --dark-color-yellow: #EED368;
+  /*** 공통변수 ***/
+  --ani-fast: .23s ease-in;
+  --ani-middle: .4s ease-in;
+  --ani-slow: .7s ease-in;
+}
+
+/*** 공통변수 ***/
+/* ani */
+@keyframes bounceAni {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+/* button type */
+/* 모드 컬러 */
+.lightMode .btn_err {
+  background-color: #2471A3;
+  border-color: #222;
+  color: #fff;
+}
+
+.darkMode .btn_err {
+  background-color: #1B6493;
+  border-color: #fff;
+  color: #fff;
+}

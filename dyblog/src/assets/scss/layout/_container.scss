@@ -25,6 +25,7 @@ body{
     @include scrollCustom;
 }
 
+main{position: relative;}
 
 .bg{
     min-height: 100vh;

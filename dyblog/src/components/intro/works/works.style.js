@@ -20,8 +20,8 @@ export const WorksScrollBox = styled.div`
 export const WorksTitWarp = styled.div`
     ${include.flex}
     justify-content: space-between;
-    border-style: solid;
-    border-width: 1px 2px 1px 1px;
+    ${include.borderStyle}
+    border-bottom-width: 1px;
     padding: .4rem 2rem;
     
     @media ${device.tablet} {}
@@ -37,8 +37,7 @@ export const WorksBtnBox = styled.div`
 `
 
 export const WorksDescWarp = styled.div`
-    border-style: solid;
-    border-width: 0 2px 2px 1px;
+    ${include.borderStyle}
     &>div{
         overflow-y: auto;
         max-height: 26rem;

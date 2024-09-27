@@ -13,6 +13,11 @@ export const include = {
         letter-spacing: normal;
     `
 
+    ,borderStyle :`
+        border-width: 1px 2px 2px 1px;
+        border-style: solid;
+    `
+
     //flex
     ,flex :`
         display: flex;

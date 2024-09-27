@@ -29,9 +29,8 @@ export const PortfolioListItem = styled.li`
 `
 export const PortfolioItemImg = styled.div`
     ${include.flexCenter}
+    ${include.borderStyle}
     height: 10rem;
-    border-width: 1px 2px 2px 1px;
-    border-style: solid;
     position: relative;
 
     &::before{
@@ -67,17 +66,16 @@ export const PortfolioItemImg = styled.div`
 `
 export const PortfolioLink = styled.a`
     ${include.flex}
+    ${include.borderStyle}
     align-items: center;
     justify-content: flex-end;
     width: 3.2rem;
     height: 3.2rem;
     padding: .6rem;
     border-radius: 3.2rem;
-    border-width: 1px 2px 2px 1px;
     background-image: url(${process.env.PUBLIC_URL}/assets/images/icons/icon-outlink.svg);
     background-repeat: no-repeat;
     background-position: center left .5rem;
-    border-style: solid;
     font-size: 0;
     line-height: 0;
     text-align: right;
