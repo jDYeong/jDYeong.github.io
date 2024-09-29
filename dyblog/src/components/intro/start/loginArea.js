@@ -2,10 +2,10 @@ import React from 'react';
 import * as S from "./start.style.js"
 import { ReactComponent as IconSuccess } from '../../../assets/images/icons/icon-success.svg';
 
-const loginArea = () => {
+const loginArea = ( props ) => {
 
     const logoutClick = () => {
-        console.log('logout click')
+        props.updateLoginResult(false);
     }
     
     return (

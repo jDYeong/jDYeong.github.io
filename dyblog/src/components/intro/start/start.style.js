@@ -1,6 +1,6 @@
-import styled from 'styled-components'
+import styled, { css, keyframes } from 'styled-components'
 import '../../../assets/scss/setting/_var.scss';
-import {include, bounceAni} from '../../../common/mixin.style';
+import {include, bounceAni, vibrationAni} from '../../../common/mixin.style';
 import { device } from '../../../common/MediaQuery';
 
 export const UserBox = styled.div`
@@ -78,8 +78,21 @@ export const LoginArea = styled.div``
 
 export const InpWrap = styled.div`
     //max-width: calc(100% - 8rem);
-    color: ${ props => props.$error ? `var(--light-color-red)` : `var(--light-color-white)`};
-`
+    ${(props) =>
+    props.$error
+    ? css`
+        color: var(--light-color-red);
+        svg{
+            transform-origin: center;
+            animation: ${vibrationAni} .1s infinite;
+        }
+        `
+    : css`
+        color: var(--light-color-white);
+        `}
+`;
+
+
 export const InpBox = styled.div`
     width: 100%;
     ${include.borderStyle};

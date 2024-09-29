@@ -4,38 +4,47 @@ import * as S from "./start.style.js"
 import { ReactComponent as InputId } from '../../../assets/images/icons/icon-id.svg';
 import { ReactComponent as InputPw } from '../../../assets/images/icons/icon-password.svg';
 import useFetch from '../../../hooks/useFetch';
+import { db } from '../../../firebase'
+import { getDoc, doc } from 'firebase/firestore'
 
 
-const LogoutArea = () => {
+const LogoutArea = ( props ) => {
 
-    const item = useFetch('http://localhost:3001/login');
     const [id, setId] = useState('');
     const [pw, setPw] = useState('');
-    const [LogIn, setLogIn] = useState(false);
+    
+    const [errType, setErrType] = useState(false);
 
-    function onSubmit(){
-        axios.post('http://localhost:3001/login',{ id,  pw})
-            .then((res)=>{
-                const result = item.data.find((item)=> item.memId === id && item.memPw === pw);
-                if(result){
-                    console.log("로그인 성공");
-                    setLogIn(true);
-                }
-                else{
-                    alert("아이디 혹은 비밀번호가 일치하지 않습니다.")
-                    setLogIn(false);
-                }
-            })
-            .catch((err) => {
-                console.error('에러 발생:', err);
-            });
+    // useEffect(async() => {
+
+    // })
+
+    const onSubmit = async() => {
+        const tweetDoc = await getDoc(doc(db, 'admin', 'login'));
+        const tweetData = tweetDoc.data();
+        
+        if (tweetDoc.exists()) {
+            const result = tweetData.memId === id && tweetData.memPw === pw;
+            if(result){
+                setErrType(false)
+                //setLogIn(true);
+                props.updateLoginResult(true);
+                //console.log('로그인 성공')
+            }
+            else{
+                setErrType(true)
+                setTimeout(() => setErrType(false), 1000);
+                //setLogIn(false);
+                props.updateLoginResult(false);
+            }
+        }
     }
 
     return (
         <S.LoginArea>
             <p>Admin Login</p>
             <form action="">
-                <S.InpWrap $error={false}>
+                <S.InpWrap $error={errType}>
                     <S.InpBox>
                         <S.Inp type={'text'} onChange={(e) => setId(e.target.value)} />
                         <InputId />

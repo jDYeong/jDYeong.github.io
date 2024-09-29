@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import * as S from "./start.style.js"
 import UserBoxTag from '../../common/bookmark.js'
 import LoginArea from "./loginArea.js"
@@ -7,6 +7,12 @@ import AboutMe from "./aboutme.js"
 
 
 const Start = () => {
+
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
+    const updateLoginResult = (result) => {
+        setIsLoggedIn(result);
+    };
+
     return (
         <div>
             <S.UserBox>
@@ -16,11 +22,9 @@ const Start = () => {
                 </S.UserPic>
 
                 <S.UserLogin className='user_box login'>
-                    {/* 로그아웃 상태 */}
-                    <LogoutArea />
 
-                    {/* 로그인 상태
-                    <LoginArea /> */}
+                    {isLoggedIn ? <LoginArea updateLoginResult={updateLoginResult} /> : <LogoutArea updateLoginResult={updateLoginResult} />}
+
                     <UserBoxTag />
                 </S.UserLogin>
             </S.UserBox>

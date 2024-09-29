@@ -66,3 +66,7 @@ export const bounceAni = keyframes`
     50%{transform: translateY(-5px);}
     100%{transform: translateY(0);}
 `
+export const vibrationAni = keyframes`
+    from {transform: translateY(-50%) rotate(10deg);}
+    to {transform: translateY(-50%) rotate(-10deg);}
+`
