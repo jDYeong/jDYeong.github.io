@@ -4,7 +4,7 @@ import Nav from "./nav";
 import Footer from "./footer";
 import MainButtons from "./mainButtons";
 
-export default function Header(prop){
+export default function Header({ mediaQuery, loginState }){
 
     //태블릿,모바일 헤더 스크롤 이벤트
     const handleScroll = (e) => {
@@ -34,7 +34,7 @@ export default function Header(prop){
     }
 
     useEffect(() => {
-        if( prop.mediaQuery ){
+        if( mediaQuery ){
 
             const timer = setInterval(() => {
                 window.addEventListener("scroll", handleScroll);
@@ -48,17 +48,17 @@ export default function Header(prop){
     }, []);
 
     return(
-        <header className={ prop.mediaQuery ? 'mediaNotPc' : 'mediaPc' }>
+        <header className={ mediaQuery ? 'mediaNotPc' : 'mediaPc' }>
             <div className="sticky">
                 <h1 className="title">
                     <p>안녕하세요 정다영입니다!</p>
                     <span></span>
                     <div>JDYeong <br />Blog</div>
                 </h1>
-                <Pc><Nav /></Pc>
+                <Pc><Nav loginState={loginState} /></Pc>
             </div>
-            <Mobile><Nav /></Mobile>
-            <Tablet><Nav /></Tablet>
+            <Mobile><Nav loginState={loginState} /></Mobile>
+            <Tablet><Nav loginState={loginState} /></Tablet>
 
             <Pc><Footer /></Pc>
 

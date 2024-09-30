@@ -9,13 +9,13 @@ import Works from "./works/works.js"
 import Portfolio from "./portfolio/portfolio.js"
 
 
-export default function Intro(){
+export default function Intro({sendLoginData}){
 
     return(
         <S.IntroContent>
             {/* about me */}
             <S.RowContent $mobWidth>
-                <Start />
+                <Start sendLoginData={sendLoginData} />
             </S.RowContent>
 
             {/* skills */}

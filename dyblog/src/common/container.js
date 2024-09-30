@@ -6,8 +6,7 @@ import MainButtons from './mainButtons';
 import Footer from './footer';
 import Contact from './contact';
 
-export default function Container(){
-
+export default function Container({sendLoginData, loginState}){
     const [isThema, setThema] = useState();
     if( isThema  === null ){
         setThema('lightMode')
@@ -17,14 +16,14 @@ export default function Container(){
         const Thema = JSON.parse(localStorage.getItem("thema"));
         setThema(Thema)
     }, []);
-
+    
     return(
         <div className={`bg ${isThema}`}>
             <div className="container">
-                <Pc><Header /></Pc>
-                <Mobile><Header mediaQuery={true} /></Mobile>
-                <Tablet><Header mediaQuery={true} /></Tablet>
-                <Main />
+                <Pc><Header loginState={loginState} /></Pc>
+                <Mobile><Header loginState={loginState} mediaQuery={true} /></Mobile>
+                <Tablet><Header loginState={loginState} mediaQuery={true} /></Tablet>
+                <Main  sendLoginData={sendLoginData}/>
                 <Pc><MainButtons /></Pc>
                 <Contact />
             </div>

@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
 import * as S from "./start.style.js"
 import { ReactComponent as InputId } from '../../../assets/images/icons/icon-id.svg';
 import { ReactComponent as InputPw } from '../../../assets/images/icons/icon-password.svg';
-import useFetch from '../../../hooks/useFetch';
 import { db } from '../../../firebase'
 import { getDoc, doc } from 'firebase/firestore'
 
+import axios from 'axios';
+import useFetch from '../../../hooks/useFetch';
 
 const LogoutArea = ( props ) => {
 
@@ -27,14 +27,11 @@ const LogoutArea = ( props ) => {
             const result = tweetData.memId === id && tweetData.memPw === pw;
             if(result){
                 setErrType(false)
-                //setLogIn(true);
                 props.updateLoginResult(true);
-                //console.log('로그인 성공')
             }
             else{
                 setErrType(true)
                 setTimeout(() => setErrType(false), 1000);
-                //setLogIn(false);
                 props.updateLoginResult(false);
             }
         }

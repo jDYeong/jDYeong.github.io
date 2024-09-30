@@ -8,12 +8,12 @@ import Private from '../components/private';
 import Err from '../components/err';
 import { Switch } from 'react-router-dom/cjs/react-router-dom.min';
 
-export default function Main(){
+export default function Main({sendLoginData}){
 
     return(
         <main>
             <Switch>
-                <Route exact path="/"><Intro /></Route>
+                <Route exact path="/"><Intro sendLoginData={sendLoginData} /></Route>
                 <Route path="/guestbook"><Guestbook /></Route>
                 <Route path="/note"><Note /></Route>
                 <Route path="/diary"><Diary /></Route>

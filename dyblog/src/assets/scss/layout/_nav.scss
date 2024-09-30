@@ -43,9 +43,10 @@ nav{
             padding: .5rem 0;
             position: relative;
             a{
+                @include flex;
+                align-items: center;
                 @include fontTitle;
                 width: 100%;
-                display: block;
                 padding: 1rem 3rem .6rem 1rem;
                 font-size: 1.4em;
                 line-height: 1.4;
@@ -70,6 +71,10 @@ nav{
                     bottom: -1px;
                     border-width: 2px 1px 1px 2px;
                 }
+            }
+            &.private a svg:first-of-type{
+                position: static;
+                margin-left: .4rem;
             } 
         }
     }
