@@ -366,8 +366,16 @@ nav ul li:hover a {
 nav ul li.private a svg:first-of-type {
   position: static;
   margin-left: 0.4rem;
+  flex-shrink: 0;
+  margin-top: -0.4rem;
 }
 
+@media screen and (max-width: 1200px) {
+  nav ul li.private a svg:first-of-type {
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+}
 @media screen and (max-width: 960px) {
   /* 모드 컬러 */
   .lightMode nav {
