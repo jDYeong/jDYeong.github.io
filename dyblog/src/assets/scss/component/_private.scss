@@ -1,0 +1,13 @@
+@import '../setting/_var.scss';
+
+/* 모드 컬러 */
+.lightMode{
+    .private_content li:hover{
+        background: $light-color-light-orange;
+    }
+}
+.darkMode{
+    .private_content li:hover{
+        background: $dark-color-gray;
+    }
+}
