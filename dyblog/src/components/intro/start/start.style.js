@@ -191,6 +191,13 @@ export const AboutMeDesc = styled.dd`
     line-height: 1.4;
     word-break: keep-all;
     margin-top: .8rem;
+
+    a{
+        display: block;
+        text-decoration: underline;
+        font-weight: 800;
+        margin-top: .4rem;
+    }
     
     @media ${device.tablet} { 
     

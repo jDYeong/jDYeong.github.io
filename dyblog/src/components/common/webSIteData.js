@@ -40,6 +40,22 @@ export const PortfolioData = [
         pageLink: null,
         logoLink: null,
         },
+        {
+            title: "한국농협김치몰 반응형 사이트 제작",
+            contri: 100,
+            content:
+                `- 한국농협김치몰 반응형 사이트를 고도몰을 사용하여 테마를 사용하여 반응형 웹 디자인 구현하고 기능을 추가하였습니다.\n- 고도몰의 디자인 편집 도구를 사용하여 기존 템플릿을 최신 디자인에 맞게 퍼블리싱을 수정하였으며, UI 및 UX를 개선하기 위한 세부적인 수정 작업을 진행했습니다.`,
+            pageLink: 'https://shop.korea-nonghyupkimchi.com/',
+            logoLink: `${process.env.PUBLIC_URL}/assets/images/logos/korea-nonghyupkimchi-mall.png`,
+            },
+            {
+                title: "한국농협김치 법인 반응형 사이트 제작",
+                contri: 100,
+                content:
+                    `- 사용자의 스크롤 행동에 따라 애니메이션이 활성화되는 트리거를 설계하고, UX 향상을 위해 애니메이션의 타이밍과 속도를 세밀하게 조정하여 사이트를 제작하였습니다.\n- HTML5, CSS3, JavaScript, jQuery를 사용하여 웹사이트를 크로스 브라우징 대응으로 구현하였으며, 웹 접근성과 다양한 화면 크기에 적응하는 반응형 웹 디자인을 적용했습니다.`,
+                pageLink: 'https://www.korea-nonghyupkimchi.com/main/',
+                logoLink: `${process.env.PUBLIC_URL}/assets/images/logos/korea-nonghyupkimchi.png`,
+                },
     {
         title: "트레스자산운용 사이트 리뉴얼",
         contri: 100,
