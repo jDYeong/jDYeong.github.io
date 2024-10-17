@@ -1,0 +1,60 @@
+@import '../setting/_var.scss';
+
+/* 모드 컬러 */
+.lightMode{
+    input, textarea{
+        background-color: $light-color-white;
+        border-color: $light-color-black;
+        color: $light-color-black;
+        &::placeholder{color: $light-color-gray;}
+    }
+
+    .btn_save{
+        background-color: $light-color-blue;
+        color: $light-color-white;
+        border-color: $light-color-black;
+    }
+    .btn_cancel{
+        background-color: $light-color-light-gray;
+        color: $light-color-black;
+        border-color: $light-color-black;
+    }
+}
+
+.darkMode{
+    input, textarea{
+        background-color: $dark-color-black;
+        border-color: $dark-color-white;
+        color: $dark-color-white;
+        &::placeholder{color: $dark-color-gray;}
+    }
+
+    .btn_save{
+        background-color: $dark-color-blue;
+        color: $dark-color-white;
+        border-color: $dark-color-white;
+    }
+    .btn_cancel{
+        background-color: $dark-color-light-gray;
+        color: $dark-color-black;
+        border-color: $dark-color-white;
+    }
+}
+
+input{
+	display: block;
+	width: 100%;
+	border-width: 1px 2px 2px 1px;
+	border-style: solid;
+    font: inherit;
+    box-sizing: border-box;
+}
+textarea{
+	display: block;
+	width: 100%;
+	border-width: 1px 2px 2px 1px;
+	border-style: solid;
+	resize: none;
+    font: inherit;
+    box-sizing: border-box;
+}

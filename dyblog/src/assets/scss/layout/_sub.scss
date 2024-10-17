@@ -1,0 +1,15 @@
+/* 모드 컬러 */
+.lightMode{
+    .admin_content .main-btns{
+        background-color: $light-color-white;
+    }
+}
+
+.darkMode{
+    .admin_content .main-btns{
+        background-color: $dark-color-black;
+    }
+}
+
+/*어드민 공통*/
+.admin_content .main-btns button:last-of-type{margin-top: 0;}

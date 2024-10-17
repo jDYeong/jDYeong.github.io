@@ -8,6 +8,7 @@ import Contact from './contact';
 
 export default function Container({sendLoginData, loginState}){
     const [isThema, setThema] = useState();
+
     if( isThema  === null ){
         setThema('lightMode')
     }

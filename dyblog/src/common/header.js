@@ -1,10 +1,12 @@
 import React, { useEffect } from 'react';
 import { Pc, Mobile, Tablet } from './MediaQuery';
+import { useLocation } from 'react-router-dom';
 import Nav from "./nav";
 import Footer from "./footer";
 import MainButtons from "./mainButtons";
 
 export default function Header({ mediaQuery, loginState }){
+    const location = useLocation();
 
     //태블릿,모바일 헤더 스크롤 이벤트
     const handleScroll = (e) => {
@@ -33,6 +35,13 @@ export default function Header({ mediaQuery, loginState }){
         }
     }
 
+    const getRootClassName = () => {
+        if (location.pathname.startsWith('/private') && location.pathname !== '/private') {
+            return 'sub-page-header';
+        }
+        return '';
+    };
+
     useEffect(() => {
         if( mediaQuery ){
 
@@ -48,7 +57,7 @@ export default function Header({ mediaQuery, loginState }){
     }, []);
 
     return(
-        <header className={ mediaQuery ? 'mediaNotPc' : 'mediaPc' }>
+        <header className={ `${mediaQuery ? 'mediaNotPc' : 'mediaPc'} ${getRootClassName()}` }>
             <div className="sticky">
                 <h1 className="title">
                     <p>안녕하세요 정다영입니다!</p>

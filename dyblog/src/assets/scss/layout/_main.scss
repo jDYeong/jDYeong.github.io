@@ -3,6 +3,7 @@
     main{
         border-top-color: $light-color-black;
         color: $light-color-black;
+        &.sub-page-main .main-btns{border-bottom-color: $light-color-black;}
     }
 }
 
@@ -10,12 +11,14 @@
     main{
         border-top-color: $dark-color-white;
         color: $light-color-white;
+        &.sub-page-main .main-btns{border-bottom-color: $dark-color-white;}
     }
 }
 
 main{
+    z-index: 1;
     width: $constent-pc-width;
-    margin-top: 4rem;
+    margin-top: $main-btns-pc-height;
     border-top: 1px solid;
     box-sizing: border-box;
 }
@@ -29,9 +32,14 @@ main{
     main{
         width: 100%;
         height: $constent-tablet-height;
-        margin-top: 0;
+        margin-top: $main-btns-mob-height;
         border-width: 0;
         padding-top: $header-tablet-height;
+        &.sub-page-main{
+            margin-top: 0;
+            padding-top: 0;
+            .main-btns{border-bottom: 1px solid;}
+        }
     }
 }
 

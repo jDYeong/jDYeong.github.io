@@ -1,5 +1,7 @@
 import React from 'react';
 import { Route } from "react-router-dom";
+import { Switch } from 'react-router-dom/cjs/react-router-dom.min';
+import { useLocation } from 'react-router-dom';
 import Intro from '../components/intro';
 import Note from '../components/note';
 import Diary from '../components/diary';
@@ -10,12 +12,18 @@ import AdminIntro from '../components/private/admin_intro';
 import AdminGuestbook from '../components/private/admin_guestbook';
 import AdminNote from '../components/private/admin_note';
 import AdminDiary from '../components/private/admin_diary';
-import { Switch } from 'react-router-dom/cjs/react-router-dom.min';
 
 export default function Main({sendLoginData}){
+    const location = useLocation();
 
+    const getRootClassName = () => {
+        if (location.pathname.startsWith('/private') && location.pathname !== '/private') {
+            return 'sub-page-main';
+        }
+        return '';
+    };
     return(
-        <main>
+        <main className={getRootClassName()}>
             <Switch>
                 <Route exact path="/"><Intro sendLoginData={sendLoginData} /></Route>
                 <Route path="/guestbook"><Guestbook /></Route>
