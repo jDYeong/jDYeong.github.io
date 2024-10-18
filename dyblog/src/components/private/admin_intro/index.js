@@ -1,9 +1,9 @@
 import React from 'react';
 import * as C from "../index.style.js"
 import * as S from "./index.style.js"
-import * as SC from "../admin_common/admin_common.style.js"
-import BtnClose from '../../../components/common/btnClose'
-import ThemeButtonBtn from '../../../components/common/themaButton'
+import * as SC from "../admin_components/admin_components.style.js"
+import BtnClose from '../../../components/common/buttons/btnClose'
+import ThemeButtonBtn from '../../../components/common/buttons/themaButton'
 
 const AdminIntro = () => {
     return (

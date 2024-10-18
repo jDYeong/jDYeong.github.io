@@ -107,11 +107,11 @@ export const InpBox = styled.div`
 export const Inp = styled.input`
     display: block;
     width: 100%;
-    background-color: transparent;
+    background-color: transparent !important;
     border-width: 0;
     font-size: 1.2rem;
     line-height: 2.4rem;
-    color: inherit;
+    color: inherit !important;
     &:focus{outline: none;}
     &+svg{
         width: 1.6rem;

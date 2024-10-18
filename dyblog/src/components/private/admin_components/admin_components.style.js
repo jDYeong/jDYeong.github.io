@@ -22,10 +22,10 @@ export const SubHeader = styled.div`
 
 //어드민 공통 헤더 영역
 export const AdminHeader = styled.div`
-    padding: var(--main-btns-pc-height) 0 6rem;
+    padding: 0 0 6rem;
     
-    @media ${device.tablet}{padding: var(--main-btns-mob-height) 0 3rem;}
-    @media ${device.mobile}{padding: var(--main-btns-mob-height) 0 3rem;}
+    @media ${device.tablet}{padding: 0 0 3rem;}
+    @media ${device.mobile}{padding: 0 0 3rem;}
 `
 export const SubTit = styled.span`
     font-size: 1.8rem;

@@ -1,8 +1,8 @@
 import React from 'react';
-import {Pc, Mobile, Tablet} from '../../common/MediaQuery';
+import {Pc, Mobile, Tablet} from '../../../common/MediaQuery';
 import { useMediaQuery } from "react-responsive"
-import { ReactComponent as MenuOpenButton } from '../../assets/images/icons/icon-menu.svg';
-import { ReactComponent as MenuCloseButton } from '../../assets/images/icons/icon-close.svg';
+import { ReactComponent as MenuOpenButton } from '../../../assets/images/icons/icon-menu.svg';
+import { ReactComponent as MenuCloseButton } from '../../../assets/images/icons/icon-close.svg';
 
 const MenuButtonBtn = () => {
 

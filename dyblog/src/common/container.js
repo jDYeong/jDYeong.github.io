@@ -24,7 +24,7 @@ export default function Container({sendLoginData, loginState}){
                 <Pc><Header loginState={loginState} /></Pc>
                 <Mobile><Header loginState={loginState} mediaQuery={true} /></Mobile>
                 <Tablet><Header loginState={loginState} mediaQuery={true} /></Tablet>
-                <Main  sendLoginData={sendLoginData}/>
+                <Main loginState={loginState} sendLoginData={sendLoginData}/>
                 <Pc><MainButtons /></Pc>
                 <Contact />
             </div>

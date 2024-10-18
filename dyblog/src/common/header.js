@@ -39,6 +39,9 @@ export default function Header({ mediaQuery, loginState }){
         if (location.pathname.startsWith('/private') && location.pathname !== '/private') {
             return 'sub-page-header';
         }
+        if (location.pathname.startsWith('/note/detail/') && location.pathname !== `/note/detail/`) {
+            return 'sub-page-header';
+        }
         return '';
     };
 

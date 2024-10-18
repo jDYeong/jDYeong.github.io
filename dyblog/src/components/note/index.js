@@ -1,8 +1,17 @@
 import React from 'react';
+import * as S from "./index.style.js"
+import ListTitleArea from '../common/layout/listTitleArea.js';
+import ListArea from './components/listItem.js';
 
-export default function Note(){
+export default function Note({loginState}){
 
     return(
-        <div>노트 목록페이지</div>
+        <S.NoteContent className='note_content'>
+            <ListTitleArea title={'NOTE'} loginState={loginState} />
+
+            <S.ListContent>
+                <ListArea />
+            </S.ListContent>
+        </S.NoteContent>
     )
 }

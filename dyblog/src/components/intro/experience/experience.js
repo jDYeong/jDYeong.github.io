@@ -21,7 +21,7 @@ const Experience = () => {
                 <S.ExperieceCol className='bgHover'>
                     <S.ExperieceDesc>
                         <IconListArr />
-                        웹디자인 & 웹퍼블리셔과정 수료
+                        모바일 UI/UX 웹디자인 & 웹퍼블리셔
                     </S.ExperieceDesc>
                     <S.ExperieceDate>2020.06 ~ 2020.11</S.ExperieceDate>
                 </S.ExperieceCol>

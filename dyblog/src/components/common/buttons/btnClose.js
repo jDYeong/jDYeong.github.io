@@ -1,7 +1,7 @@
 import React from 'react';
-import {Pc, Mobile, Tablet} from '../../common/MediaQuery';
+import {Pc, Mobile, Tablet} from '../../../common/MediaQuery';
 import { useHistory } from "react-router-dom";
-import { ReactComponent as IconClose } from '../../assets/images/icons/icon-close.svg';
+import { ReactComponent as IconClose } from '../../../assets/images/icons/icon-close.svg';
 
 const BtnClose = () => {
     const history = useHistory();

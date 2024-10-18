@@ -1,7 +1,7 @@
 import React from 'react';
-import {Pc, Mobile, Tablet} from '../../common/MediaQuery';
+import {Pc, Mobile, Tablet} from '../../../common/MediaQuery';
 import { useHistory } from "react-router-dom";
-import { ReactComponent as LinkIntro } from '../../assets/images/icons/icon-home.svg';
+import { ReactComponent as LinkIntro } from '../../../assets/images/icons/icon-home.svg';
 
 const LinkIntroBtn = () => {
     const history = useHistory();

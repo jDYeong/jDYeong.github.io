@@ -55,7 +55,7 @@ button.close .open {
   --constent-tablet-height: calc(100% - 6rem);
   --constent-mob-height: calc(100% - 6rem);
   --main-btns-pc-height: 4rem;
-  --main-btns-mob-height: 4.7rem;
+  --main-btns-mob-height: 8rem;
 }
 
 /*** 공통변수 ***/
@@ -403,7 +403,7 @@ button.close .open {
   --constent-tablet-height: calc(100% - 6rem);
   --constent-mob-height: calc(100% - 6rem);
   --main-btns-pc-height: 4rem;
-  --main-btns-mob-height: 4.7rem;
+  --main-btns-mob-height: 8rem;
 }
 
 /*** 공통변수 ***/
@@ -471,7 +471,7 @@ button.close .open {
   --constent-tablet-height: calc(100% - 6rem);
   --constent-mob-height: calc(100% - 6rem);
   --main-btns-pc-height: 4rem;
-  --main-btns-mob-height: 4.7rem;
+  --main-btns-mob-height: 8rem;
 }
 
 /*** 공통변수 ***/
@@ -535,7 +535,7 @@ button.close .open {
   --constent-tablet-height: calc(100% - 6rem);
   --constent-mob-height: calc(100% - 6rem);
   --main-btns-pc-height: 4rem;
-  --main-btns-mob-height: 4.7rem;
+  --main-btns-mob-height: 8rem;
 }
 
 /*** 공통변수 ***/
@@ -566,6 +566,11 @@ button.close .open {
   color: #fff;
   border-color: #222;
 }
+.lightMode .btn_delete {
+  background-color: #EC7063;
+  color: #fff;
+  border-color: #222;
+}
 .lightMode .btn_cancel {
   background-color: #EEE;
   color: #222;
@@ -582,6 +587,11 @@ button.close .open {
 }
 .darkMode .btn_save {
   background-color: #1B6493;
+  color: #fff;
+  border-color: #fff;
+}
+.darkMode .btn_delete {
+  background-color: #BD3D30;
   color: #fff;
   border-color: #fff;
 }

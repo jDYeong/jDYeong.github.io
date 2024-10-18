@@ -1,7 +1,7 @@
 import React from 'react';
 import gsap from 'gsap';
-import {Pc, Mobile, Tablet} from '../../common/MediaQuery';
-import { ReactComponent as IconOpenClose } from '../../assets/images/icons/works_close_all.svg';
+import {Pc, Mobile, Tablet} from '../../../common/MediaQuery';
+import { ReactComponent as IconOpenClose } from '../../../assets/images/icons/works_close_all.svg';
 
 const closeAll = () => {
     const clickAllClose = (e) => {

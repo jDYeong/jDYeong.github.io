@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import * as S from "./start.style.js"
-import UserBoxTag from '../../common/bookmark.js'
+import UserBoxTag from '../../common/buttons/bookmark.js'
 import LoginArea from "./loginArea.js"
 import LogoutArea from "./logoutArea.js"
 import AboutMe from "./aboutme.js"

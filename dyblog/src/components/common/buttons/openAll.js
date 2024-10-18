@@ -1,7 +1,7 @@
 import React from 'react';
-import {Pc, Mobile, Tablet} from '../../common/MediaQuery';
-import * as S from "../intro/skills/skills.style.js"
-import { ReactComponent as IconOpenAll } from '../../assets/images/icons/works_open_all.svg';
+import {Pc, Mobile, Tablet} from '../../../common/MediaQuery.js';
+import * as S from "../../intro/skills/skills.style.js"
+import { ReactComponent as IconOpenAll } from '../../../assets/images/icons/works_open_all.svg';
 
 const openAll = () => {
 

@@ -37,7 +37,7 @@
   --constent-tablet-height: calc(100% - 6rem);
   --constent-mob-height: calc(100% - 6rem);
   --main-btns-pc-height: 4rem;
-  --main-btns-mob-height: 4.7rem;
+  --main-btns-mob-height: 8rem;
 }
 
 /*** 공통변수 ***/
@@ -169,6 +169,9 @@ header {
 }
 header.mediaPc {
   transform: translateY(0) !important;
+}
+header.sub-page-header ~ .main-btns {
+  display: none;
 }
 header .sticky {
   display: flex;
@@ -476,7 +479,7 @@ main {
   main {
     width: 100%;
     height: calc(100% - 6rem);
-    margin-top: 4.7rem;
+    margin-top: 8rem;
     border-width: 0;
     padding-top: 8rem;
   }
@@ -624,7 +627,7 @@ footer p {
   --constent-tablet-height: calc(100% - 6rem);
   --constent-mob-height: calc(100% - 6rem);
   --main-btns-pc-height: 4rem;
-  --main-btns-mob-height: 4.7rem;
+  --main-btns-mob-height: 8rem;
 }
 
 /*** 공통변수 ***/
@@ -802,15 +805,144 @@ footer p {
   }
 }
 /* 모드 컬러 */
-.lightMode .admin_content .main-btns {
+.lightMode .sub-page-main .main-btns {
   background-color: #fff;
 }
+.lightMode .note_content .btn-save {
+  padding: 0.2rem;
+  background: #2471A3;
+  border: 1px solid #222;
+  border-bottom-width: 2px;
+  border-right-width: 2px;
+  box-sizing: border-box;
+  color: #fff;
+}
+.lightMode .note_content .btn-save svg.hide {
+  display: none;
+}
+.lightMode .note_content .btn_newpost {
+  padding: 0.2rem;
+  background: #2471A3;
+  border: 1px solid #222;
+  border-bottom-width: 2px;
+  border-right-width: 2px;
+  box-sizing: border-box;
+  color: #fff;
+}
+.lightMode .note_content .btn_newpost svg.hide {
+  display: none;
+}
+.lightMode .note_content .btn-list {
+  padding: 0.2rem;
+  background: #2471A3;
+  border: 1px solid #222;
+  border-bottom-width: 2px;
+  border-right-width: 2px;
+  box-sizing: border-box;
+  color: #fff;
+}
+.lightMode .note_content .btn-list svg.hide {
+  display: none;
+}
+.lightMode .note_content .btn-modify {
+  padding: 0.2rem;
+  background: #F3B562;
+  border: 1px solid #222;
+  border-bottom-width: 2px;
+  border-right-width: 2px;
+  box-sizing: border-box;
+  color: #fff;
+}
+.lightMode .note_content .btn-modify svg.hide {
+  display: none;
+}
+.lightMode .note_content .btn-delete {
+  padding: 0.2rem;
+  background: #EC7063;
+  border: 1px solid #222;
+  border-bottom-width: 2px;
+  border-right-width: 2px;
+  box-sizing: border-box;
+  color: #fff;
+}
+.lightMode .note_content .btn-delete svg.hide {
+  display: none;
+}
+@media screen and (max-width: 960px) {
+  .lightMode .note_content .btn-delete {
+    padding: 0.8rem 1.2rem;
+    line-height: 1rem;
+    vertical-align: top;
+  }
+}
 
-.darkMode .admin_content .main-btns {
+.darkMode .sub-page-main .main-btns {
   background-color: #121212;
+}
+.darkMode .note_content .btn-save {
+  padding: 0.2rem;
+  background: #E39F43;
+  border: 1px solid #fff;
+  border-bottom-width: 2px;
+  border-right-width: 2px;
+  box-sizing: border-box;
+  color: #121212;
+}
+.darkMode .note_content .btn-save svg.hide {
+  display: none;
+}
+.darkMode .note_content .btn_newpost {
+  padding: 0.2rem;
+  background: #E39F43;
+  border: 1px solid #fff;
+  border-bottom-width: 2px;
+  border-right-width: 2px;
+  box-sizing: border-box;
+  color: #121212;
+}
+.darkMode .note_content .btn_newpost svg.hide {
+  display: none;
+}
+.darkMode .note_content .btn-list {
+  padding: 0.2rem;
+  background: #1B6493;
+  border: 1px solid #fff;
+  border-bottom-width: 2px;
+  border-right-width: 2px;
+  box-sizing: border-box;
+  color: #fff;
+}
+.darkMode .note_content .btn-list svg.hide {
+  display: none;
+}
+.darkMode .note_content .btn-modify {
+  padding: 0.2rem;
+  background: #E39F43;
+  border: 1px solid #fff;
+  border-bottom-width: 2px;
+  border-right-width: 2px;
+  box-sizing: border-box;
+  color: #fff;
+}
+.darkMode .note_content .btn-modify svg.hide {
+  display: none;
+}
+.darkMode .note_content .btn-delete {
+  padding: 0.2rem;
+  background: #BD3D30;
+  border: 1px solid #121212;
+  border-bottom-width: 2px;
+  border-right-width: 2px;
+  box-sizing: border-box;
+  color: #fff;
+}
+.darkMode .note_content .btn-delete svg.hide {
+  display: none;
 }
 
 /*어드민 공통*/
-.admin_content .main-btns button:last-of-type {
+.sub-page-main .main-btns button:last-of-type {
   margin-top: 0;
 }
+
+/* 노트 공통 */

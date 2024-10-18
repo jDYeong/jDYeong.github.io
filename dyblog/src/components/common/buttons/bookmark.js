@@ -1,5 +1,5 @@
 import React from 'react';
-import { ReactComponent as ImgBookMark } from '../../assets/images/icons/intro_userTag.svg';
+import { ReactComponent as ImgBookMark } from '../../../assets/images/icons/intro_userTag.svg';
 
 const UserBoxTag = () => {
 

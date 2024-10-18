@@ -1,23 +1,27 @@
 import React, { useState } from 'react';
+import { useRouter } from 'next/router';
+import { useHistory } from 'react-router-dom/cjs/react-router-dom.min.js';
 import ReactQuill, { Quill } from "react-quill";
 import { db } from '../../../firebase'
 import { addDoc, collection } from 'firebase/firestore'
 
 import * as S from "./index.style.js"
 import * as C from "../index.style.js"
-import * as SC from "../admin_common/admin_common.style.js"
+import * as SC from "../admin_components/admin_components.style.js"
 import { Pc, Mobile, Tablet } from '../../../common/MediaQuery';
-import AdminHeader from '../admin_common/header';
-import BtnClose from '../../../components/common/btnClose'
-import ThemeButtonBtn from '../../../components/common/themaButton'
+import AdminHeader from '../admin_components/header';
+import BtnClose from '../../../components/common/buttons/btnClose'
+import ThemeButtonBtn from '../../../components/common/buttons/themaButton'
 
 const AdminNote = () => {
+    const router = useRouter();
+    const history = useHistory();
     const noteCollectionRef = collection(db, "note");
 
     const [title, setTitle] = useState("");
     const [subTitle, setSubTitle] = useState("");
     const [content, setContent] = useState("");
-    const [tags, setTags] = useState();
+    const [tags, setTags] = useState("");
 
 	const [titleText, setTitleText] = useState('제목을 입력해 주세요.')
 	const [subTitleText, setSubTitleText] = useState('짧은 요약을 입력해 주세요.')
@@ -40,7 +44,7 @@ const AdminNote = () => {
     
     const handleSubmit = async (e) => {
         e.preventDefault();
-        var date = new Date().toISOString().slice(0, 10);
+        var date = new Date();
 
         try {
             if(!title){
@@ -59,9 +63,11 @@ const AdminNote = () => {
                     tags,
                     date,
                 })
+                .then((res) => {
+                    //console.log(res.id)
+                    history.push(`/note/detail/${res.id}`)
+                });
             }
-            //.then((res) => console.log(res));
-            //router.push(`/note/${result.data.createBoard.number}`)
         }
         catch (error) {
             console.log(error);
@@ -94,8 +100,8 @@ const AdminNote = () => {
                         <SC.InpBox>
                             <ReactQuill style={{height: "250px"}} onChange={setContent} />
                         </SC.InpBox>
-                        <SC.InpBox $error={tagseErrType}>
-                            <SC.Input placeholder={!tagseErrType ? tagsText : errText} onChange={onChangeTags} />
+                        <SC.InpBox>
+                            <SC.Input placeholder={tagsText} onChange={onChangeTags} />
                         </SC.InpBox>
                     </SC.DescArea>
                     <SC.BtnArea>

@@ -1,15 +1,66 @@
 /* 모드 컬러 */
 .lightMode{
-    .admin_content .main-btns{
-        background-color: $light-color-white;
-    }
+    .sub-page-main .main-btns{background-color: $light-color-white;} 
+    .note_content{
+        .btn-save{
+            @include btnType1($light-color-black, $light-color-blue);
+            color: $light-color-white;
+        }
+        .btn_newpost{
+            @include btnType1($light-color-black, $light-color-blue);
+            color: $light-color-white;
+        }
+        .btn-list{
+            @include btnType1($light-color-black, $light-color-blue);
+            color: $light-color-white;
+        }
+        .btn-modify{
+            @include btnType1($light-color-black, $light-color-dark-orange);
+            color: $light-color-white;
+        }
+        .btn-delete{
+            @include btnType1($light-color-black, $light-color-red);
+            color: $light-color-white;
+            
+            @media screen and (max-width: 960px) {
+                padding: .8rem 1.2rem;
+                line-height: 1rem;
+                vertical-align: top;
+            }
+        }
+    } 
 }
 
 .darkMode{
-    .admin_content .main-btns{
-        background-color: $dark-color-black;
-    }
+    .sub-page-main .main-btns{background-color: $dark-color-black;} 
+    .note_content{
+        .btn-save{
+            @include btnType1($dark-color-white, $dark-color-dark-orange);
+            color: $dark-color-black;
+        }
+        .btn_newpost{
+            @include btnType1($dark-color-white, $dark-color-dark-orange);
+            color: $dark-color-black;
+        }
+        .btn-list{
+            @include btnType1($dark-color-white, $dark-color-blue);
+            color: $dark-color-white;
+        }
+        .btn-modify{
+            @include btnType1($dark-color-white, $dark-color-dark-orange);
+            color: $dark-color-white;
+        }
+        .btn-delete{
+            @include btnType1($dark-color-black, $dark-color-red);
+            color: $dark-color-white;
+        }
+    } 
 }
 
 /*어드민 공통*/
-.admin_content .main-btns button:last-of-type{margin-top: 0;}
+.sub-page-main .main-btns button:last-of-type{margin-top: 0;}
+
+/* 노트 공통 */
+.note_content{
+    
+}

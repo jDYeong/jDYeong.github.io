@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import {Pc, Mobile, Tablet} from '../../common/MediaQuery';
-import { ReactComponent as ImgThemeMoonButton } from '../../assets/images/icons/theme-moon.svg';
-import { ReactComponent as ImgThemeSunButton } from '../../assets/images/icons/theme-sun.svg';
+import {Pc, Mobile, Tablet} from '../../../common/MediaQuery';
+import { ReactComponent as ImgThemeMoonButton } from '../../../assets/images/icons/theme-moon.svg';
+import { ReactComponent as ImgThemeSunButton } from '../../../assets/images/icons/theme-sun.svg';
 
 const ThemeButtonBtn = () => {
 

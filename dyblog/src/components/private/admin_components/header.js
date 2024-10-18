@@ -1,5 +1,5 @@
 import React from 'react';
-import * as S from "./admin_common.style.js"
+import * as S from "./admin_components.style.js"
 
 const AdminHeader = (props) => {
     return (

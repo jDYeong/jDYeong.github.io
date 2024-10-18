@@ -1,8 +1,8 @@
 import React from 'react';
 import {Pc, Mobile, Tablet} from './MediaQuery';
-import LinkIntroBtn from '../components/common/linkIntro'
-import MenuOpenButtonBtn from '../components/common/menuButton'
-import ThemeButtonBtn from '../components/common/themaButton'
+import LinkIntroBtn from '../components/common/buttons/linkIntro'
+import MenuOpenButtonBtn from '../components/common/buttons/menuButton'
+import ThemeButtonBtn from '../components/common/buttons/themaButton'
 
 const MainButtons = () => {
     return (

@@ -59,6 +59,22 @@ export const include = {
         align-items: center;
         justify-content: center;
     `
+
+    //말줄임표
+    ,lineEllipsis1 :`
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+    `
+    ,lineEllipsis2 :`
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+    `
 }
 
 export const bounceAni = keyframes`

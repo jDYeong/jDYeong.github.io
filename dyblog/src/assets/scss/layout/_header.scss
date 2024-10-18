@@ -51,6 +51,7 @@ header{
     box-sizing: border-box;
 
     &.mediaPc{transform: translateY(0) !important;}
+    &.sub-page-header ~ .main-btns{display: none;}
 
     .sticky{
         @include flexColumnTop;
