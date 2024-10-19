@@ -26,4 +26,5 @@ export const NoteDescArea = styled.div`
 export const DetailContentTxt = styled.div`
     font-size: 1.6rem;
     line-height: 1.9rem;
+    img{max-width: 100%;}
 `
