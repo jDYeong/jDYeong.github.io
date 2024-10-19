@@ -31,6 +31,15 @@
   --ani-fast: .23s ease-in;
   --ani-middle: .4s ease-in;
   --ani-slow: .7s ease-in;
+  /***사이즈 변수***/
+  --header-tablet-height: 8rem;
+  --header-mob-height: 8rem;
+  --constent-tablet-height: calc(100% - 6rem);
+  --constent-mob-height: calc(100% - 6rem);
+  --main-btns-pc-height: 4rem;
+  --main-btns-mob-height: 8rem;
+  --img-url-bg: "../images/bg/";
+  --img-url-icons: "../images/icons/";
 }
 
 /*** 공통변수 ***/
@@ -162,6 +171,9 @@ header {
 }
 header.mediaPc {
   transform: translateY(0) !important;
+}
+header.sub-page-header ~ .main-btns {
+  display: none;
 }
 header .sticky {
   display: flex;
@@ -302,6 +314,9 @@ header .title div {
   header.mediaNotPc.fixed {
     position: fixed;
   }
+  header.sub-page-header {
+    display: none;
+  }
 }
 /* 모드 컬러 */
 .lightMode nav ul li a {
@@ -374,6 +389,7 @@ nav ul li.private a svg:first-of-type {
   nav ul li.private a svg:first-of-type {
     width: 1.8rem;
     height: 1.8rem;
+    margin-top: -0.2rem;
   }
 }
 @media screen and (max-width: 960px) {
@@ -441,13 +457,20 @@ nav ul li.private a svg:first-of-type {
   border-top-color: #222;
   color: #222;
 }
+.lightMode main.sub-page-main .main-btns {
+  border-bottom-color: #222;
+}
 
 .darkMode main {
   border-top-color: #fff;
   color: #fff;
 }
+.darkMode main.sub-page-main .main-btns {
+  border-bottom-color: #fff;
+}
 
 main {
+  z-index: 1;
   width: 85%;
   margin-top: 4rem;
   border-top: 1px solid;
@@ -458,9 +481,16 @@ main {
   main {
     width: 100%;
     height: calc(100% - 6rem);
-    margin-top: 0;
+    margin-top: 8rem;
     border-width: 0;
     padding-top: 8rem;
+  }
+  main.sub-page-main {
+    margin-top: 0;
+    padding-top: 0;
+  }
+  main.sub-page-main .main-btns {
+    border-bottom: 1px solid;
   }
 }
 /* 모드 컬러 */
@@ -593,6 +623,15 @@ footer p {
   --ani-fast: .23s ease-in;
   --ani-middle: .4s ease-in;
   --ani-slow: .7s ease-in;
+  /***사이즈 변수***/
+  --header-tablet-height: 8rem;
+  --header-mob-height: 8rem;
+  --constent-tablet-height: calc(100% - 6rem);
+  --constent-mob-height: calc(100% - 6rem);
+  --main-btns-pc-height: 4rem;
+  --main-btns-mob-height: 8rem;
+  --img-url-bg: "../images/bg/";
+  --img-url-icons: "../images/icons/";
 }
 
 /*** 공통변수 ***/
@@ -769,3 +808,145 @@ footer p {
     height: 5rem;
   }
 }
+/* 모드 컬러 */
+.lightMode .sub-page-main .main-btns {
+  background-color: #fff;
+}
+.lightMode .note_content .btn-save {
+  padding: 0.2rem;
+  background: #2471A3;
+  border: 1px solid #222;
+  border-bottom-width: 2px;
+  border-right-width: 2px;
+  box-sizing: border-box;
+  color: #fff;
+}
+.lightMode .note_content .btn-save svg.hide {
+  display: none;
+}
+.lightMode .note_content .btn_newpost {
+  padding: 0.2rem;
+  background: #2471A3;
+  border: 1px solid #222;
+  border-bottom-width: 2px;
+  border-right-width: 2px;
+  box-sizing: border-box;
+  color: #fff;
+}
+.lightMode .note_content .btn_newpost svg.hide {
+  display: none;
+}
+.lightMode .note_content .btn-list {
+  padding: 0.2rem;
+  background: #2471A3;
+  border: 1px solid #222;
+  border-bottom-width: 2px;
+  border-right-width: 2px;
+  box-sizing: border-box;
+  color: #fff;
+}
+.lightMode .note_content .btn-list svg.hide {
+  display: none;
+}
+.lightMode .note_content .btn-modify {
+  padding: 0.2rem;
+  background: #F3B562;
+  border: 1px solid #222;
+  border-bottom-width: 2px;
+  border-right-width: 2px;
+  box-sizing: border-box;
+  color: #fff;
+}
+.lightMode .note_content .btn-modify svg.hide {
+  display: none;
+}
+.lightMode .note_content .btn-delete {
+  padding: 0.2rem;
+  background: #EC7063;
+  border: 1px solid #222;
+  border-bottom-width: 2px;
+  border-right-width: 2px;
+  box-sizing: border-box;
+  color: #fff;
+}
+.lightMode .note_content .btn-delete svg.hide {
+  display: none;
+}
+@media screen and (max-width: 960px) {
+  .lightMode .note_content .btn-delete {
+    padding: 0.8rem 1.2rem;
+    line-height: 1rem;
+    vertical-align: top;
+  }
+}
+
+.darkMode .sub-page-main .main-btns {
+  background-color: #121212;
+}
+.darkMode .note_content .btn-save {
+  padding: 0.2rem;
+  background: #E39F43;
+  border: 1px solid #fff;
+  border-bottom-width: 2px;
+  border-right-width: 2px;
+  box-sizing: border-box;
+  color: #121212;
+}
+.darkMode .note_content .btn-save svg.hide {
+  display: none;
+}
+.darkMode .note_content .btn_newpost {
+  padding: 0.2rem;
+  background: #E39F43;
+  border: 1px solid #fff;
+  border-bottom-width: 2px;
+  border-right-width: 2px;
+  box-sizing: border-box;
+  color: #121212;
+}
+.darkMode .note_content .btn_newpost svg.hide {
+  display: none;
+}
+.darkMode .note_content .btn-list {
+  padding: 0.2rem;
+  background: #1B6493;
+  border: 1px solid #fff;
+  border-bottom-width: 2px;
+  border-right-width: 2px;
+  box-sizing: border-box;
+  color: #fff;
+}
+.darkMode .note_content .btn-list svg.hide {
+  display: none;
+}
+.darkMode .note_content .btn-modify {
+  padding: 0.2rem;
+  background: #E39F43;
+  border: 1px solid #fff;
+  border-bottom-width: 2px;
+  border-right-width: 2px;
+  box-sizing: border-box;
+  color: #fff;
+}
+.darkMode .note_content .btn-modify svg.hide {
+  display: none;
+}
+.darkMode .note_content .btn-delete {
+  padding: 0.2rem;
+  background: #BD3D30;
+  border: 1px solid #121212;
+  border-bottom-width: 2px;
+  border-right-width: 2px;
+  box-sizing: border-box;
+  color: #fff;
+}
+.darkMode .note_content .btn-delete svg.hide {
+  display: none;
+}
+
+/*어드민 공통*/
+.sub-page-main .main-btns button:last-of-type {
+  margin-top: 0;
+}
+
+/* 노트 공통 */
