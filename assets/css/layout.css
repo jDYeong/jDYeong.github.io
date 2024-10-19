@@ -872,11 +872,16 @@ footer p {
 .lightMode .note_content .btn-delete svg.hide {
   display: none;
 }
+.lightMode .note_content .list_content ul li {
+  background: #EEE;
+}
+.lightMode .note_content .tag_area li {
+  background: #EEE;
+}
 @media screen and (max-width: 960px) {
-  .lightMode .note_content .btn-delete {
-    padding: 0.8rem 1.2rem;
-    line-height: 1rem;
-    vertical-align: top;
+  .lightMode .note_content .list_content ul li {
+    background: transparent;
+    border-bottom: 1px solid #EEE;
   }
 }
 
@@ -902,7 +907,7 @@ footer p {
   border-bottom-width: 2px;
   border-right-width: 2px;
   box-sizing: border-box;
-  color: #121212;
+  color: #fff;
 }
 .darkMode .note_content .btn_newpost svg.hide {
   display: none;
@@ -934,7 +939,7 @@ footer p {
 .darkMode .note_content .btn-delete {
   padding: 0.2rem;
   background: #BD3D30;
-  border: 1px solid #121212;
+  border: 1px solid #fff;
   border-bottom-width: 2px;
   border-right-width: 2px;
   box-sizing: border-box;
@@ -943,6 +948,18 @@ footer p {
 .darkMode .note_content .btn-delete svg.hide {
   display: none;
 }
+.darkMode .note_content .list_content ul li {
+  background: #636363;
+}
+.darkMode .note_content .tag_area li {
+  background: #636363;
+}
+@media screen and (max-width: 960px) {
+  .darkMode .note_content .list_content ul li {
+    background: transparent;
+    border-bottom: 1px solid #636363;
+  }
+}
 
 /*어드민 공통*/
 .sub-page-main .main-btns button:last-of-type {
@@ -950,3 +967,10 @@ footer p {
 }
 
 /* 노트 공통 */
+@media screen and (max-width: 960px) {
+  .note_content .btn-delete {
+    padding: 0.7rem 1.2rem !important;
+    line-height: 1rem;
+    vertical-align: top;
+  }
+}
