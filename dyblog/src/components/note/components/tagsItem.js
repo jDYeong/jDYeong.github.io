@@ -24,7 +24,7 @@ const TagsListArea = (prop) => {
     
 
     return (
-        <S.TagsListArea>
+        <S.TagsListArea className='tag_area'>
             {tags.length > 0 ? (
                 tags.map((tag, index) => (
                     <S.TagItem key={index}>#{tag}</S.TagItem>

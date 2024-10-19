@@ -103,7 +103,7 @@ const NoteDetail = ({loginState}) => {
                 </S.NoteDescArea>
 
                 {/* 상세 페이징 */}
-                <DetailPagingArea prevDoc={prevDoc} nextDoc={nextDoc} loginState={loginState} />
+                <DetailPagingArea data={data} noteId={noteId} prevDoc={prevDoc} nextDoc={nextDoc} loginState={loginState} />
 
             </S.NoteDetailContent>
         </S.DetailContent>

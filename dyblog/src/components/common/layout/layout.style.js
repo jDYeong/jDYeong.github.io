@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components'
 import '../../../assets/scss/setting/_var.scss';
-import {include} from '../../../common/mixin.style';
+import {include, colorfull} from '../../../common/mixin.style';
 import { device } from '../../../common/MediaQuery';
 import { Link } from "react-router-dom";
 
@@ -59,7 +59,7 @@ export const DetailSubTitle = styled.h2`
 export const DetailPagingArea = styled.div`
     ${include.flexCenter}
     justify-content: space-between;
-    border-top: 1px solid var(--light-color-light-gray);
+    border-top: 1px solid;
     padding: 1.2rem;
     margin-top: 6rem;
     
@@ -107,8 +107,10 @@ export const ArrBtn = styled.button`
     ${(props) => props.$prev ? css`svg{transform: rotate(180deg);}` : css``}
     ${(props) => props.$next ? css`justify-content:flex-end` : css``}
 `
+
 export const LinkBtn = styled(Link)``
 export const DeleteBtnBottom = styled.button``
+export const UpdateBtnBottom = styled.button``
 
 
 /* 로딩영역 */
@@ -120,11 +122,13 @@ export const LodingArea = styled.div`
     width: 100%;
     height: 100%;
     z-index: 101;
-    &::after{
-        content: '';
-        display: block;
-        width: 4rem;
-        height: 4rem;
-        background: pink;
+    svg{
+        rect{
+            animation: ${colorfull} 1s ease infinite;
+            fill: none;
+            &:nth-child(1){animation-delay: 0s;}
+            &:nth-child(2){animation-delay: 0.2s;}
+            &:nth-child(3){animation-delay: 0.4s;}
+        }
     }
 `

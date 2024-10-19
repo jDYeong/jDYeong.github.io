@@ -9,7 +9,7 @@ export default function Note({loginState}){
         <S.NoteContent className='note_content'>
             <ListTitleArea title={'NOTE'} loginState={loginState} />
 
-            <S.ListContent>
+            <S.ListContent className='list_content'>
                 <ListArea />
             </S.ListContent>
         </S.NoteContent>

@@ -29,15 +29,12 @@ export const ListArea = styled.ul`
 `
 export const ListItem = styled.li`
     width: calc(50% - 1.2rem);
-    background: var(--light-color-light-gray);
     padding: 1.8rem;
     box-sizing: border-box;
     
     @media ${device.mobile}{
         width: 100%;
-        background-color: transparent;
         padding: 0 0 1.2rem;
-        border-bottom: 1px solid var(--light-color-light-gray);
     }
 `
 export const ImgBox = styled.div`
@@ -78,6 +75,16 @@ export const Txt = styled.span`
     line-height: 1.9rem;
     color: var(--light-color-gray);
 `
+//목록 노데이터
+export const ListNodata = styled.div`
+    ${include.flexColumnCenter}
+    width: 100%;
+    height: 16rem;
+    gap: .8rem;
+    font-size: 1.6rem;
+    line-height: 1.2;
+    font-weight: 500;
+`
 
 /* 상세 tag items */
 export const TagsListArea = styled.ul`
@@ -91,5 +98,4 @@ export const TagItem = styled.li`
     border-radius: 2rem;
     font-size: 1.4rem;
     line-height: 1.8rem;
-    background: var(--light-color-light-gray);
 `

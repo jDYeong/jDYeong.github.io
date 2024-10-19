@@ -86,3 +86,7 @@ export const vibrationAni = keyframes`
     from {transform: translateY(-50%) rotate(10deg);}
     to {transform: translateY(-50%) rotate(-10deg);}
 `
+export const colorfull = keyframes`
+    0%{fill: none;}
+    100%{fill: currentColor;}
+`

@@ -75,4 +75,11 @@ button{
 	margin: 0;
 	font-size: 0;
 	line-height: 0;
+	&:disabled{
+		color: #222;
+		opacity: .4;
+	}
+}
+.darkMode button:disabled{
+	color: #fff;
 }

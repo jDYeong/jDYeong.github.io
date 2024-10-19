@@ -21,14 +21,24 @@
         .btn-delete{
             @include btnType1($light-color-black, $light-color-red);
             color: $light-color-white;
-            
-            @media screen and (max-width: 960px) {
-                padding: .8rem 1.2rem;
-                line-height: 1rem;
-                vertical-align: top;
+        }
+
+        //목록페이지 컬러
+        .list_content ul li{background: $light-color-light-gray;}
+        //상세페이지 컬러
+        .detail_paging_area{border-color: $light-color-light-gray;}
+        .tag_area li{background: $light-color-light-gray;}
+    } 
+
+    @media screen and (max-width: 1200px) {}
+    @media screen and (max-width: 960px) {
+        .note_content{
+            .list_content ul li{
+                background: transparent;
+                border-bottom: 1px solid $light-color-light-gray;
             }
         }
-    } 
+    }
 }
 
 .darkMode{
@@ -40,7 +50,7 @@
         }
         .btn_newpost{
             @include btnType1($dark-color-white, $dark-color-dark-orange);
-            color: $dark-color-black;
+            color: $dark-color-white;
         }
         .btn-list{
             @include btnType1($dark-color-white, $dark-color-blue);
@@ -51,8 +61,24 @@
             color: $dark-color-white;
         }
         .btn-delete{
-            @include btnType1($dark-color-black, $dark-color-red);
+            @include btnType1($dark-color-white, $dark-color-red);
             color: $dark-color-white;
+        }
+        
+        //목록페이지 컬러
+        .list_content ul li{background: $dark-color-gray;}
+        //상세페이지 컬러
+        .detail_paging_area{border-color: $dark-color-gray;}
+        .tag_area li{background: $dark-color-gray;}
+    }
+
+    @media screen and (max-width: 1200px) {}
+    @media screen and (max-width: 960px) {
+        .note_content{
+            .list_content ul li{
+                background: transparent;
+                border-bottom: 1px solid $dark-color-gray;
+            }
         }
     } 
 }
@@ -62,5 +88,11 @@
 
 /* 노트 공통 */
 .note_content{
-    
+    @media screen and (max-width: 960px) {
+        .btn-delete{
+            padding: .7rem 1.2rem !important;
+            line-height: 1rem;
+            vertical-align: top;
+        }
+    }
 }

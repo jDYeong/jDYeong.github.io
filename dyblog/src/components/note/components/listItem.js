@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { collection, getDocs } from 'firebase/firestore';
+import { Link } from "react-router-dom";
 import {db} from "../../../firebase.js"
 import * as S from './components.style'
-import { Link } from "react-router-dom";
+import LogindArea from '../../common/layout/lodingArea'
+import { ReactComponent as IconNodata } from '../../../assets/images/icons/icon-nodata.svg';
 
 const ListArea = () => {
 
@@ -40,27 +42,35 @@ const ListArea = () => {
     }, []);
 
     if (loading) {
-        return <p>Loading...</p>;
+        return <LogindArea />;
     }
 
     return (
         <S.ListArea>
-            {items.map(item => (
-                <S.ListItem key={item.id.toString()}>
-                    
-                    <Link to={`/note/detail/${item.id.toString()}`}>
-                        {item.imageUrl ? <S.ImgBox><img src={item.imageUrl} alt="목록이미지" /></S.ImgBox> : ''}
-                        <S.TxtBox>
-                            <S.Title>{item.title}</S.Title>
-                            <S.SubTitle>{item.subtitle}</S.SubTitle>
-                            <S.Row>
-                                <S.Txt>관리자</S.Txt>
-                                <S.Txt>{item.date}</S.Txt>
-                            </S.Row>
-                        </S.TxtBox>
-                    </Link>
-                </S.ListItem>
-            ))}
+            { items.length === 0 ? (
+                    <S.ListNodata>
+                        <IconNodata />
+                        <p>게시글이 존재하지 않습니다.</p>
+                    </S.ListNodata>
+                ) : (
+                    items.map((item, i) => (
+                        <S.ListItem key={item.id.toString()}>
+                            
+                            <Link to={`/note/detail/${item.id.toString()}`}>
+                                {item.imageUrl ? <S.ImgBox><img src={item.imageUrl} alt="목록이미지" /></S.ImgBox> : ''}
+                                <S.TxtBox>
+                                    <S.Title>{item.title}</S.Title>
+                                    <S.SubTitle>{item.subtitle}</S.SubTitle>
+                                    <S.Row>
+                                        <S.Txt>관리자</S.Txt>
+                                        <S.Txt>{item.date}</S.Txt>
+                                    </S.Row>
+                                </S.TxtBox>
+                            </Link>
+                        </S.ListItem>
+                    ))
+                )
+            }
         </S.ListArea>
     );
 };

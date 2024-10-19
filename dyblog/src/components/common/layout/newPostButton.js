@@ -6,7 +6,7 @@ import { ReactComponent as ImgNewPostButton } from '../../../assets/images/icons
 const NewPostBtn = () => {
 
     return (
-        <Link to="/private/admin_note" className="btn-type1 btn_newpost">
+        <Link to={{ pathname: "/private/admin_note", state: { editMode: false } }} className="btn-type1 btn_newpost" >
             <Pc>
                 <ImgNewPostButton width={24} height={24} />
             </Pc>

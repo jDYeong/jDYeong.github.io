@@ -56,6 +56,8 @@ button.close .open {
   --constent-mob-height: calc(100% - 6rem);
   --main-btns-pc-height: 4rem;
   --main-btns-mob-height: 8rem;
+  --img-url-bg: "../images/bg/";
+  --img-url-icons: "../images/icons/";
 }
 
 /*** 공통변수 ***/
@@ -404,6 +406,8 @@ button.close .open {
   --constent-mob-height: calc(100% - 6rem);
   --main-btns-pc-height: 4rem;
   --main-btns-mob-height: 8rem;
+  --img-url-bg: "../images/bg/";
+  --img-url-icons: "../images/icons/";
 }
 
 /*** 공통변수 ***/
@@ -472,6 +476,8 @@ button.close .open {
   --constent-mob-height: calc(100% - 6rem);
   --main-btns-pc-height: 4rem;
   --main-btns-mob-height: 8rem;
+  --img-url-bg: "../images/bg/";
+  --img-url-icons: "../images/icons/";
 }
 
 /*** 공통변수 ***/
@@ -536,6 +542,8 @@ button.close .open {
   --constent-mob-height: calc(100% - 6rem);
   --main-btns-pc-height: 4rem;
   --main-btns-mob-height: 8rem;
+  --img-url-bg: "../images/bg/";
+  --img-url-icons: "../images/icons/";
 }
 
 /*** 공통변수 ***/

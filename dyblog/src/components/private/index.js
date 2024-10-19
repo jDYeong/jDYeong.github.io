@@ -19,7 +19,7 @@ export default function Private(){
                 </S.PrivateListItem>
                 <S.PrivateListItem>
                     <IconListArr />
-                    <Link to="/private/admin_note">Note page</Link>
+                    <Link to={{ pathname: "/private/admin_note", state: { editMode: false } }}>Note page</Link>
                 </S.PrivateListItem>
                 <S.PrivateListItem>
                     <IconListArr />
