@@ -875,6 +875,9 @@ footer p {
 .lightMode .note_content .list_content ul li {
   background: #EEE;
 }
+.lightMode .note_content .detail_paging_area {
+  border-color: #EEE;
+}
 .lightMode .note_content .tag_area li {
   background: #EEE;
 }
@@ -950,6 +953,9 @@ footer p {
 }
 .darkMode .note_content .list_content ul li {
   background: #636363;
+}
+.darkMode .note_content .detail_paging_area {
+  border-color: #636363;
 }
 .darkMode .note_content .tag_area li {
   background: #636363;
