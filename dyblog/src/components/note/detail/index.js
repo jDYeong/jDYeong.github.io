@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from 'react-router-dom'
-import { doc, getDoc } from "firebase/firestore";
+import { doc, getDoc, collection, getDocs, orderBy, query } from "firebase/firestore";
 import {db} from "../../../firebase.js"
-
-import { collection, getDocs } from "firebase/firestore";
 
 import * as SC from "../components/components.style.js"
 import * as S from "./index.style.js"
@@ -51,7 +49,8 @@ const NoteDetail = ({loginState}) => {
     //이전,다음 데이터 배열로 저장
     useEffect(() => {
         const fetchAllData = async () => {
-            const querySnapshot = await getDocs(collection(db, "note"));
+            const board = collection(db, "note")
+            const querySnapshot = await getDocs(query(board, orderBy("date", "asc")));
             const docs = [];
             querySnapshot.forEach((doc) => {
                 docs.push({

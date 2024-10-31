@@ -131,7 +131,6 @@ const AdminNote = () => {
             ...FormData,
             content: value,
         }));
-        console.log(value)
     };
     
     const handleSubmit = async (e) => {
