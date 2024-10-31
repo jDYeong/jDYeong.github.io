@@ -31,6 +31,10 @@ export const ListItem = styled.li`
     width: calc(50% - 1.2rem);
     padding: 1.8rem;
     box-sizing: border-box;
+    transition: transform .23s ease;
+    &:hover{
+        transform: translateY(-5px);
+    }
     
     @media ${device.mobile}{
         width: 100%;

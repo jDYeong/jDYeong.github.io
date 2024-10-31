@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { collection, getDocs } from 'firebase/firestore';
+import { collection, getDocs, orderBy, query } from 'firebase/firestore';
 import { Link } from "react-router-dom";
 import {db} from "../../../firebase.js"
 import * as S from './components.style'
@@ -14,7 +14,8 @@ const ListArea = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const querySnapshot = await getDocs(collection(db, 'note'));
+                const board = collection(db, "note")
+                const querySnapshot = await getDocs(query(board, orderBy("date", "desc")));
                 const itemsList = querySnapshot.docs.map(doc => {
                     const data = doc.data();
                     
