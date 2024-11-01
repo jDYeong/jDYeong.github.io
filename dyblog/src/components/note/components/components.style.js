@@ -42,9 +42,19 @@ export const ListItem = styled.li`
     }
 `
 export const ImgBox = styled.div`
+    ${include.flexCenter}
+    max-width: 100%;
+    max-height: 15rem;
     margin-bottom: 1.2rem;
     border-width: 1px 2px 2px 1px;
     border-style: solid;
+    overflow: hidden;
+    img{
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
 
     @media ${device.mobile}{margin-bottom: .8rem;}
 `

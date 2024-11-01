@@ -28,6 +28,7 @@ const AdminNote = () => {
         subtitle: '',
         content: '',
         tags: '',
+        //imagesUrl: '',
     });
     const [imageUrl, setImageUrl] = useState(""); // 새로운 상태 추가
 
@@ -99,6 +100,7 @@ const AdminNote = () => {
                             const imageUrl = await uploadImage(file);
                             const range = quill.getSelection();
                             if (range) {
+                                setImageUrl(imageUrl)
                                 quill.insertEmbed(range.index, 'image', imageUrl);
                             } else {
                                 console.error('커서 위치를 찾을 수 없습니다.');
@@ -145,6 +147,7 @@ const AdminNote = () => {
                     subtitle : formData.subtitle,
                     content : formData.content,
                     tags : formData.tags,
+                    imageUrl : imageUrl,
                     date,
                 });
                 history.push(`/note/detail/${noteId}`)
@@ -168,6 +171,7 @@ const AdminNote = () => {
                         subtitle : formData.subtitle,
                         content : formData.content,
                         tags : formData.tags,
+                        imageUrl : imageUrl,
                         date,
                     })
                     .then((res) => {
