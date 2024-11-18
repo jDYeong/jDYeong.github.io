@@ -121,6 +121,7 @@ export const LodingArea = styled.div`
     left: 0;
     width: 100%;
     height: 100%;
+    min-height: 20rem;
     z-index: 101;
     svg{
         rect{
@@ -130,5 +131,8 @@ export const LodingArea = styled.div`
             &:nth-child(2){animation-delay: 0.2s;}
             &:nth-child(3){animation-delay: 0.4s;}
         }
+    }
+    @media ${device.mobile}{
+        top: 13rem;
     }
 `

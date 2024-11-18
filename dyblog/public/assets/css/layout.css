@@ -881,6 +881,60 @@ footer p {
 .lightMode .note_content .tag_area li {
   background: #EEE;
 }
+.lightMode .GB_content .txt {
+  background-color: #EEE;
+}
+.lightMode .GB_content .textarea {
+  border-color: #BBB;
+}
+.lightMode .GB_content .btn-submit {
+  padding: 0.2rem;
+  background: #2471A3;
+  border: 1px solid #222;
+  border-bottom-width: 2px;
+  border-right-width: 2px;
+  box-sizing: border-box;
+  color: #fff;
+}
+.lightMode .GB_content .btn-submit svg.hide {
+  display: none;
+}
+.lightMode .GB_content .btn-cancel {
+  padding: 0.2rem;
+  background: #BBB;
+  border: 1px solid #222;
+  border-bottom-width: 2px;
+  border-right-width: 2px;
+  box-sizing: border-box;
+  color: #fff;
+}
+.lightMode .GB_content .btn-cancel svg.hide {
+  display: none;
+}
+.lightMode .GB_content .btn-delete {
+  padding: 0.2rem;
+  background: #EC7063;
+  border: 1px solid #222;
+  border-bottom-width: 2px;
+  border-right-width: 2px;
+  box-sizing: border-box;
+  color: #fff;
+}
+.lightMode .GB_content .btn-delete svg.hide {
+  display: none;
+}
+.lightMode .GB_content .btn-modify {
+  padding: 0.2rem;
+  background: #F3B562;
+  border: 1px solid #222;
+  border-bottom-width: 2px;
+  border-right-width: 2px;
+  box-sizing: border-box;
+  color: #fff;
+}
+.lightMode .GB_content .btn-modify svg.hide {
+  display: none;
+}
 @media screen and (max-width: 960px) {
   .lightMode .note_content .list_content ul li {
     background: transparent;
@@ -960,6 +1014,60 @@ footer p {
 .darkMode .note_content .tag_area li {
   background: #636363;
 }
+.darkMode .GB_content .textarea {
+  border-color: #636363;
+}
+.darkMode .GB_content .txt {
+  background-color: #CCC;
+}
+.darkMode .GB_content .btn-submit {
+  padding: 0.2rem;
+  background: #1B6493;
+  border: 1px solid #121212;
+  border-bottom-width: 2px;
+  border-right-width: 2px;
+  box-sizing: border-box;
+  color: #fff;
+}
+.darkMode .GB_content .btn-submit svg.hide {
+  display: none;
+}
+.darkMode .GB_content .btn-cancel {
+  padding: 0.2rem;
+  background: #636363;
+  border: 1px solid #121212;
+  border-bottom-width: 2px;
+  border-right-width: 2px;
+  box-sizing: border-box;
+  color: #fff;
+}
+.darkMode .GB_content .btn-cancel svg.hide {
+  display: none;
+}
+.darkMode .GB_content .btn-delete {
+  padding: 0.2rem;
+  background: #BD3D30;
+  border: 1px solid #121212;
+  border-bottom-width: 2px;
+  border-right-width: 2px;
+  box-sizing: border-box;
+  color: #fff;
+}
+.darkMode .GB_content .btn-delete svg.hide {
+  display: none;
+}
+.darkMode .GB_content .btn-modify {
+  padding: 0.2rem;
+  background: #E39F43;
+  border: 1px solid #121212;
+  border-bottom-width: 2px;
+  border-right-width: 2px;
+  box-sizing: border-box;
+  color: #fff;
+}
+.darkMode .GB_content .btn-modify svg.hide {
+  display: none;
+}
 @media screen and (max-width: 960px) {
   .darkMode .note_content .list_content ul li {
     background: transparent;
@@ -980,3 +1088,5 @@ footer p {
     vertical-align: top;
   }
 }
+
+/* 방명록 공통 */
